@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.interests.InterestsActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="@dimen/_550dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:fillViewport="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="@dimen/_550dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitleToolbar"
+                        style="@style/TextViewScreenTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2dp"
+                        android:layout_marginBottom="@dimen/_20dp"
+                        android:gravity="start"
+                        android:text="@string/interests"
+                        android:textColor="@color/gold_90"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/bg_white_top_radius_30"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/interests"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_21sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupBrings2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginHorizontal="@dimen/_20dp"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        app:chipSpacingVertical="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/privacy_settings"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_15dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/show_on_public_profile"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_21sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchInteractiveSession"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@drawable/selector_btn_switch_selector"
+                            android:checked="true"
+                            android:padding="0dp"
+                            android:thumb="@null"
+                            app:track="@null" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnUpdateMyInterest"
+                        style="@style/MaterialGoldButtonStyle"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:text="@string/save" />
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </FrameLayout>
+
+</layout>

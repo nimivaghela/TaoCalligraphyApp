@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_curve_20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/vd_cross_gray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostSemiBoldStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:text="Boost Your Healing"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_15ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:text="Receive a Light Transmission for your heart to boost your healing process!"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_13ssp" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:cardElevation="0dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTellMeMore"
+                    style="@style/ButtonGoldStyle"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="tell me more"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:backgroundTint="@null"
+                    app:fontFamily="@font/font_jost_semi_bold"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/white" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

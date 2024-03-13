@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvPendingApprovalRoom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_80"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:padding="@dimen/_20sdp"
+                android:src="@drawable/vd_cross_gray"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostMediumStyle"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/mindfulness_for_nit_professionals"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_22ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:text="@string/submitted_with_colon"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_11ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostBoldStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Nov 8, 2021"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_13ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="1:31 pm ET"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:text="@string/reviewed_with_colon"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_11ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostBoldStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Nov 10, 2021"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_13ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="6:10 pm ET"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/your_room_was"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_13ssp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:background="@color/red" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:text="@string/not_approved"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_19ssp" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostMediumStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/message_from_moderator"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_13ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum lacinia luctus risus pharetra dui elementum ornare. Arcu ut interdum ullamcorper potenti. Sed tellus egestas et nunc lacus"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_11ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="@string/you_may_resubmit_with_changes"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:text="@string/until"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostBoldStyle"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="Nov 17, 2021"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="6:10 pm"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvEditRoom"
+                style="@style/CardViewStyle"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEditRoom"
+                    style="@style/ButtonGoldStyle"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="@string/edit_room" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/or_you_may"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_13ssp" />
+
+            <com.loopeer.shadow.ShadowView
+                style="@style/ShadowViewStyle"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                app:cornerRadius="@dimen/_10sdp"
+                app:shadowMargin="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnContactTheModerator"
+                    style="@style/ButtonWhiteStyle"
+                    android:background="@drawable/bg_white_curve"
+                    android:text="@string/contact_the_moderator" />
+
+            </com.loopeer.shadow.ShadowView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

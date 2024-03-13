@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="0dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.85"
+            android:background="@drawable/bg_gray93_three_side_radius_15dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="@dimen/_4sdp">
+
+            <ImageView
+                android:id="@+id/ivPlayAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/vd_play_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/vd_sound_wave" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sliderAudioMessageProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:value="25"
+                    android:valueFrom="0.0"
+                    android:valueTo="100.0"
+                    app:thumbElevation="0dp"
+                    app:thumbRadius="0dp"
+                    android:layout_marginTop="-15dp"
+                    app:labelBehavior="gone"
+                    app:trackColorActive="@color/dark_grey"
+                    app:trackColorInactive="@color/medium_grey_50"
+                    app:trackHeight="@dimen/_3sdp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:text="00:05 / 1:02"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMessageTime"
+                            style="@style/TextViewJostRegularStyle"
+                            android:text="2:03 pm"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

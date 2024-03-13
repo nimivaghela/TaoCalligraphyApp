@@ -1,0 +1,7 @@
+package com.app.taocalligraphy.models.eventbus
+
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class MeditationContentDownloadListener(val downloadStatus: Int) : Parcelable

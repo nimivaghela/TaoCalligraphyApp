@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_50sdp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@color/white"
+            tools:context=".ui.field_healing_detail.StartFieldHealingActivity">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_380sdp"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/ic_heart" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_380sdp"
+                android:layout_marginTop="-20dp"
+                android:background="@color/white_50" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_170sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:cardBackgroundColor="@color/medium_grey"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="true">
+
+                    <com.google.android.exoplayer2.ui.PlayerView
+                        android:id="@+id/playerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:keep_content_on_player_reset="true"
+                        app:resize_mode="fill"
+                        app:surface_type="texture_view"
+                        app:use_artwork="true"
+                        app:use_controller="false" />
+
+                    <com.google.android.exoplayer2.ui.SubtitleView
+                        android:id="@+id/subTitleView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivSubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_10sdp"
+                            app:srcCompat="@drawable/vd_subtitle" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivMediaFullScreen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/_10sdp"
+                            app:srcCompat="@drawable/vd_fullscreen" />
+
+                    </RelativeLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:text="Heal &amp; Transform\nThe Heart"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_32ssp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivRepeatVideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/vd_video_repeat" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvMeditationVideoPlaylist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center_vertical">
+
+                    <FrameLayout
+                        android:id="@+id/ffBackForwardMedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/vd_left_forward" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:gravity="center"
+                            android:text="15"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMediaPlayPlause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_25sdp"
+                        app:srcCompat="@drawable/vd_playing" />
+
+                    <FrameLayout
+                        android:id="@+id/ffMoveForwardMedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/vd_right_forward" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:gravity="center"
+                            android:text="15"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sliderVideoProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="0.7"
+                    android:value="10.3"
+                    android:valueFrom="0.0"
+                    android:valueTo="100.0"
+                    app:labelBehavior="floating"
+                    app:labelStyle="@style/SliderLabel"
+                    app:thumbColor="@color/gold"
+                    app:trackColorActive="@color/dandelion"
+                    app:trackColorInactive="@color/medium_grey_50"
+                    app:trackHeight="@dimen/_2sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMusicProgressTime"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="01:30"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMusicTotalProgressTime"
+                        style="@style/TextViewJostMediumStyle"
+                        android:text="10:00"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnBoostYourHealing"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_30sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_30sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Boost Your Healing"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

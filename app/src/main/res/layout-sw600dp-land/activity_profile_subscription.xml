@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="@dimen/_550dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleToolbar"
+                style="@style/TextViewScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/subscription"
+                android:textColor="@color/gold_90"
+                android:visibility="visible"
+                android:layout_marginBottom="@dimen/_20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_top_radius_30"
+                >
+
+            <RelativeLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:id="@+id/llTopDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_14sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="start"
+                        android:text="@string/subscription_level"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_18sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSubscriptionLevel"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:gravity="start"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_21sp"
+                        tools:text="Basic, Annual" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:gravity="start"
+                        android:text="@string/subscribe_since"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_18sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSubscriptionDate"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:gravity="start"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_21sp"
+                        tools:text="Jan 15, 2022" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitleRenewal"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:gravity="start"
+                        android:text="@string/next_level"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_18sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtNextRenewalDate"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:gravity="start"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_21sp"
+                        tools:text="Jan 15, 2023" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitleSubscriptionMethod"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:gravity="start"
+                        android:text="@string/subscribtion_method"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_18sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtSubscriptionMethod"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:gravity="start"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_21sp"
+                        tools:text="App Store" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llButtonsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_10sdp">
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/MaterialGoldButtonStyle"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:text="@string/upgrade"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnManageSubscription"
+                        style="@style/MaterialGoldButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginVertical="@dimen/_13sdp"
+                        android:text="@string/manage_subscription" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancelSubscription"
+                        style="@style/MaterialWhiteButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/cancel_subscription" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_above="@id/llButtonsView"
+                    android:layout_below="@id/llTopDescription"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_lines"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:rotation="180"
+                        android:scaleType="fitXY"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="wavy_lines_animation.json"
+                        app:lottie_loop="true"
+                        app:lottie_speed="1" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:background="@android:color/transparent"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <include layout="@layout/item_subscription_price_shimmer" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <include layout="@layout/item_subscription_price_shimmer" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <include layout="@layout/item_subscription_price_shimmer" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <include layout="@layout/item_subscription_price_shimmer" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+</layout>

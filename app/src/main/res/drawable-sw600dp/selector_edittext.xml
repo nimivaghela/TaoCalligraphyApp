@@ -1,0 +1,9 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_white_medium_grey_border" android:state_enabled="true" android:state_window_focused="false" />
+    <item android:drawable="@drawable/bg_white_medium_grey_border" android:state_enabled="false" android:state_window_focused="false" />
+    <item android:drawable="@drawable/bg_white_medium_grey_border" android:state_pressed="true" />
+    <item android:drawable="@drawable/bg_white_gold_border" android:state_enabled="true" android:state_focused="true" />
+    <item android:drawable="@drawable/bg_white_medium_grey_border" android:state_enabled="true" />
+    <item android:drawable="@drawable/bg_white_gold_border" android:state_focused="true" />
+    <item android:drawable="@drawable/bg_white_medium_grey_border" />
+</selector>

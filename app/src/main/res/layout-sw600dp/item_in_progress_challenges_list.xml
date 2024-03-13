@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_102sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_rounded_right_corner_border" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_13_5_8_5"
+                app:cornerFamily="rounded"
+                app:srcCompat="@drawable/ic_gratitude_dummy" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:srcCompat="@drawable/vd_in_progress_challenges" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="7-Day Gratitude Challenge"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_14ssp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderAudioMessageProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-5dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="-5dp"
+            android:value="25"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            app:labelBehavior="gone"
+            app:thumbElevation="0dp"
+            app:thumbRadius="0dp"
+            app:trackColorActive="@color/dandelion"
+            app:trackColorInactive="@color/shimmer_light"
+            app:trackHeight="@dimen/_12sdp" />
+    </LinearLayout>
+</layout>

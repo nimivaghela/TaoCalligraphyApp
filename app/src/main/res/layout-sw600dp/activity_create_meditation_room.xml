@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:fillViewport="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.create_meditation_room.CreateMeditationRoomActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:animateLayoutChanges="true"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_50sdp">
+
+                    <include
+                        android:id="@+id/toolbar"
+                        layout="@layout/toolbar" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostSemiBoldStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/topic"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSelectCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clipToPadding="false"
+                        android:fadeScrollbars="false"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_10ssp"
+                        android:paddingEnd="@dimen/_10ssp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/item_select_category_small" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostSemiBoldStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Details"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlRoomName"
+                        style="@style/TextInputLayoutMediumBoxStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etRoomName"
+                            style="@style/EditTextStyle"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_gravity="start|top"
+                            android:gravity="start|top"
+                            android:hint="Room Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:nextFocusDown="@id/tlSessionDescription"
+                            android:textSize="@dimen/_12sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlSessionDescription"
+                        style="@style/TextInputLayoutMediumBoxStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etSessionDescription"
+                            style="@style/EditTextStyleMultiLine"
+                            android:layout_gravity="start|top"
+                            android:gravity="start|top"
+                            android:hint="@string/description"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:lines="5"
+                            android:maxHeight="@dimen/_100sdp"
+                            android:minHeight="@dimen/_50sdp"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:textSize="@dimen/_12sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/rrAccessHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/llAccessHeader"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:text="@string/access"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_10ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSelectedSessionAccess"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:text="@string/public_session"
+                                        android:textColor="@color/secondary_black"
+                                        android:textSize="@dimen/_15ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llAccessType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    tools:visibility="visible">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvPublicSession"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_width="wrap_content"
+                                        android:paddingTop="@dimen/_5sdp"
+                                        android:text="@string/public_session"
+                                        android:textColor="@color/gold"
+                                        android:textSize="@dimen/_15ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvPrivateSession"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_width="wrap_content"
+                                        android:paddingTop="@dimen/_5sdp"
+                                        android:text="@string/private_session"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_15ssp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivSessionAccessArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                app:srcCompat="@drawable/vd_gray_arrow_down" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                        android:padding="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:text="Language"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:text="English"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            app:srcCompat="@drawable/vd_gray_arrow_down" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                        android:padding="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:text="Country"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:text="United States"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_15ssp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            app:srcCompat="@drawable/vd_gray_arrow_down" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostSemiBoldStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:text="Background"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBannerImagesForCreateRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/item_create_room_banner_images" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostSemiBoldStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:text="@string/terms"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:text="Your room will need admin approval."
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/dark_grey"
+                            android:checked="true"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:text="@string/agree_community_guidelines"
+                            android:textAllCaps="false"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/CardViewStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="false">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnRequestApproval"
+                            style="@style/ButtonGoldStyle"
+                            android:background="@drawable/bg_light_dark_golden_curve"
+                            android:text="Request Approval" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.loopeer.shadow.ShadowView
+                        style="@style/ShadowViewStyle"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:cornerRadius="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnCancel"
+                            style="@style/ButtonWhiteStyle"
+                            android:background="@drawable/bg_white_curve"
+                            android:text="@string/cancel" />
+                    </com.loopeer.shadow.ShadowView>
+
+                    <LinearLayout
+                        android:id="@+id/llDeleteRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/vd_delete_icon_grey" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Delete Room"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_white_top_gradient"
+            android:visibility="gone" />
+    </FrameLayout>
+</layout>

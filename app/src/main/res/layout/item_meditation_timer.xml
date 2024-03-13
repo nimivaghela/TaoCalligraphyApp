@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvViewTimer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|top"
+                    android:padding="@dimen/_12sdp"
+                    android:src="@drawable/vd_three_dot_grey_color_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:background="@drawable/ic_white_round_bg_with_shadow"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTimer"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_32ssp"
+                        tools:text="30" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHoursMinute"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-1dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_18ssp"
+                        tools:text="m" />
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/llOptionDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="false"
+                    tools:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_timer_dialog">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llEdit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivEdit"
+                                android:layout_width="@dimen/_11sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:src="@drawable/ic_pencil_grey"
+                                android:tint="@color/dark_grey"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEdit"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="@string/edit"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_11ssp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/editSeparator"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bg_timer_separator"
+                            app:layout_constraintTop_toBottomOf="@id/llEdit" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llClone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/editSeparator">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivClone"
+                                android:layout_width="@dimen/_11sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:src="@drawable/vd_clone_icon_gold"
+                                android:tint="@color/dark_grey"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvClone"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="@string/clone"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_11ssp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/cloneSeparator"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/bg_timer_separator"
+                            app:layout_constraintTop_toBottomOf="@id/llClone" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/llDelete"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cloneSeparator">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivDelete"
+                                android:layout_width="@dimen/_14sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:src="@drawable/vd_delete_icon_gold"
+                                android:tint="@color/dark_grey"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvDelete"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_width="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/delete"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_11ssp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMeditationName"
+            style="@style/TextViewJostMediumStyle"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="0.7"
+            android:maxLines="2"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/_10ssp"
+            tools:text="Lorem ipsum dolor sit amet" />
+
+    </LinearLayout>
+
+</layout>

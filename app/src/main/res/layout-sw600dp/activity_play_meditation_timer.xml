@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgMeditationTimerBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_40sdp"
+            tools:context=".ui.meditation_timer.PlayMeditationTimerActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/mToolbar"
+                    layout="@layout/view_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_51sp"
+                    tools:text="30:00" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/circularProgressDailyActivityChart"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    app:cpb_background_progressbar_color="@color/gold"
+                    app:cpb_background_progressbar_width="@dimen/_5dp"
+                    app:cpb_progress="0"
+                    app:cpb_progress_direction="to_right"
+                    app:cpb_progress_max="100"
+                    app:cpb_progressbar_color="@color/light_gray"
+                    app:cpb_progressbar_width="@dimen/_5dp"
+                    app:cpb_round_border="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivPlayOrPause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vd_meditation_timer_play"
+                        android:visibility="visible"
+                        tools:visibility="gone" />
+
+                    <FrameLayout
+                        android:id="@+id/fmDone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/bg_gold_round" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvDone"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/done_capital"
+                                android:textColor="#99FFFFFF"
+                                android:textSize="@dimen/_41sp" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvDone"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvEnd"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginEnd="@dimen/_7sdp"
+                                    android:drawableTop="@drawable/vd_meditation_timer_cancel"
+                                    android:drawablePadding="@dimen/_2sdp"
+                                    android:gravity="center"
+                                    android:text="@string/end"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvRestart"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginStart="@dimen/_7sdp"
+                                    android:layout_toEndOf="@+id/tvEnd"
+                                    android:drawableTop="@drawable/vd_meditation_timer_restart"
+                                    android:drawablePadding="@dimen/_2sdp"
+                                    android:gravity="center"
+                                    android:text="@string/restarts"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMeditationName"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_23sp"
+                tools:text="@string/lorem_ipsum_dolor_sit_amet" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialogZenMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp"
+            android:visibility="gone"
+            tools:ignore="UselessParent"
+            tools:visibility="visible">
+
+            <include
+                android:id="@+id/zenModeView"
+                layout="@layout/dialog_zen_mode_on_off" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

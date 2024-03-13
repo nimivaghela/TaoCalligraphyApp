@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frameImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageMeditation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_read_meditation" />
+
+        </FrameLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshLayout"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_70sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_minus10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mToolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_top_bottom_radius_30">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewScreenTitle"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/how_to_meditate" />
+
+                    <LinearLayout
+                        android:id="@+id/llAlertTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvWatch"
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_white_gold_border_22dp"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:text="@string/watch"
+                            android:textAllCaps="true"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRead"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/bg_gray_95_radius_22dp"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:text="@string/read_cap"
+                            android:textAllCaps="true"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_16sp" />
+                    </LinearLayout>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nestedScroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:animateLayoutChanges="true"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:animateLayoutChanges="true">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvReadData"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:orientation="vertical"
+                                    android:visibility="gone"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblNoReadFound"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="@string/no_read_data_found"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_8sdp"
+                                    android:visibility="gone" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblNoWatchFound"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="@string/no_watch_data_found"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_8sdp"
+                                    android:visibility="gone" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvWatchData"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:orientation="vertical"
+                                    android:visibility="gone"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ProgressBar
+                                    android:id="@+id/progressBarRead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="@dimen/_10sdp"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

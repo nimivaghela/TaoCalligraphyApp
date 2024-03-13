@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@color/white"
+            android:fillViewport="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_30sdp"
+                tools:context=".ui.program.ProgramDetailsActivity">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBannerImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_350sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_gratitude_thumb" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_350sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_bg_gradient_program_detail" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_80sdp"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvProgramName"
+                            style="@style/TextViewCormorantBoldStyle"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/_7_days_to_better_quality_sleep"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_28ssp" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_marginTop="@dimen/_11sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:drawableStart="@drawable/vd_small_gold_user"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableTint="@color/medium_grey"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="@string/_453_joined_average_51_completion"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_10ssp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flDailyActivityChart"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_140sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="@dimen/_180sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_medium_gery_40_round" />
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/circularProgressDailyActivityChart"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_200sdp"
+                        app:cpb_background_progressbar_color="@color/white_90"
+                        app:cpb_background_progressbar_width="@dimen/_15sdp"
+                        app:cpb_progress="0"
+                        app:cpb_progress_direction="to_left"
+                        app:cpb_progress_max="100"
+                        app:cpb_progressbar_color_end="@color/dandelion"
+                        app:cpb_progressbar_color_start="@color/dandelion"
+                        app:cpb_progressbar_width="@dimen/_18sdp"
+                        app:cpb_round_border="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNotStarted"
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.1"
+                            android:text="@string/not_nstarted"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_24ssp"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDayCount"
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="0.1"
+                            android:text="@string/day_1_7"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_24ssp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_300sdp"
+                    android:background="@drawable/bg_white_top_left_right_curve_90"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvProgramsTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:fadeScrollbars="false"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="0dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_custom_tab_view" />
+
+                    <FrameLayout
+                        android:id="@+id/root_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/_10sdp" />
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_115sdp"
+                android:background="@drawable/bg_white_top_gradient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/bg_white_round"
+                android:elevation="@dimen/_3sdp"
+                android:src="@drawable/vd_grey_back_arrow" />
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardJoin"
+            style="@style/CardViewStyle"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_45sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJoinPrograms"
+                style="@style/ButtonGoldStyle"
+                android:background="@drawable/bg_light_dark_golden_curve"
+                android:drawableStart="@drawable/vd_challenge_trophy_small"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_110sdp"
+                android:paddingEnd="0dp"
+                android:text="@string/join"
+                app:fontFamily="@font/font_lato_bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_white_top_gradient"
+            android:visibility="gone" />
+    </FrameLayout>
+</layout>

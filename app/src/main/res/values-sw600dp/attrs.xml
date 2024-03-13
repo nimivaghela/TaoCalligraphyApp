@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundedBarChart">
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SegmentedControlGroup">
+        <attr name="customSliderColor" format="color"/>
+        <attr name="customDividerColor" format="color"/>
+        <attr name="customShadowColor" format="color"/>
+    </declare-styleable>
+    <bool name="isTablet">true</bool>
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/ic_end_session_bg"
+            android:orientation="vertical"
+            tools:context=".ui.meditation_rooms_detail.ReportRoomActivity">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:padding="@dimen/_20sdp"
+                android:src="@drawable/vd_cross_gray"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/vd_alert_triangle_big" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="0dp"
+                    android:text="Mindfulness for IT Professionals"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_22ssp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostMediumStyle"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:text="Report Inappropriate Content"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:id="@+id/llReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/bg_white_medium_grey_border"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="What would you like to report?"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_9ssp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etReportMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:lines="6"
+                    android:maxLines="10"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInfo1"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:text="We’ve received your report. Our team will look into the matter. Thank you for your efforts to keep our community a positive place."
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInfo2"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:text="A copy of your report has been emailed to you at darrellstew@gmail.com"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvSendReport"
+                style="@style/CardViewStyle"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSendReport"
+                    style="@style/ButtonGoldStyle"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="Send Report" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvReturnHome"
+                style="@style/CardViewStyle"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnReturnHome"
+                    style="@style/ButtonGoldStyle"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="RETURN HOME" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_white_top_gradient" />
+    </FrameLayout>
+</layout>

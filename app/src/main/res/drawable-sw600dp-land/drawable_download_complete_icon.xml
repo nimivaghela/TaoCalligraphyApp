@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="@dimen/_12sdp"
+        android:height="@dimen/_16sdp"
+        android:drawable="@drawable/vd_view_download_complete" />
+</layer-list>

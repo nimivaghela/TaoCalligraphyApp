@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_50sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            tools:context=".ui.field_healing.fragment.PhysicalBodyFragment">
+
+            <com.richpath.RichPathView
+                android:id="@+id/ivMalePhysicalBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:vector="@drawable/vd_figure_male_without_lines" />
+
+            <com.richpath.RichPathView
+                android:id="@+id/ivFemalePhysicalBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:vector="@drawable/vd_figure_female_without_lines" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMale"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:src="@drawable/vd_male_icon_select" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivFemale"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:src="@drawable/vd_female_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

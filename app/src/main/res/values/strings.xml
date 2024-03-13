@@ -1,0 +1,1416 @@
+<resources>
+    <string name="app_name">Oneness Heart</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="jost_regular">font/font_jost_bold</string>
+
+    <string name="facebook_app_id">2327202777455632</string>
+    <string name="fb_login_protocol_scheme">fb2327202777455632</string>
+    <string name="facebook_client_token">0f98eaeeff4013e92f2fd6297fba0f33</string>
+    <string name="password_strength_caption">Password Strength: {0}</string>
+    <string name="password_strength_weak">Weak Password</string>
+    <string name="password_strength_medium">Can Be Stronger</string>
+    <string name="password_strength_strong">Strong Password</string>
+
+    <string name="notification_channel_ohter">Tao Calligraphy app notification channel</string>
+    <string name="notification_channel_description">Manage all notification with this channel name</string>
+
+    <!--Splash-->
+    <string name="home_is_where_the_heart_is">Home is\nwhere the Heart is.</string>
+    <string name="home_is">Home is\nwhere the</string>
+    <string name="heart">Heart</string>
+    <string name="str_is">is.</string>
+    <string name="welcome_home">Welcome Home.</string>
+    <string name="welcome">Welcome</string>
+    <string name="home">Home.</string>
+    <string name="begin_your_experience">Begin Your Experience</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+
+    <!--Begin Experience-->
+    <string name="get_to_the_heart_of_transformation">Get to the Heart\nof Transformation.</string>
+    <string name="step_into_the">Step into the</string>
+    <string name="heart_of_wellbeing">Heart \nof Wellbeing.</string>
+    <string name="of_transformation">of Transformation.</string>
+    <string name="lorem_ipsum_dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus nulla pellentesque est gravida elit convallis.</string>
+    <string name="experience_more">EXPERIENCE MORE</string>
+
+    <!--Experience More-->
+    <string name="release_stress">Release Stress</string>
+    <string name="meditate_with_the_light_of_the_moon">Meditate with the light of the moon, mountains and ocean, along with the transformative art field of Greatest Love, to melt away stress…</string>
+    <string name="swipe_up_for_more">Swipe Up for More</string>
+    <string name="the_inner_calm">The inner calm you’re feeling is always there, in the deepest part of you - your true nature.\n\nWe are here to help you unlock and access this secret power on demand.\n\nImagine reconnecting with this feeling, and more, at the touch of a button.</string>
+    <string name="a_unique_wellness_library_awaits_you">A Unique Wellness Library Awaits You.</string>
+    <string name="tap_a_category_to_see_your_selections_below">Tap a category to see your selections below.</string>
+    <string name="videos">Videos</string>
+    <string name="video">Video</string>
+    <string name="videos_not_available">No Videos found</string>
+    <string name="guided_audio">Guided Audio</string>
+    <string name="guided_not_available">No Guided Audio found</string>
+    <string name="music">Music</string>
+    <string name="music_not_available">No Music found</string>
+    <string name="more_ways_to_grow">More Ways To Grow</string>
+    <string name="live_sessions">LIVE Sessions</string>
+    <string name="a_worldwide_community_of_meditation_rooms_at_your_fingertips">A worldwide community of meditation rooms at your fingertips.</string>
+    <string name="curated_programs">Curated Programs</string>
+    <string name="designed_to_give_you_a_balanced_well_rounded_path_to_your_goals">Designed to give you a balanced, well-rounded path to your goals.</string>
+    <string name="expert_coaching">Expert Coaching</string>
+    <string name="book_one_on_one_time_with_tao_calligraphy_wellness_coaches_to_personalize_your_journey">Book one-on-one time with Tao Calligraphy Wellness Coaches to personalize your journey.</string>
+    <string name="explain_free_trial_here">Explain free trial here</string>
+    <string name="try_us_free">Try us free today! No commitment required.</string>
+    <string name="start_your_free_trial_today">Start your free trial today!</string>
+    <string name="explain_subscription_levels_and_prices">Explain subscription levels and prices</string>
+    <string name="health">Health</string>
+    <string name="relationships">Relationships</string>
+    <string name="peak_performance">Peak Performance</string>
+    <string name="business_and_finance">Business &amp; Finance</string>
+    <string name="pregnancy">Pregnancy</string>
+    <string name="children_and_education">Children &amp; Education</string>
+    <!--<string name="signup">SignUp</string>-->
+    <string name="logout_msg">Are you sure you want to logout?</string>
+    <string name="delete_account_msg">Are you sure you want to delete account?</string>
+    <string name="delete_msg">Are you sure you want to delete the playlist? You won\'t able to revert the changes.</string>
+
+    <!--Sign Up-->
+    <string name="sign_up_title">Sign Up</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="i_agree_to_the">I agree to the</string>
+    <string name="terms_and_conditions"><u>Terms and Conditions</u></string>
+    <string name="and">and</string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="have_an_account">Already have an account?</string>
+    <string name="login_with_underline"><u>Login</u></string>
+    <string name="corporate">Corporate</string>
+    <string name="personal">Personal</string>
+    <string name="corporation_code">Corporation Code</string>
+    <string name="password_strength">Password Strength</string>
+    <string name="password_must_match">Passwords Must Match</string>
+    <string name="password_do_not_match">Passwords Do Not Match</string>
+    <string name="password_match">Passwords Match!</string>
+
+    <!-- Login -->
+    <string name="forgot_password_que"><u>Forgot Password?</u></string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="sign_up_with_underline"><u>Sign Up</u></string>
+    <string name="already_have_an_account">Already have an account?</string>
+
+    <!-- Forgot password -->
+    <string name="forgot_password">Reset Password</string>
+    <string name="enter_your_email_address_and_we_ll_send_you_a_reset_link">Enter your email address and we’ll send you a reset link.</string>
+    <string name="continue_text">Continue</string>
+
+    <!-- Email Sent -->
+    <string name="email_sent">Email Sent!</string>
+    <string name="we_have_sent_reset_instructions_to">We have sent reset instructions to</string>
+    <string name="check_your_email">Check your email!</string>
+
+    <!-- Reset password -->
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_password">Confirm Password</string>
+
+    //Questionnaire Result
+    <string name="ready_to_start">%s, ready to get started?</string>
+    <string name="intro_program">21-Day Intro Program</string>
+    <string name="start_now">Start Now</string>
+    <string name="later">later</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="subscribe_now">Subscribe Now</string>
+    <string name="access_it_from_profile">You can access it later from your profile.</string>
+    <string name="more_for_user">More for %s</string>
+    <string name="Subscribe_for_boost">Subscribe for these and many other ways to boost your wellness!</string>
+    <string name="continue_free_trial">Continue Free Trial</string>
+    <string name="meditation_text_bold">Practice free meditations</string>
+    <string name="meditation_text_normal">and release what holds you back.</string>
+    <string name="program_text_bold">Join a program</string>
+    <string name="program_text_normal">to focus and reach your goals faster.</string>
+    <string name="how_to_meditate_text_bold">Learn</string>
+    <string name="how_to_meditate_text_normal">how transformative field meditations work.</string>
+    <string name="profile_text_bold">Complete your profile</string>
+    <string name="profile_text_normal">to find live sessions in your region.</string>
+    <string name="go_to_my_profile">go to my profile</string>
+    <string name="start_free_trial">start free trial</string>
+
+    // Bottom Navigation tab title
+    <string name="home_tab">Home</string>
+    <string name="wellness_tab">Wellness</string>
+    <string name="search_tab">Search</string>
+    <string name="rooms_tab">Rooms</string>
+    <string name="notification_tab">Notifications</string>
+
+    //Home screen
+    <string name="new_release">New Releases</string>
+    <string name="no_new_release">No New Releases found.</string>
+    <string name="wellness_library">Wellness Library</string>
+    <string name="see_all">See All</string>
+    <string name="feature_session">Featured Sessions</string>
+    <string name="live">Live</string>
+    <string name="my_upcoming_sessions">My Upcoming Sessions</string>
+    <string name="see_more">See More</string>
+    <string name="daily_wisdom">Daily Wisdom</string>
+    <string name="daily_activity">Daily Activity</string>
+    <string name="meditations">Meditations</string>
+    <string name="live_session_small">Live Session</string>
+    <string name="seems_offline">It seems you’re offline.</string>
+    <string name="enjoy_download_meditations">You can still enjoy the meditations\nyou have downloaded.</string>
+    <string name="reconnect">Reconnect</string>
+    <string name="view_downloads">VIEW DOWNLOADS</string>
+    <string name="press_again_to_exit">Press again to exit.</string>
+
+    //Notification screen
+    <string name="alerts">Alerts</string>
+    <string name="notifications">Notifications</string>
+    <string name="alarm">Alarm</string>
+    <string name="clear_all">CLEAR ALL</string>
+    <string name="less">LESS</string>
+    <string name="clear">CLEAR</string>
+    <string name="clear_all_notification">CLEAR ALL\nNOTIFICATIONS?</string>
+    <string name="yes_clear">YES, CLEAR</string>
+    <string name="no_keep">No, Keep</string>
+    <string name="no_notifications">You have no notifications</string>
+    <string name="goto_alarm">Go to Alarm</string>
+
+    //Meditation Detail
+    <string name="about">About</string>
+    <string name="reviews">Reviews</string>
+    <string name="lorem_meditation_detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum lacinia luctus risus pharetra dui elementum ornare. Arcu ut interdum ullamcorper.</string>
+    <string name="get">Get</string>
+    <string name="relaxed">Relaxed</string>
+    <string name="energized">Energized</string>
+    <string name="peaceful">Peaceful</string>
+    <string name="happier">Happier</string>
+    <string name="calmer">Calmer</string>
+    <string name="lighter">Lighter</string>
+    <string name="less_pain">Less Pain</string>
+    <string name="unlock_instantly">unlock instantly with</string>
+    <string name="your_wellness_matter">You and your wellness matter to us!</string>
+    <string name="extreme_pain">Extreme Pain</string>
+    <string name="no_pain">No Pain</string>
+    <string name="save_start">SAVE &amp; START</string>
+    <string name="pre_assessment_msg">We’ll only ask once for each new meditation you try.</string>
+    <string name="skip_for_now">Skip for Now</string>
+    <string name="skip_rating">Skip Rating</string>
+    <string name="btn_continue">CONTINUE</string>
+    <string name="step">STEP</string>
+    <string name="how_your_experience">How was your experience?</string>
+    <string name="type_word">Or type in a word</string>
+    <string name="save_close">CLOSE</string>
+    <string name="open_journal">OPEN JOURNAL</string>
+    <string name="felt_better">felt better</string>
+    <string name="post_assessment_title_user">You Did It, %s!</string>
+
+    <!-- Questionnaire -->
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+
+    <!-- Validations -->
+    <string name="please_enter_first_name">Please enter your first name</string>
+    <string name="first_name_must_contain_at_least_2_characters">The first name must contain at least 2 characters long</string>
+    <string name="first_name_should_not_exceed_more_than_30_characters">First name should not exceed more than 30 characters</string>
+    <string name="please_enter_last_name">Please enter your last name</string>
+    <string name="last_name_must_contain_at_least_2_characters">The last name must contain at least 2 characters long</string>
+    <string name="last_name_should_not_exceed_more_than_30_characters">Last name should not exceed more than 30 characters</string>
+    <string name="please_enter_email_address">Please enter your email address</string>
+    <string name="please_enter_valid_email_address">Please enter a valid email address</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="password_must_be_at_least_6_letters_and_must_also_include_special_characters_and_numbers">Password must contain one upper case, one lowercase, one special character, one digit and must be of 10 characters.</string>
+    <string name="password_must_contain_at_least_6_characters">Password must contain at least 10 characters long</string>
+    <!--    <string name="password_should_not_exceed_more_than_16_characters">Password should not exceed more than 16 characters</string>-->
+    <string name="please_do_not_enter_emojis_into_the_password">Please do not enter invalid characters into the password</string>
+    <string name="please_enter_confirm_password">Please enter confirm password</string>
+    <string name="confirm_password_and_password_must_be_the_same">Confirm Password and Password must be the same</string>
+    <string name="please_agree_to_our_terms_and_conditions_and_privacy_policy">Please agree to our Terms &amp; Conditions and Privacy Policy</string>
+    <string name="welcome_nfrancisco">Welcome,\nFrancisco!</string>
+    <string name="let_s_get_to_know_you_answer_just_a_few_questions_so_we_can">Let’s get to know you. Answer just a few questions, so we can:</string>
+    <string name="recommend_our_most_ideal_meditations_for_you">Recommend our most ideal meditations for you</string>
+    <string name="point_you_to_live_community_sessions_you_might_like">Point you to LIVE community sessions you might like</string>
+    <string name="create_the_perfect_new_releases_to_keep_you_motivated">Create the perfect new releases to keep you motivated!</string>
+    <string name="please_enter_any_report_text">Please enter any report text</string>
+    <string name="please_enter_new_password">Please enter new password</string>
+    <string name="new_password_must_be_at_least_6_letters_and_must_also_include_special_characters_and_numbers">New password must contain one upper case, one lowercase, one special character, one digit and must be of 10 characters.</string>
+    <string name="new_password_must_contain_at_least_6_characters">New Password must contain at least 10 characters long</string>
+    <!--    <string name="new_password_should_not_exceed_more_than_16_characters">New Password should not exceed more than 16 characters</string>-->
+    <string name="please_do_not_enter_emojis_into_the_new_password">Please do not enter invalid characters into the new password</string>
+    <string name="confirm_password_and_new_password_must_be_the_same">Confirm Password and New Password must be the same</string>
+    <string name="please_enter_meditation_name">Please enter meditation name</string>
+    <string name="please_select_start_sound">Please select start sound</string>
+    <string name="please_select_end_sound">Please select end sound</string>
+    <string name="please_select_ambient_sound">Please select ambient sound</string>
+    <string name="please_select_remind_time">Please select remind time</string>
+    <string name="please_select_background_image">Please select background image</string>
+
+    <!-- Home Profile Popup -->
+    <string name="personalize">Personalize</string>
+    <string name="profile">Profile</string>
+    <string name="chat">Chat</string>
+    <string name="playlists">Playlists</string>
+    <string name="downloads">Downloads</string>
+    <string name="journal">Journal</string>
+    <string name="calendar">Calendar</string>
+    <string name="meditation_timer">Meditation Timer</string>
+    <string name="meditation_time">Meditation Time</string>
+    <string name="community">Community</string>
+    <string name="settings">Settings</string>
+    <string name="stats">Stats</string>
+    <string name="history">History</string>
+    <string name="logout">Logout</string>
+    <string name="today">Today</string>
+
+    <!-- Calendar -->
+    <string name="more_from_rooms_you_follow">More From Rooms You Follow</string>
+    <string name="load_more">Load More</string>
+    <string name="free_with_subscription">FREE with (level) subscription</string>
+
+    <!-- Wellness Category -->
+    <string name="welcome_to">Welcome to</string>
+    <string name="programs">Programs</string>
+    <string name="filters">Filters</string>
+    <string name="topic">Topic</string>
+    <string name="topics">Topics</string>
+    <string name="choose_one">choose one</string>
+    <string name="search">Search</string>
+    <string name="physical">Physical</string>
+    <string name="mental_amp_emotional"><![CDATA[Mental & Emotional]]></string>
+    <string name="sleep">Sleep</string>
+    <string name="spiritual">Spiritual</string>
+    <string name="tags">Tags</string>
+    <string name="choose_one_or_more">choose one or more</string>
+    <string name="shop">Shop</string>
+    <string name="premium">PREMIUM</string>
+    <string name="hide">Hide</string>
+    <string name="show">Show</string>
+    <string name="all_meditation_title">All Meditations In %s</string>
+    <string name="back_to_category">Back to Category</string>
+    <string name="str_arrow">›</string>
+
+    <!-- Meditation Rooms -->
+    <string name="meditation_rooms">Meditation Rooms</string>
+
+    <!-- Meditation Timer -->
+    <string name="edit">Edit</string>
+    <string name="clone">Clone</string>
+    <string name="delete">Delete</string>
+    <string name="select_sound">Select Sound</string>
+    <string name="sound_not_found">Sound Not Found</string>
+
+    <!-- New Timer -->
+    <string name="new_timer">New Timer</string>
+    <string name="edit_timer">Edit Timer</string>
+    <string name="_30">30</string>
+    <string name="min">min</string>
+    <string name="name">Name</string>
+    <string name="lorem_ipsum_dolor_sit_amet">Lorem ipsum dolor sit amet</string>
+    <string name="sounds">Sounds</string>
+    <string name="start">Start</string>
+    <string name="lorem">Lorem…</string>
+    <string name="end">End</string>
+    <string name="ambient">Ambient</string>
+    <string name="remind_daily_at">Remind Daily At:</string>
+    <string name="not_set">(Not Set)</string>
+    <string name="background">Background</string>
+    <string name="save">Save</string>
+    <string name="update_my_interests">Update My Interests</string>
+    <string name="cancel">Cancel</string>
+    <string name="set">Set</string>
+
+    <!-- Meditation Rooms -->
+    <string name="all">All</string>
+    <string name="following">Following</string>
+    <string name="favourites">Favourites</string>
+    <string name="my_rooms">My Rooms</string>
+
+    <!-- Create New Session -->
+    <string name="new_session">New Session</string>
+    <string name="edit_session">Edit Session</string>
+    <string name="banner">Banner</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="session_name">Session Name</string>
+    <string name="description">Description</string>
+    <string name="language">Spoken Languages</string>
+    <string name="region">Region</string>
+    <string name="country">Country</string>
+    <string name="sort_by">Sort By</string>
+    <string name="tao_calligraphy_fields">Tao Calligraphy Fields</string>
+    <string name="featured_rooms">Featured Rooms</string>
+    <string name="filter_by_topic">Filter by Topic</string>
+    <string name="welcome_to_your_rooms">Welcome To Your Rooms!</string>
+
+    <!-- Create New Meditation -->
+    <string name="create_room">Create Room</string>
+    <string name="edit_room">Edit Room</string>
+    <string name="upcoming_session">Upcoming Sessions</string>
+    <string name="access">Access</string>
+    <string name="public_session">Public</string>
+    <string name="private_session">Private</string>
+    <string name="main_language">Main Language</string>
+    <string name="translation">Translation</string>
+    <string name="date_time">Date &amp; Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="one_time">ONE-TIME</string>
+    <string name="weekly">WEEKLY</string>
+    <string name="monthly">MONTHLY</string>
+    <string name="on_day">on day</string>
+    <string name="done">Done</string>
+    <string name="advanced">Advanced</string>
+    <string name="interactive_session">INTERACTIVE SESSION</string>
+    <string name="participants_can_unmute">(participants can unmute)</string>
+    <string name="max_participants">MAX. PARTICIPANTS</string>
+    <string name="no_limit">NO LIMIT</string>
+    <string name="co_hosts">CO-HOSTS</string>
+    <string name="add_co_hosts">Add Co-Hosts</string>
+    <string name="terms">Terms</string>
+    <string name="agree_community_guidelines">I agree to the <u>Community Guidelines</u></string>
+    <string name="schedule">Schedule</string>
+    <string name="cancel_session">Cancel Session</string>
+    <string name="are_you_sure">ARE YOU SURE?</string>
+    <string name="clear_mind">Breathwork for a Clear Mind</string>
+    <string name="on">on</string>
+    <string name="wll_canceled">will be canceled.</string>
+    <string name="notify_followers">Notify Followers</string>
+    <string name="yes_cancel_it">Yes, Cancel It</string>
+    <string name="continue_editing">No, Continue Editing</string>
+
+    <string-array name="custom_weekdays">
+        <item>M</item>
+        <item>T</item>
+        <item>W</item>
+        <item>T</item>
+        <item>F</item>
+        <item>S</item>
+        <item>S</item>
+    </string-array>
+
+    //Audio session screen
+    <string name="starts_in">STARTS IN</string>
+    <string name="days">Days</string>
+    <string name="hrs">Hrs</string>
+    <string name="min_first_cap">Min</string>
+    <string name="sec">Sec</string>
+    <string name="join_now">Join Now</string>
+    <string name="join_as">Join as</string>
+    <string name="guest">Guest</string>
+    <string name="view">View</string>
+    <string name="leave">LEAVE</string>
+    <string name="you_are_hosting">You’re Hosting</string>
+    <string name="you_are_co_hosting_with">You’re Co-hosting with</string>
+    <string name="prepare_to_start">PREPARE TO START</string>
+    <string name="manage_participants">Manage Participants</string>
+    <string name="view_participants">View Participants</string>
+    <string name="manage">Manage</string>
+    <string name="mute_all">Mute All</string>
+    <string name="unmute_all">UnMute All</string>
+    <string name="send_message">Send Message</string>
+    <string name="make_co_host">Make Co-host</string>
+    <string name="remove">Remove</string>
+    <string name="ban">Ban</string>
+    <string name="mute">Mute</string>
+    <string name="type_message">Type a message</string>
+    <string name="leave_session">LEAVE SESSION?</string>
+    <string name="end_session">END SESSION?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="session_ended">SESSION ENDED</string>
+    <string name="schedule_another">Schedule Another</string>
+    <string name="close_without_schedule">CLOSE WITHOUT SCHEDULING</string>
+    <string name="thanks_for_joining">Thanks for Joining!</string>
+    <string name="your_experience_matter">You and your experience\nmatter to us.</string>
+    <string name="rate_this_session">PLEASE RATE THIS SESSION</string>
+    <string name="return_home">Return Home</string>
+    <string name="continue_your_journey">Continue your journey into</string>
+    <string name="meditations_caps">MEDITATIONS</string>
+    <string name="sessions">SESSIONS</string>
+    <string name="rooms">ROOMS</string>
+    <string name="invite_users_to_join">Invite users to join</string>
+    <string name="send_invite">SEND INVITE</string>
+    <string name="invite_successfully_sent">Invite successfully sent to</string>
+    <string name="send_another">Send Another</string>
+    <string name="close">Close</string>
+    <string name="waiting_for_host">WAITING FOR HOST</string>
+    <string name="add_friend">Add Friend</string>
+
+    //Book a Consultation
+    <string name="need_support">Need Personalized Support?</string>
+    <string name="book_a_consultation">Book A Consultation</string>
+    <string name="not_do_it_alone">You don’t have to do it alone…</string>
+    <string name="you_have_us">You have us.</string>
+    <string name="worldwide_help_you">Let our Tao Calligraphy Wellness Coaches Worldwide Help You:</string>
+    <string name="find_purpose">Find purpose and direction in your life</string>
+    <string name="feel_more_connected">Feel more connected to your heart and soul and your self-healing abilities</string>
+    <string name="overcome_blockages">Overcome blockages in health, relationships, and finances</string>
+    <string name="Become_more_confident">Become more confident and clear about your decisions</string>
+    <string name="develop_positive_mindsets">Develop positive mindsets and remove negative thinking</string>
+    <string name="create_a_flow">Create a flow of abundance in your life</string>
+    <string name="joy_every_day">Experience more joy every day</string>
+    <string name="login_to_start_booking">Login At [URL]\nTo Start Your Booking</string>
+
+    //Alarm Screen
+    <string name="wake_up_meditation">Wake Up With Meditation</string>
+    <string name="meditation">Meditation</string>
+    <string name="morning_freshen_up">Morning Freshen Up</string>
+    <string name="change">Change</string>
+
+    //Choose A Meditation
+    <string name="choose_repeat">Choose Repeat Day</string>
+    <string name="choose_meditation">Choose A Meditation</string>
+    <string name="category">Category</string>
+    <string name="select">Select</string>
+
+    //Chat
+    <string name="friends">Friends</string>
+    <string name="conversations">Conversations</string>
+    <string name="pin">Pin</string>
+    <string name="read">Read</string>
+    <string name="new_chat">New Chat</string>
+    <string name="view_profile">View Profile</string>
+    <string name="add_to_chat">Add To Chat</string>
+    <string name="add">Add</string>
+    <string name="contact_not_found">Contact Not Found</string>
+    <string name="contact_not_found_message">Eugene Silva is not on Oneness Heart yet.
+Share your referral link with them to invite them now and meditate together!</string>
+    <string name="share">Share</string>
+    <string name="you_are_offline">Oops! it seems you’re offline.</string>
+    <string name="page_error_loading">Oops! Something went wrong.\nWe couldn’t load that page.</string>
+    <string name="retry">Retry</string>
+
+    //Field Healing
+    <string name="field_healing">Field Healing</string>
+    <string name="mouth_lips_teeth_and_gums">Mouth, Lips, Teeth &amp; Gums</string>
+    <string name="neck">Neck</string>
+    <string name="shoulders">Shoulders</string>
+    <string name="elbows">Elbows</string>
+    <string name="wrists">Wrists</string>
+    <string name="hands">Hands</string>
+    <string name="knees">Knees</string>
+    <string name="ankles">Ankles</string>
+    <string name="feet">Feet</string>
+    <string name="hipbones">Hipbones</string>
+    <string name="lower_back">Lower Back</string>
+    <string name="muscles">Muscles</string>
+    <string name="nose">Nose</string>
+    <string name="ears">Ears</string>
+    <string name="eyes">Eyes</string>
+    <string name="physical_body">PHYSICAL BODY</string>
+    <string name="_16_selections">16 selections</string>
+    <string name="internal_organs">INTERNAL ORGANS</string>
+    <string name="_22_selections">22 selections</string>
+    <string name="emotions">EMOTIONS</string>
+    <string name="_7_selections">7 selections</string>
+    <!--<string name="relationships">Relationships</string>-->
+    <string name="_9_selections">9 selections</string>
+    <string name="body_channels">BODY CHANNELS</string>
+    <string name="_3_selections">3 selections</string>
+    <string name="message_channel">Message\nChannel</string>
+    <string name="to_nourish_the_spirit">To Nourish\nThe Spirit</string>
+    <string name="energy_channel">Energy\nChannel</string>
+    <string name="to_heal_sickness">To Heal\nSickness</string>
+    <string name="matter_channel">Matter\nChannel</string>
+    <string name="to_rejuvenate_the_body">To Rejuvenate\nThe Body</string>
+    <string name="title_activity_field_healing_detail">FieldHealingDetailActivity</string>
+    <string name="begin">Begin</string>
+    <string name="previous">Previous</string>
+
+
+    //Program Progress
+    <string name="minutes">Minutes</string>
+    <string name="program_history">your program history</string>
+    //Challenges
+    <string name="challenges">Challenges</string>
+    <string name="new_upcoming">New &amp; Upcoming</string>
+    <string name="in_progress">In Progress</string>
+    <string name="reward_at_glance">Your Rewards At A Glance</string>
+    <string name="silver">Silver</string>
+    <string name="gold">Gold</string>
+    <string name="diamond">Diamond</string>
+    <string name="view_redeem_rewards">VIEW AND REDEEM REWARDS</string>
+    <string name="complete_reward">All Those who Complete\nWill Receive:</string>
+    <string name="show_gratitude_someone">Did you\nShow Gratitude to Someone\nToday?</string>
+    <string name="amazing">AMAZING!</string>
+    <string name="world_better_place">The world is a better place\nbecause you did it.</string>
+    <string name="close_journal">Close &amp; Journal</string>
+    <string name="steps">Steps</string>
+    <string name="silver_heart">Silver Heart</string>
+    <string name="golden_heart">Golden Heart</string>
+    <string name="diamond_heart">Diamond Heart</string>
+    <string name="earn_more">EARN MORE</string>
+    <string name="my_rewards">MY REWARDS</string>
+    <string name="silver_first_complete">for completing your\nfirst full meditation</string>
+    <string name="golden_first_complete">for completing 6 months\nas a subscriber</string>
+    <string name="diamond_first_complete">for completing 1 year\nas a premium subscriber</string>
+    <string name="about_program">About the Program</string>
+    <string name="program_review_title">You did it, %s!</string>
+    <string name="program_review_title_completed">You’ve completed</string>
+    <string name="program_review_title_rate">PLEASE RATE THIS PROGRAM</string>
+    <string name="program_not_started">Not\nStarted</string>
+    <string name="program_completed_days">Day %s/%s</string>
+    <string name="program_you_might_like">Programs you might like</string>
+    <string name="program_thank_you_for_joining">Thank you for joining</string>
+    <string name="program_your_first_session">Your first session is set for</string>
+    <string name="program_at">at</string>
+    <string name="program_notify_before_begin">We’ll notify you before it begins.</string>
+    <string name="program_rejoin">Re-join</string>
+
+    //Journal
+    <string name="pinned">Pinned</string>
+    <string name="swipe_to_pin_unpin">Swipe right to pin/unpin</string>
+    <string name="by_date">By Date</string>
+    <string name="swipe_right_to_pin">Swipe right to pin</string>
+    <string name="swipe_right_to_unpin">Swipe right to unpin</string>
+
+    //Favorites
+    <string name="favorites">Favorites</string>
+
+    //Downloads
+    <string name="all_categories">All Categories</string>
+    <string name="most_recent">Most Recent</string>
+    <string name="delete_selected">Delete Selected Downloads</string>
+    <string name="no_download">You have no downloaded\nmeditations</string>
+    <string name="download_your_favorites">DOWNLOAD YOUR FAVORITES?</string>
+    <string name="find_something_new">OR, FIND SOMETHING NEW</string>
+    <string name="no_download_found_for_category">You have no downloaded meditations for %s</string>
+
+    //statistics
+    <string name="day">DAY</string>
+    <string name="week">WEEK</string>
+    <string name="month">MONTH</string>
+    <string name="total_time">Total Time</string>
+    <string name="daily_average">DAILY AVERAGE</string>
+    <string name="weekly_total">WEEKLY TOTAL</string>
+    <string name="monthly_total">MONTHLY TOTAL</string>
+    <string name="meditation_day">Meditations/day</string>
+    <string name="live_session_day">Live Sessions/day</string>
+    <string name="daily_average_small">Daily Average</string>
+    <string name="daily_meditation_time_with_hour">%sh %sm</string>
+    <string name="daily_meditation_time_only_minute">%sm</string>
+
+    //How to meditate
+    <string name="how_to_meditate">How-To Guides</string>
+    <string name="watch">WATCH</string>
+    <string name="read_cap">READ</string>
+
+    //History
+    <string name="light_transmission">Light Transmissions</string>
+    <string name="completed">Completed</string>
+    <string name="started_on">Started on:</string>
+    <string name="completed_on">Completed on:</string>
+    <string name="order_details">Order Details</string>
+    <string name="order">Order:</string>
+    <string name="date">Date:</string>
+    <string name="items">Items</string>
+    <string name="total">Total</string>
+    <string name="show_past">Show Past:</string>
+
+    //Playlist
+    <string name="new_playlist">New Playlist</string>
+    <string name="create_playlist">Create Playlist</string>
+    <string name="name_your_list">Name Your List</string>
+    <string name="add_new">Add New</string>
+    <string name="edit_playlist">Edit Playlist</string>
+    <string name="play_all">PLAY ALL</string>
+    <string name="up_next">Up Next</string>
+
+    //Profile
+    <string name="profile_pic">Profile Pic</string>
+    <string name="drag_pinch_zoom">Drag to position / Pinch to Zoom</string>
+    <string name="reset">Reset</string>
+
+    <!-- Profile -->
+    <string name="account_info">Account Info</string>
+    <string name="personal_info_password_public_profile">Personal Info, Password, Public Profile</string>
+    <string name="rewards">Rewards</string>
+    <string name="earn_or_redeem_reward_points">Earn Or Redeem Reward Points</string>
+    <string name="subscription">Subscription</string>
+    <string name="subscriber_since_jan_22_manage">Subscriber Since Jan ‘22 | Manage</string>
+    <string name="goals">Goals</string>
+    <string name="pain_relief_physical_health_career">Pain Relief, Physical Health, Career, …</string>
+    <string name="interests">Interests</string>
+    <string name="calligraphy_moving_meditation_energ">Calligraphy, Moving Meditation, Energ…</string>
+    <string name="notifications_language">Notifications, Language</string>
+    <string name="friend_list_pending_requests_blocked_users">Friend list, Pending Requests, Blocked Users</string>
+    <string name="referrals">Referrals</string>
+    <string name="referral_link_referral_rewards">Referral link, Referral rewards</string>
+
+    <!--Account Info-->
+    <string name="tap_to_change">Tap to change</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="mobile">Mobile</string>
+    <string name="location">Location</string>
+    <string name="about_me">About Me</string>
+    <string name="birthday">Birthday</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="we_would_like_to">We’d like to send you a surprise wellness boost on your birthday!</string>
+    <string name="age_range">Age Range</string>
+    <string name="public_profile">Public Profile</string>
+    <string name="allow_others_to_find_me">Allow Others To Find Me</string>
+    <string name="private_profile_link">Private Profile Link</string>
+    <string name="your_profile_will_not_searchable">Your profile will not be searchable by others. You can share your private profile link with users if you choose.</string>
+    <string name="str_profile_not">not</string>
+    <string name="show_the_following_on_my_profile">Show the following on my profile:</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="preview_my_private_profile">PREVIEW MY PRIVATE PROFILE</string>
+    <string name="preview_my_public_profile">PREVIEW MY PUBLIC PROFILE</string>
+    <string name="change_password">Change Password</string>
+    <string name="new_password">New Password</string>
+    <string name="your_profile_will_searchable">Your profile will be searchable by others on this app.</string>
+    <string name="error_public_profile_nothing_checked">Please enable the options you would like others to see in your profile.</string>
+    <string name="error_public_profile_not_saved">Please save the data you would like others to see in your profile.</string>
+    <string name="error_public_profile">Please update %s to make it visible in your profile</string>
+    <string name="select_language_mandatory">Please select at least one spoken language</string>
+    <string name="error_public_profile_remove_data">Your %s content is shown to other users on your profile. Please add some data in %s, or please turn off the option for %s in "Showing the following on my profile" section.</string>
+    <string name="error_public_profile_remove_interest">Your %s content is shown to other users on your profile. Please add some data in %s, or please turn off the option for %s in "Show On Public Profile" section.</string>
+
+    <!--Rewards-->
+    <string name="current_balance">Current Balance</string>
+    <string name="you_can_use_your_heart_to_unlock">You can use your hearts to unlock special meditations and live sessions.</string>
+    <string name="find_now">Find Now</string>
+    <string name="as_a_subscriber_you_can_choose_your_heart">As a subscriber, you can also use your hearts to unlock new images for your meditation rooms and sessions.</string>
+    <string name="go_to_my_rooms">Go To My Rooms</string>
+    <string name="redeem_rewards">Redeem Rewards</string>
+    <string name="reward_history">Reward History</string>
+    <string name="subscription_level">Subscription Level &amp; Type</string>
+    <string name="subscribe_since">Subscriber Since</string>
+    <string name="next_level">Next Renewal</string>
+    <string name="subscribtion_method">Subscription Method</string>
+    <string name="upgrade_to_premium">Upgrade to Premium</string>
+    <string name="renew_now">Renew Now</string>
+    <string name="cancel_subscription">Cancel Subscription</string>
+
+    <!-- Goals -->
+    <string name="wellness_goals">Wellness Goals</string>
+    <string name="update_my_goals">UPDATE MY GOALS</string>
+    <string name="daily_meditation_target">Daily Meditation Target</string>
+
+    <!-- Interests -->
+    <string name="privacy_settings">Privacy Settings</string>
+    <string name="show_on_public_profile">Show On Public Profile</string>
+
+    <!-- Setting -->
+    <string name="in_app_notifications">In-App Notifications</string>
+    <string name="email_notifications">Email Notifications</string>
+    <string name="zen_mode">Zen Mode</string>
+    <string name="when_to_silence">When to silence:</string>
+    <string name="during_meditations">During Meditations</string>
+    <string name="during_live_sessions">During Live Sessions</string>
+    <string name="from_other_apps">From Other Apps</string>
+    <string name="session_reminder_notification">Session Reminder Notification</string>
+    <string name="_30_mins">30 mins</string>
+    <string name="before_session">before session</string>
+    <string name="languages">Languages</string>
+    <string name="app_languages">App Language</string>
+    <string name="show_rooms_and_sessions_in_ndifferent_languages">Show rooms and sessions in\ndifferent languages?</string>
+    <string name="show_rooms_and_sessions_in_other_languages">Show rooms and sessions in other languages?</string>
+    <string name="app_version">App Version</string>
+    <string name="_2_0">2.0</string>
+    <string name="check_for_updates">Check for Updates</string>
+    <string name="interactive_tutorial">Interactive Tutorial</string>
+    <string name="relaunch_tutorial">RELAUNCH TUTORIAL</string>
+    <string name="important_info">Important Info</string>
+    <string name="privacy_policy_">Privacy Policy</string>
+    <string name="terms_amp_conditions_"><![CDATA[Terms & Conditions]]></string>
+    <string name="community_guidelines_">Community Guidelines</string>
+    <string name="send_us_feedback">SEND US FEEDBACK</string>
+    <string name="darrellstew_gmail_com">darrellstew@gmail.com</string>
+    <string name="send_us_feedback_">Send Us Feedback</string>
+    <string name="nature_of_feedback">Nature of Feedback</string>
+    <string name="your_message">Your Message</string>
+    <string name="send">SEND</string>
+    <string name="compliment">Compliment</string>
+    <string name="help">Help</string>
+
+    <!-- Community -->
+    <string name="received">Received</string>
+    <string name="sent">Sent</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="report">Report</string>
+    <string name="block">Block</string>
+    <string name="unblock">Unblock</string>
+
+    <!--    Search-->
+    <string name="search_by_category">Search By Category</string>
+    <string name="gender">Gender</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="manage_subscription">Manage Subscription</string>
+    <string name="rating">Rating</string>
+    <string name="relationships_capital">RELATIONSHIPS</string>
+    <string name="search_result_meditation_type_with_time">%s / %s</string>
+
+
+    <!--    VERIFY EMAIL-->
+    <string name="verify_email">Verify Email</string>
+    <string name="resend_code"><u>Re-send code</u></string>
+    <string name="start_over"><u>Start Over</u></string>
+    <string name="enter_the_code_sent_to">Enter the code sent to</string>
+    <string name="invalid_code_please_try_again">Invalid code. Please try again.</string>
+
+    <!--    WELCOME -->
+    <string name="login_with_email">Login With Email</string>
+    <string name="signup_with_email">Sign up with email</string>
+    <string name="confirm_password_must_be_at_least_6_letters_and_must_also_include_special_characters_and_numbers">
+        Confirm Password must contain one upper case, one lowercase, one special character, one digit and must be of 10 characters.</string>
+    <string name="confirm_password_must_contain_at_least_6_characters">
+        Confirm Password must contain at least 10 characters long</string>
+    <string name="confirm_password_should_not_exceed_more_than_16_characters">Confirm Password should not exceed more than 16 characters</string>
+    <string name="password_and_confirm_password_must_be_the_same">Password and Confirm Password must be the same</string>
+    <string name="please_enter_corporate_code">Please enter corporate code</string>
+    <string name="you_can_also">You can also…</string>
+    <string name="latest">Latest</string>
+    <string name="listen_now">Listen Now</string>
+    <string name="watch_now">Watch Now</string>
+    <string name="your_subscription_was_canceled_on">Your Subscription Was Canceled On</string>
+    <string name="your_subscription_was_Expired_on">Your Subscription Was Expired On</string>
+    <string name="subscribe_again">Subscribe Again</string>
+    <string name="delete_account">Delete Account</string>
+
+    <!--    TAO CALLIGRAPHY ROOM-->
+    <string name="unfollow">Unfollow</string>
+    <string name="follow">Follow</string>
+    <string name="search_rooms">Search Rooms</string>
+    <string name="contact_the_moderator">Contact the Moderator</string>
+    <string name="submitted_with_colon">Submitted:</string>
+    <string name="reviewed_with_colon">Reviewed:</string>
+    <string name="your_room_was">Your Room Was</string>
+    <string name="you_havent_added_any_fav_meditation_yet">You haven’t added any favorite meditations yet.</string>
+    <string name="you_havent_added_any_fav_program_yet">You haven’t added any favorite program yet.</string>
+
+    <string name="no_favorite_meditations_yet">No Favorite Meditations Yet</string>
+    <string name="see_our_recommendations">SEE OUR RECOMMENDATIONS</string>
+    <string name="no_favorite_programs_yet">No Favorite Programs Yet</string>
+    <string name="browse_programs">browse programs</string>
+    <string name="no_favorite_sessions_yet">No Favorite Sessions Yet</string>
+    <string name="view_featured_sessions">view featured sessions</string>
+    <string name="no_favorite_rooms_yet">No Favorite Rooms Yet</string>
+    <string name="explore_the_community">explore the community</string>
+    <string name="silences_notifications_while_you_meditate">Silences notifications while you meditate</string>
+    <string name="zen_mode_with_colon">Zen Mode:</string>
+    <string name="we_will_turn_off_our_notifications_while_you_meditate">We’ll turn off our notifications\n while you meditate.</string>
+    <string name="do_not_show_again">Don\'t show\n again</string>
+    <string name="please_select_your_answer">Please select at least one option!</string>
+    <string name="welcome_with_comma">Welcome,</string>
+    <string name="enter_title">Enter title</string>
+    <string name="title">Title</string>
+    <string name="notes">Notes</string>
+    <string name="select_duration">Select Duration</string>
+    <string name="language_not_found">Language not found</string>
+    <string name="please_enter_valid_mobile">Mobile Number must contain first + special character and must contain at least 10 digit.</string>
+    <string name="please_enter_mobile">Please enter mobile</string>
+    <string name="please_select_region">Please select region</string>
+    <string name="please_select_country">Please select country</string>
+    <string name="please_enter_about_me">Please enter about me</string>
+    <string name="please_select_spoken_language">Please select spoken language</string>
+    <string name="please_select_gender">Please select gender</string>
+    <string name="please_select_age">Please select age</string>
+    <string name="whats_on_your_mind_with_question_mark">What’s on your mind?</string>
+    <string name="results">Results</string>
+    <string name="no_meditations_found">No Meditations Found</string>
+    <string name="no_programs_found">No Programs Found</string>
+
+    <string name="rate_current_pain">Please rate your current level of pain</string>
+    <string name="current_level_pain">Please rate your current level of</string>
+    <string name="suggestion_for_improvement">Suggestion For Improvement</string>
+    <string name="goals_not_found">Goals not found</string>
+
+    <string name="no_in_progress_yet">No Program In Progress Yet</string>
+    <string name="no_for_you_yet">No Program For You Yet</string>
+    <string name="no_program_result_found">No Result found in Program</string>
+    <string name="no_program_found">No program found</string>
+    <string name="no_progress_found">No Progress Yet</string>
+    <string name="no_for_you_data_found">No For You Data Found</string>
+    <string name="no_how_to_meditate_data_found">No Meditation Data Found</string>
+    <string name="no_new_release_data_found">No New Release Found</string>
+    <string name="filter">Filter</string>
+    <plurals name="wellness_filter">
+        <item quantity="zero">Filter</item>
+        <item quantity="one">Filter (%1$d)</item>
+        <item quantity="other">Filters (%1$d)</item>
+    </plurals>
+    <string name="choose">choose</string>
+    <string name="meditation_result">%s Results</string>
+    <string name="meditation_selection_option">choose one or more</string>
+    <string name="meditation_selection_one">choose one</string>
+    <string name="meditation_choose_tag">Choose Tags</string>
+    <string name="meditation_choose_topic">Choose Topic</string>
+    <string name="meditation_choose_category">Choose Category</string>
+    <string name="meditation_category_available">%s Categories Available</string>
+    <string name="meditation_topic_available">%s Topics Available</string>
+    <string name="meditation_tag_available">%s Tags Available</string>
+    <string name="for_you">For You</string>
+    <string name="for_you_with_comma">For</string>
+    <string name="of_goal">of goal</string>
+    <string name="category_not_found">Category not found</string>
+    <string name="no_video_data_found">No Video Found</string>
+    <string name="no_audio_data_found">No Audio Found</string>
+    <string name="no_music_data_found">No Music Found</string>
+    <string name="content_not_found">Content  Not Found</string>
+    <string name="no_result_found">No Results Found</string>
+    <string name="please_enter_name_your_list">Please enter your list name</string>
+    <string name="empty_playlist_error">Please select at least one meditation</string>
+    <string name="keywords">Keywords</string>
+    <string name="no_content_found">No content list found</string>
+    <string name="no_playlist_found">No Playlists Found</string>
+    <string name="no_journal_found">No Entries Found</string>
+    <string name="no_journal_found_for_search">No Entries Found For</string>
+    <string name="new_journal">New</string>
+    <string name="no_content_available">No Content available.</string>
+
+    <string name="a_z">A->Z</string>
+    <string name="apply">Apply</string>
+    <string name="are_you_sure_want_to_delete_journal_with_ques">Delete this journal entry?\n(This cannot be undone)</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="no_results_found">No Results Found</string>
+    <string name="locked">Locked</string>
+    <string name="your_devices">Your Devices</string>
+    <string name="your_devices_dec">You’re logged in to Oneness Heart™ on the following devices:</string>
+    <string name="your_devices_note">Note: Locations are approximate, and may be inaccurate if using a VPN.</string>
+    <string name="choose_a_plan">Choose a Plan</string>
+    <string name="billed_monthly">BILLED MONTHLY</string>
+    <string name="billed_yearly">BILLED YEARLY</string>
+    <string name="standard">Standard</string>
+    <string name="exclusive">exclusive</string>
+    <string name="asset_statements" translatable="false">
+         [{
+        \"relation\": [\"delegate_permission/common.get_login_creds\"],
+        \"target\": {
+          \"namespace\": \"web\",
+          \"site\": \"https://stageapp.onenessheart.com\"
+          }
+        },
+        {
+        \"relation\": [\"delegate_permission/common.get_login_creds\"],
+        \"target\": {
+          \"namespace\": \"web\",
+          \"site\": \"https://taocalligraphy.openxcell.dev\"
+          }
+        }
+      ]
+    </string>
+    <string name="domain_url_prefix">https://onenessheart.page.link</string>
+    <string name="firebase_link_host_name">onenessheart.page.link</string>
+    <string name="unlock_within">Unlock Within</string>
+    <string name="unlock_days">Unlock Within %s Days</string>
+
+    <string name="set_alarm">Set alarm</string>
+    <string name="are_you_sure_want_to_clear_notification">Are you sure want to clear notification?</string>
+    <string name="no_category_data_found">No Category Data Found</string>
+    <string name="cancel_alarm_msg">Are you sure you want to cancel alarm?</string>
+    <string name="a_to_z">A - Z</string>
+    <string name="community_rooms">Community Rooms</string>
+    <string name="no_read_data_found">No Read Data Found</string>
+    <string name="no_watch_data_found">No Watch Data Found</string>
+    <string name="alarm_unsaved_changes">You have unsaved changes.</string>
+    <string name="alarm_save_changes">Save Changes</string>
+    <string name="alarm_leave_without_saving">Leave Without Saving</string>
+    <string name="alarm_subscribe_for_content">Please subscribe in order to keep this content as Alarm.</string>
+    <string name="alarm_purchase_for_content">Please purchase in order to keep this content as Alarm.</string>
+
+    <string name="download_limit_message">Download Limit Reached! Please checkout downloads.</string>
+    <string name="done_capital">DONE</string>
+    <string name="restarts">Restart</string>
+    <string name="zen_mode_on">Zen Mode: ON</string>
+    <string name="zen_mode_instruction">We’ll turn off our notifications\nwhile you meditate.</string>
+
+    <string name="don_t_show_again">DON’T SHOW\nAGAIN</string>
+    <string name="live_sessions_small_letter">Live Sessions</string>
+    <string name="spoken_languages">Spoken Languages</string>
+    <string name="no_pinned_journal_found">No Pinned Entries</string>
+
+    <string name="video_no_longer_available">This video is no longer available</string>
+    <string name="please_enter_what_s_on_your_mind_with_question">Please enter What\'s on your mind?</string>
+    <string name="remove_profile_msg">Are you sure you want to remove profile picture?</string>
+    <string name="oops_it_seems_you_re_offline">Oops! It seems you\'re offline</string>
+    <string name="language_capital">LANGUAGE</string>
+    <string name="please_select_at_least_one_goal">Please select at least one goal!</string>
+    <string name="no_reviews_yet">No reviews yet</string>
+    <string name="what_people_experience">What people experienced</string>
+    <string name="what_brings_you_here_question">What Brings You Here?</string>
+    <string name="please_select_interest">Please select interest</string>
+    <string name="str_in">in</string>
+    <string name="no_in_progress_programs">No In Progress Programs</string>
+    <string name="what_would_you_like_to_achieve_question">What Would You Like To  Achieve?</string>
+    <string name="need_support_dummy_text">Your unique story is what has brought you to this point, shaping your strengths, challenges, and future outlook. Sometimes, you may need a personal touch  to swiftly get to the heart of the matter. Our well-trained certified wellness coaches are here for you, to create a customized wellness path and offer solutions for your greater wellbeing and success. Let’s begin.</string>
+
+    <string name="live_session_profile">LIVE SESSIONS BY %s</string>
+    <string name="join">JOIN</string>
+    <string name="no_internet">Please connect to the internet, %s</string>
+    <string name="no_langauge_found">No Language Found</string>
+    <string name="no_region_found">No Region Found</string>
+    <string name="no_country_found">Please select a region first.</string>
+    <string name="delete_meditation_timer_message">Are you sure you want to delete this timer?</string>
+    <string name="up_next_collan">Up Next :</string>
+    <string name="perMonth">/month</string>
+
+    <string name="profile_goal_meditation_time_default">10 mins</string>
+    <string name="track_your_daily_progress">Track your daily progress throughout the program. Find your next steps on the “Program” tab.</string>
+
+    <string name="timer">Timer</string>
+    <string name="getting_started_guide">Getting Started Guide</string>
+    <string name="Interactive_Tutorial">Interactive Tutorial</string>
+    <string name="support_faqs"><![CDATA[Support & FAQs]]></string>
+    <string name="onenessheart_com">OnenessHeart.com</string>
+    <string name="total_download_size">TOTAL : </string>
+    <string name="hour_12">12 hour</string>
+    <string name="hour_24">24 hour</string>
+    <string name="time_display">Time Display</string>
+    <string name="with">with</string>
+
+    <string name="read_time">%s read</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="no_referrals_yet">You don’t have any referrals yet.</string>
+    <string name="subscription_unlock_full_experience">Unlock The Full \nTransformative Experience</string>
+    <string name="subscribe_to_oneness_heart">Subscribe to Oneness Heart™ or begin your free trial today.</string>
+    <string name="upgrade_subscription_text">Upgrade your Oneness Heart™ to %s</string>
+    <string name="annual">Annual</string>
+    <string name="free_duration_text">%s days free, then %s/year. You will not be charged till %s.</string>
+    <string name="no_charge_text">You will not be charged till %s.</string>
+
+    <string name="failed_to_purchase_product">Failed to purchase product</string>
+    <string name="payment_cancelled">Payment has been cancelled</string>
+    <string name="btn_ok">ok</string>
+    <string name="subscribed_successfully">Subscribed successfully.</string>
+    <string name="free_trial_started">Subscribed successfully.</string>
+    <string name="includes_with_colon">Includes:</string>
+    <string name="subscription_desc_one">Breakthrough meditation library with video, guided audio and music based on research-backed Tao Calligraphy Healing Field techniques</string>
+    <string name="subscription_desc_two">Live streaming sessions from meditation rooms worldwide</string>
+    <string name="subscription_desc_three">Insightful how-to videos</string>
+    <string name="subscription_desc_four">Mobile app (iOS/Android)</string>
+    <string name="subscription_desc_five">Download content to your device for transformation on-the-go (only available on the mobile app)</string>
+    <string name="proceed_to_pay">Proceed to payment</string>
+    <string name="what_others_experienced">What Others Experienced</string>
+    <string name="info_share">Share this with your contacts to invite them to use this App. Earn rewards when they sign up!</string>
+
+    <string name="no_internet_interest">to get interest</string>
+    <string name="no_internet_edit_profile">to edit user profile</string>
+    <string name="don_one_act_unconditional_kindness">Do One Act of Unconditional Kindness</string>
+    <string name="day_2_of_kindness_challenge">Day 2 of Kindness Challenge</string>
+    <string name="threetofour">3:00 – 4:00 PM</string>
+    <string name="breathwork_for_boosting_energy">Breathwork for Boosting Energy</string>
+    <string name="with_name">with Harsha</string>
+    <string name="five_thirty_to_six">5:30 – 6:30 PM</string>
+    <string name="with_francisco">with Francisco</string>
+    <string name="six_to_seven">6:00 – 7:00 PM</string>
+    <string name="self_love_practice_hour">Self-Love Practice Hour</string>
+    <string name="with_elizabeth">with Elizabeth</string>
+    <string name="elizabeth">\" Elizabeth\"</string>
+    <string name="eleven_pm">11:00 PM</string>
+    <string name="sount_sleep">Sound Sleep</string>
+    <string name="day_two_of_7_days_to_better_sleep">Day 2 of 7 Days to Better Sleep</string>
+    <string name="STEPS">STEPS</string>
+    <string name="REWARDS">REWARDS</string>
+    <string name="PROGRESS">PROGRESS</string>
+
+
+
+
+
+    <!--1 to 7-->
+    <string name="one">01</string>
+    <string name="two">02</string>
+    <string name="three">03</string>
+    <string name="four">04</string>
+    <string name="five">05</string>
+    <string name="six">06</string>
+    <string name="seven">07</string>
+
+    <!--Nov 30 to Dec 6-->
+
+    <string name="NOV_30">NOV 30</string>
+    <string name="DEC_01">DEC 1</string>
+    <string name="DEC_02">DEC 2</string>
+    <string name="DEC_03">DEC 3</string>
+    <string name="DEC_04">DEC 4</string>
+    <string name="DEC_05">DEC 5</string>
+    <string name="DEC_06">DEC 6</string>
+
+
+    <string name="mViewMore">More >></string>
+    <string name="m_read_now">Read Now >></string>
+    <string name="show_gratitude_to_someone">Show Gratitude to Someone</string>
+    <string name="noon_refresh_recharge"><![CDATA[Noon Refresh & Recharge]]></string>
+    <string name="six_pm">6pm</string>
+    <string name="thirty_silver_heart">30 Silver Hearts</string>
+    <string name="entry_to_a_live_session">Entry to a Live Session on Jan 29, “Gratitude Changes my Life”</string>
+    <string name="that_warm_feeling_in_the_heart_that_gratitude_brings">That warm feeling in the heart that gratitude brings</string>
+    <string name="FRIEND_LIST">FRIEND LIST</string>
+    <string name="REQUESTS">REQUESTS</string>
+    <string name="BLOCKED">BLOCKED</string>
+    <string name="please_select_downloads_to_delete">Please select downloads to delete</string>
+    <string name="language_en">en</string>
+    <string name="to_get_favorites">to get favorites</string>
+    <string name="zero_min">0 min</string>
+
+
+    <!--Internal Organ List-->
+    <string name="adrenal_glands">Adrenal Glands</string>
+    <string name="blood">Blood</string>
+    <string name="blood_vessels">Blood Vessels</string>
+    <string name="bones">Bones</string>
+    <string name="brain">Brain</string>
+    <string name="gallbladder">Gallbladder</string>
+    <string name="kidneys">Kidneys</string>
+    <string name="large_intestine">Large Intestine</string>
+    <string name="liver">Liver</string>
+    <string name="lungs">Lungs</string>
+    <string name="pancreas">Pancreas</string>
+    <string name="skin">Skin</string>
+    <string name="spinal_cord">Spinal Cord</string>
+    <string name="spleen">Spleen</string>
+    <string name="stomach">Stomach</string>
+    <string name="small_intestine">Small Intestine</string>
+
+    <!--emotionsList-->
+    <string name="happiness">Happiness</string>
+    <string name="healing_anger">Healing Anger</string>
+    <string name="healing_worry">Healing Worry</string>
+    <string name="healing_sadness">Healing Sadness</string>
+    <string name="healing_fear">Healing Fear</string>
+    <string name="anxiety">Anxiety</string>
+    <string name="healing">Healing</string>
+    <string name="depression"><![CDATA[Depression &]]></string>
+    <string name="addication">Addiction</string>
+
+    <!--Relationship list-->
+
+    <string name="true_love">True Love</string>
+    <string name="self_love">Self Love</string>
+    <string name="parents">Parents</string>
+    <string name="children">Children</string>
+    <string name="grandparents">Grandparents</string>
+    <string name="siblings">Siblings</string>
+    <string name="pets">Pets</string>
+    <string name="colleagues">Colleagues</string>
+    <string name="to_send_email">to send email</string>
+    <string name="to_get_user_goal">to get user goal</string>
+    <string name="one_min">1 min</string>
+    <string name="three_mins">3 mins</string>
+    <string name="five_mins">5 mins</string>
+    <string name="ten_mins">10 mins</string>
+    <string name="fiften_mins">15 mins</string>
+    <string name="twenty_mins">20 mins</string>
+    <string name="twenty_five_mins">25 mins</string>
+    <string name="thirty_mins">30 mins</string>
+    <string name="fourty_five_mins">45 mins</string>
+    <string name="three_min">3 min</string>
+    <string name="ten_min">10 min</string>
+    <string name="fiften_min">15 min</string>
+    <string name="twenty_min">20 min</string>
+    <string name="twenty_five_min">25 min</string>
+    <string name="thirty_min">30 min</string>
+    <string name="fourty_five_min">45 min</string>
+    <string name="one_hour">1 hour</string>
+    <string name="two_hours">2 hours</string>
+    <string name="four_hours">4 hours</string>
+    <string name="eight_hours">8 hours</string>
+    <string name="to_get_goals">to get goals</string>
+    <string name="eight_sessions">8 Sessions</string>
+    <string name="to_load_data">to load data</string>
+    <string name="zero_h_zero_m">0h 0m</string>
+    <string name="to_get_how_to_meditate_data">to get how-to guides data</string>
+    <string name="please_enter_search_text">please enter search text</string>
+    <string name="journal_deleted_successfully">Journal Deleted Successfully.</string>
+    <string name="to_delete_journal">to delete journal</string>
+    <string name="to_login">to login</string>
+    <string name="from">From </string>
+    <string name="to_get_fav_meditaion">to get favorite meditation</string>
+    <string name="to_svae_meditation">to save meditation</string>
+    <string name="intro">INTRO</string>
+    <string name="programs_capital">PROGRAMS</string>
+    <string name="about_capital">ABOUT</string>
+    <string name="announcements">ANNOUNCEMENTS</string>
+    <string name="enter_here">Enter here...</string>
+    <string name="view_less">View Less</string>
+    <string name="dr_master_sha"><![CDATA[DR. & MASTER SHA]]></string>
+    <string name="francisco_quintero">FRANCISCO QUINTERO</string>
+    <string name="david_lusch">DAVID LUSCH</string>
+    <string name="cecilia_liu">CECILIA LIU</string>
+    <string name="allan_chuch">ALLAN CHUCK</string>
+    <string name="sher">SHER</string>
+    <string name="fname_lname">Firstname Lastname</string>
+    <string name="deutsch">Deutsch</string>
+    <string name="english">English</string>
+    <string name="espanol">Español</string>
+    <string name="franscais">Français</string>
+    <string name="nederlands">Nederlands</string>
+    <string name="z_to_a">Z - A</string>
+    <string name="zero_followers">0 followers</string>
+    <string name="no_ratings_yes">No Ratings Yet</string>
+    <string name="fourty_six_followers">46 followers</string>
+    <string name="two_seven">27</string>
+    <string name="requests">REQUESTS</string>
+    <string name="one_four">14</string>
+    <string name="sunday">S</string>
+    <string name="monday">M</string>
+    <string name="tuesday">T</string>
+    <string name="wednesday">W</string>
+    <string name="friday">F</string>
+    <string name="thursday">T</string>
+    <string name="saturday">S</string>
+    <string name="to_restart_meditation_timer">to restart meditation timer</string>
+    <string name="to_get_meditation_timer_detail">to get meditation timer detail</string>
+    <string name="to_get_meditation_timers">to get meditation timers</string>
+    <string name="to_clone_meditation_timer">to clone meditation timer</string>
+    <string name="to_delete_meditation_timer">to delete meditation timer</string>
+    <string name="zero_zero">00</string>
+    <string name="one_five">15</string>
+    <string name="three_zero">30</string>
+    <string name="four_five">45</string>
+    <string name="to_fetch_sounds">to fetch sounds</string>
+    <string name="five_min">5 min</string>
+    <string name="to_fetch_images">to fetch images</string>
+    <string name="to_ad_edit_meditation_timer">to add/edit mediation timer</string>
+    <string name="no_internet_connection">No Internet Connection!</string>
+    <string name="to_verify_email">to verify email</string>
+    <string name="to_resend_otp">to resend otp</string>
+    <string name="to_get_playlist">to get playlists</string>
+    <string name="to_delete_playlist">to delete playlist</string>
+    <string name="to_get_playlist_detail">to get playlist detail</string>
+    <string name="to_add_playlist">to add playlist</string>
+    <string name="hrs_small">hrs</string>
+    <string name="hr_smal">hr</string>
+    <string name="mins">mins</string>
+    <string name="secs">secs</string>
+    <string name="sec_small">sec</string>
+    <string name="to_edit_proifle_picture">to edit profile picture</string>
+    <string name="not_subscribed">Not Subscribed</string>
+    <string name="no_internet_connection_to_logout">no internet connection to logout</string>
+    <string name="to_get_data">to get data</string>
+    <string name="to_get_profile">to get profile</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="prefer_not_to_say">Prefer Not To Say</string>
+    <string name="to_get_user_profile">to get user profile</string>
+    <string name="to_change_password">to change password</string>
+    <string name="to_remvoe_profile_picture">to remove profile picture</string>
+
+    <string name="payment_has_been_cancelled">Payment has been cancelled</string>
+    <string name="ok">ok</string>
+    <string name="you_have_subscribed_from">You have Subscribed from</string>
+    <string name="please_manage_the_subscription_from_the">Please manage the Subscription from the</string>
+    <string name="please_cancel_the_subscription_from_the">Please cancel the Subscription from the</string>
+    <string name="to_get_program">to get program</string>
+    <string name="program_capital">PROGRAM</string>
+    <string name="progress">PROGRESS</string>
+    <string name="to_get_program_details">to get program detail</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="your_referrals">Your Referrals</string>
+    <string name="to_get_settings">to get settings</string>
+    <string name="to_get_user_settings">to get user settings</string>
+    <string name="to_delete_account">to delete account</string>
+    <string name="to_logout">to logout</string>
+    <string name="eight_hour">8 hour</string>
+    <string name="four_hour">4 hour</string>
+    <string name="two_hour">2 hour</string>
+    <string name="please_select_nature_of_feedback">Please select nature of feedback</string>
+    <string name="please_enter_message">Please enter message</string>
+    <string name="android">android</string>
+    <string name="ios">ios</string>
+    <string name="windows">windows</string>
+    <string name="mac">mac</string>
+    <string name="this_device">This Device</string>
+    <string name="laset_used">Last Used:</string>
+    <string name="a_min_ago">A Minute ago</string>
+    <string name="to_sign_up">to sign up</string>
+    <string name="support_faq"><![CDATA[Support & FAQs]]></string>
+    <string name="initial_experince_content_not_found">Initial experience content not found</string>
+    <string name="to_begin_your_experince">to Begin your experience</string>
+    <string name="to_log_in">to Log in</string>
+    <string name="to_login_with_email">to Login with Email</string>
+    <string name="to_siginup_with_email">to Signup with Email</string>
+    <string name="to_login_with_facebook">to login with Facebook</string>
+
+
+    <string name="stop">Stop</string>
+    <string name="snooze_alarm">Snooze Alarm</string>
+    <string name="start_meditation">Start Meditation</string>
+    <string name="alarm_snooze_msg">%s will ring again at %s.</string>
+    <string name="announcements_small">Announcements</string>
+    <string name="with_sunil">WITH SUNIL</string>
+    <string name="test_date">Nov 27</string>
+    <string name="english_with_german_translation">English with German Translation</string>
+    <string name="peak_performance_productivity">PEAK PERFORMANCE › PRODUCTIVITY</string>
+    <string name="test_time">10:45</string>
+    <string name="francisco">Francisco</string>
+    <string name="chat_15">CHAT (15)</string>
+    <string name="start_time">00:00 / 00:00</string>
+    <string name="_7_days_to_better_quality_sleep">7 Days to Better Quality Sleep</string>
+    <string name="_453_joined_average_51_completion">453 Joined | Average 51% completion</string>
+    <string name="not_nstarted">Not\nStarted</string>
+    <string name="day_1_7">Day 1/7</string>
+    <string name="_3_new_requests">3 New Requests</string>
+    <string name="details">Details</string>
+    <string name="room_name">Room Name</string>
+    <string name="language_small">Language</string>
+    <string name="united_states">United States</string>
+    <string name="your_room_will_need_admin_approval">Your room will need admin approval.</string>
+    <string name="request_approval">Request Approval</string>
+    <string name="delete_room">Delete Room</string>
+    <string name="_public">Public</string>
+    <string name="limit_100">100</string>
+    <string name="limit_50">50</string>
+    <string name="limit_20">20</string>
+    <string name="limit_10">10</string>
+    <string name="_1">1</string>
+    <string name="_60">60</string>
+    <string name="gently_relax_your_body">Gently relax your body.</string>
+    <string name="_15">15</string>
+    <string name="_1_day">1 Day</string>
+    <string name="_7_days">7 Days</string>
+    <string name="_30_days">30 Days</string>
+    <string name="mindfulness_for_it_professionals">Mindfulness for IT Professionals</string>
+    <string name="invite_users_to_follow">Invite users to follow</string>
+    <string name="enter_an_email_address">Enter an Email address</string>
+    <string name="invite_successfully_sent_to">Invite successfully sent to</string>
+    <string name="how_people_feel">How People Feel</string>
+    <string name="in">in</string>
+    <string name="_2_1k">2.1K</string>
+    <string name="live_sessions_by_user">LIVE SESSIONS BY USER</string>
+    <string name="moving_meditation_for_teens">Moving Meditation for Teens ›</string>
+    <string name="creative_visualization_to_beat_anxiety">Creative Visualization to Beat Anxiety ›</string>
+    <string name="_15_sessions">15 Sessions</string>
+    <string name="participants_felt">Participants Felt:</string>
+    <string name="clear_small">Clear</string>
+    <string name="_6_sessions">6 Sessions</string>
+    <string name="your_referral_link">Your Referral Link</string>
+    <string name="xxxx_xxxx_xxx_xxxx_xx">xxxx://xxxx.xxx/xxxx/xx</string>
+    <string name="share_this_with_your_contacts_to_invite_them_to_use_this_app_earn_rewards_when_they_sign_up">Share this with your contacts to invite them to use this App. Earn rewards when they sign up!</string>
+    <string name="report_inappropriate_content">Report Inappropriate Content</string>
+    <string name="what_would_you_like_to_report">What would you like to report?</string>
+    <string name="we_ve_received_your_report_our_team_will_look_into_the_matter_thank_you_for_your_efforts_to_keep_our_community_a_positive_place">We’ve received your report. Our team will look into the matter. Thank you for your efforts to keep our community a positive place.</string>
+    <string name="a_copy_of_your_report_has_been_emailed_to_you_at_darrellstew_gmail_com">A copy of your report has been emailed to you at darrellstew@gmail.com</string>
+    <string name="send_report">Send Report</string>
+    <string name="heal_amp_transform_nthe_heart"><![CDATA[Heal & Transform\nThe Heart]]></string>
+    <string name="boost_your_healing">Boost Your Healing</string>
+    <string name="_12_99">$12.99</string>
+    <string name="includes">Includes:</string>
+    <string name="breakthrough_meditation_library_with_video_guided_audio_and_music_based_on_research_backed_tao_calligraphy_healing_field_techniques">Breakthrough meditation library with video, guided audio and music based on research-backed Tao Calligraphy Healing Field techniques</string>
+    <string name="live_streaming_sessions_from_meditation_rooms_worldwide">Live streaming sessions from meditation rooms worldwide</string>
+    <string name="insightful_how_to_videos">Insightful how-to videos</string>
+    <string name="mobile_app_ios_android">Mobile app (iOS/Android)</string>
+    <string name="download_content_to_your_device_for_transformation_on_the_go_only_available_on_the_mobile_app">Download content to your device for transformation on-the-go (only available on the mobile app)</string>
+    <string name="proceed_to_payment">Proceed to payment</string>
+    <string name="global_wellness_center">Global Wellness Center</string>
+    <string name="all_topics">ALL TOPICS</string>
+    <string name="_4_5k">4.5K</string>
+    <string name="_64k">64K</string>
+    <string name="_97k">97K</string>
+    <string name="message_host">Message Host</string>
+    <string name="report_room">Report Room</string>
+    <string name="receive_a_light_transmission_for_your_heart_to_boost_your_healing_process">Receive a Light Transmission for your heart to boost your healing process!</string>
+    <string name="tell_me_more">tell me more</string>
+    <string name="may_22_2022">May 22, 2022</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="category_colon">Category:</string>
+    <string name="topic_colon">Topic:</string>
+    <string name="_6_categories_available">6 Categories Available</string>
+    <string name="puls_sign">+</string>
+    <string name="wellness_boost">Wellness Boost</string>
+    <string name="mindfulness_for_nit_professionals">Mindfulness for\nIT Professionals</string>
+    <string name="not_approved">Not Approved</string>
+    <string name="message_from_moderator">Message from Moderator:</string>
+    <string name="you_may_resubmit_with_changes">You may resubmit with changes</string>
+    <string name="until">until</string>
+    <string name="or_you_may">OR you may</string>
+    <string name="unlock_with_50">Unlock with 50</string>
+    <string name="we_ve_received_your_request_n_nyour_room_will_be_reviewed_by_our_team_before_it_can_be_approved_n_nthank_you_for_your_heart_of_service_to_the_community">We’ve received your request.\n\nYour room will be reviewed by our team before it can be approved.\n\nThank you for your heart of service to the community!</string>
+    <string name="back_to_rooms">BACK TO ROOMS</string>
+    <string name="day_3">DAY 3</string>
+    <string name="unlock_new_background">UNLOCK NEW BACKGROUND?</string>
+    <string name="use_5_silver_hearts">Use 5 Silver Hearts</string>
+    <string name="unlock">UNLOCK</string>
+    <string name="open_since_mmm_dd_yy">Open since: MMM DD, ‘YY</string>
+    <string name="_arrow"><![CDATA[Edit >]]></string>
+    <string name="how_your_visitors_feel">How Your Visitors Feel</string>
+    <string name="your_host_sunil">Your Host, Sunil</string>
+    <string name="full_profile">Full Profile</string>
+    <string name="your_hosts">Your Hosts</string>
+    <string name="followers">Followers</string>
+    <string name="more">More</string>
+    <string name="post_new_announcement">Post New Announcement</string>
+    <string name="enter_announcement_text">Enter Announcement Text</string>
+    <string name="you_re_on_your_way_francisco">You’re On Your Way, Francisco!</string>
+    <string name="you_ve_completed_of_the_steps_so_far">You’ve completed of the steps so far.</string>
+    <string name="all_sessions_on_the_27th"><![CDATA[All sessions on the 27th >]]></string>
+    <string name="now_transformative_art_for_flourishing">NOW: Transformative Art for Flourishing</string>
+    <string name="with_dr_amp_master_sha"><![CDATA[with Dr. & Master Sha]]></string>
+    <string name="join_live">Join Live</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="no_scheduled_sessions_nat_this_time">No scheduled sessions\nat this time</string>
+    <string name="schedule_a_session">Schedule a Session</string>
+    <string name="past">Past</string>
+    <string name="more_sign"><![CDATA[More >>]]></string>
+    <string name="completed_capital">COMPLETED!</string>
+    <string name="_30_silver_hearts">30 Silver Hearts</string>
+    <string name="_7_day_gratitude_challenge">7-Day Gratitude Challenge</string>
+    <string name="started_on_colon">Started on:</string>
+    <string name="header">Header</string>
+    <string name="breathwork">Breathwork</string>
+    <string name="liver_heart">Liver, Heart</string>
+    <string name="_2_items">2 Items</string>
+    <string name="live_capital">LIVE</string>
+    <string name="energy">Energy</string>
+    <string name="sound_sleep">Sound Sleep</string>
+    <string name="release_headache">Release Headache</string>
+    <string name="health_mental_amp_emotional"><![CDATA[HEALTH > MENTAL & EMOTIONAL]]></string>
+    <string name="_7_days_to_transform_pain">7 Days to Transform Pain</string>
+    <string name="achievement_meditated_2_hours_in_one_day">Achievement: Meditated 2 Hours in One Day</string>
+    <string name="healthy_spleen_releasing">Healthy Spleen, Releasing</string>
+    <string name="healthy_lungs_nmore_courage">Healthy Lungs,\nMore Courage</string>
+    <string name="transformative_art_for_flourishing">Transformative Art for Flourishing</string>
+    <string name="unlock_with_points">Unlock with Points</string>
+    <string name="productivity">Productivity</string>
+    <string name="_5_element_balance_with_tao_calligraphy">5 Element Balance with Tao Calligraphy</string>
+    <string name="new_capital">NEW</string>
+    <string name="not_napproved">NOT\nAPPROVED</string>
+    <string name="approval_npending">APPROVAL\nPENDING</string>
+    <string name="subscribe_capital">SUBSCRIBE</string>
+    <string name="to_create_nor_co_host_na_room">TO CREATE\nOR CO-HOST\nA ROOM</string>
+
+    <string name="adjust_speed">Adjust Speed</string>
+    <string name="normal">Normal</string>
+    <string name="slower">Slower</string>
+    <string name="faster">Faster</string>
+    <string name="speed_0_5">0.5</string>
+    <string name="speed_0_75">0.75</string>
+    <string name="speed_1_0">1.0</string>
+    <string name="speed_1_5">1.5</string>
+    <string name="speed_2_0">2.0</string>
+    <string name="all_content_not_purchased">You haven\'t purchased single content of playlist, please purchase at least one to play.</string>
+
+    <!--Media controller notification-->
+    <string name="label_pause">Pause</string>
+    <string name="label_play">Play</string>
+    <string name="label_play_pause">Play and pause toggle</string>
+    <string name="label_previous">Previous track</string>
+    <string name="label_next">Next track</string>
+    <string name="expires_on">Expires on</string>
+    <string name="go">GO</string>
+    <string name="your_subscription_expires_on">Your subscription Expired On </string>
+
+    <string name="content_not_load_msg">Unable to load content</string>
+    <string name="dialog_go_back">Go back</string>
+    <string name="dialog_refresh">Refresh</string>
+    <string name="dialog_wait">Wait</string>
+    <string name="remember_me">Remember me</string>
+
+    <string name="user_already_exist">This account already exists. Would you like to log in?</string>
+    <string name="meditate_with_a_breakthrough_wellness">Meditate with a breakthrough wellness technology using <b>oneness art</b></string>
+    <string name="enjoy_a_rich_wellness_library_covering_all_major_areas_of_life">Enjoy a rich <b>wellness library</b> covering all major areas of life</string>
+    <string name="access_wellness_anywhere_anytime">Access wellness  <b>anywhere, anytime</b></string>
+    <string name="download_content_for_wellness_on_the_go">Download content for <b>wellness on the go</b></string>
+    <string name="personalize_your_wellness_journey"><b>Personalize</b> your wellness journey</string>
+    <string name="free_trial">14 Day Free Trial</string>
+    <string name="favourite">Favorite</string>
+    <string name="already_subscribed">Already subscribed?</string>
+    <string name="restore_purchase">Restore Purchase</string>
+    <string name="restore_purchase_underline"><u>Restore Purchase</u></string>
+    <string name="no_subscription_found">No Subscription Found</string>
+    <string name="re_subscribe">Re-Subscribe</string>
+    <string name="save_journal">SAVE &amp; Journal</string>
+
+</resources>

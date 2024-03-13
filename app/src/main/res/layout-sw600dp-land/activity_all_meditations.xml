@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.wellness.AllMeditationsActivity">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshLayout"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleToolbar"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:letterSpacing="-0.02"
+                    android:maxLines="2"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_15ssp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/includes_with_colon"
+                    tools:visibility="visible" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvVideo"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_white_gold_border_22dp"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:text="@string/video"
+                            android:textAllCaps="true"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_7ssp"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGuidedAudio"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/bg_gray_95_radius_22dp"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:text="@string/guided_audio"
+                            android:textAllCaps="true"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_7ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMusic"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/bg_gray_95_radius_22dp"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_14sdp"
+                            android:text="@string/music"
+                            android:textAllCaps="true"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_7ssp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_select_sub_category" />
+
+                <LinearLayout
+                    android:id="@+id/llVideos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCategoryTitle"
+                        style="@style/TextViewJostSemiBoldStyle"
+                        android:maxLines="1"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_10ssp"
+                        tools:text="@string/proceed_to_pay" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvNoVideoFound"
+                        style="@style/TextViewJostBoldStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/no_data_found"
+                        android:textSize="@dimen/_8ssp"
+                        android:visibility="gone"
+                        tools:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvVideos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_20sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="10"
+                        tools:listitem="@layout/item_all_meditations"
+                        tools:visibility="gone"/>
+
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmerVideos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@android:color/transparent"
+                        tools:visibility="visible">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollIndicators="none"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/item_content_list_shimmer" />
+
+                                <include layout="@layout/item_content_list_shimmer" />
+
+                                <include layout="@layout/item_content_list_shimmer" />
+
+                                <include layout="@layout/item_content_list_shimmer" />
+
+                                <include layout="@layout/item_content_list_shimmer" />
+
+                                <include layout="@layout/item_content_list_shimmer" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

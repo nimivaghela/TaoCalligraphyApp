@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="onSelectSoundBackItem"
+            type="com.app.taocalligraphy.ui.meditation_timer.adapter.MeditationBackImageAdapter.OnSelectSoundBackItem" />
+
+        <variable
+            name="soundBackApiResponse"
+            type="com.app.taocalligraphy.models.response.meditation_timer.SoundBackImageApiResponse" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:onClick="@{()->onSelectSoundBackItem.onSelectSoundBackItem(position)}">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_62sdp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            app:layout_constraintDimensionRatio="1:1.76"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/_10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBackgroundImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@color/white" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHostBorder"
+            android:layout_width="@dimen/_62sdp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_tranparent_golden_curve_8dp"
+            app:layout_constraintDimensionRatio="1:1.76"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

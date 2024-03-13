@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerMarginHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <View
+            android:id="@+id/arcViewLeftBottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_left_bottom_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/centerMarginHorizontal" />
+
+        <View
+            android:id="@+id/arcViewLeftTop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_left_top_progress"
+            app:layout_constraintBottom_toBottomOf="@id/centerMarginHorizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_100sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_3sdp"
+                android:alpha="0.7"
+                android:src="@color/gray_95" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circleProgressProgram"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:cpb_background_progressbar_color="@color/gold"
+                app:cpb_background_progressbar_color_direction="bottom_to_top"
+                app:cpb_background_progressbar_width="@dimen/_1sdp"
+                app:cpb_progress="100"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progress_max="100"
+                app:cpb_progressbar_color_direction="bottom_to_top"
+                app:cpb_progressbar_color_end="@color/varden"
+                app:cpb_progressbar_color_start="@color/dandelion"
+                app:cpb_progressbar_width="@dimen/_8sdp"
+                app:cpb_round_border="true" />
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5">
+
+            <LinearLayout
+                android:id="@+id/dateView"
+                android:layout_width="@dimen/_69dp"
+                android:layout_height="@dimen/_69dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_shimmer_light_round"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDay"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="02"
+                    android:textAllCaps="true"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_36sp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMonthDay"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dateView"
+                tools:text="NOV 30" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUserMeditation"
+                        style="@style/TextViewJostRegularStyle"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textAllCaps="true"
+                        android:textColor="@color/driftwood"
+                        android:textSize="@dimen/_36sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:gravity="center"
+                        android:text="/"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_24sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotalMeditation"
+                        style="@style/TextViewJostRegularStyle"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_24sp" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewLatoRegularStyle"
+                    android:gravity="center"
+                    android:text="@string/meditations"
+                    android:textColor="@color/driftwood"
+                    android:textSize="@dimen/_6ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMinutes"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="41"
+                    android:textAllCaps="true"
+                    android:textColor="@color/driftwood"
+                    android:textSize="@dimen/_36sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewLatoRegularStyle"
+                    android:gravity="center"
+                    android:text="@string/minutes"
+                    android:textColor="@color/driftwood"
+                    android:textSize="@dimen/_14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

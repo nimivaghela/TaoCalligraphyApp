@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:background="@drawable/bg_white_top_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ivBackToolbar"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:background="@drawable/bg_toolbar_icon"
+                android:elevation="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:paddingStart="0dp"
+                android:src="@drawable/vd_grey_back_arrow"
+                android:visibility="gone"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolbarRightViews"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cardProfile"
+                app:layout_constraintStart_toEndOf="@id/ivBackToolbar"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ivDownloadToolbar"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/bg_toolbar_icon"
+                    android:elevation="@dimen/_3sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/ivDownloadStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:src="@drawable/vd_download_icon"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circleProgressDownload"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_gravity="center"
+                        android:indeterminate="false"
+                        android:progress="0"
+                        android:progressTint="@color/gold"
+                        app:indicatorColor="@color/gold"
+                        app:indicatorSize="@dimen/_32sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackColor="@color/transparent"
+                        app:trackThickness="@dimen/_3sdp" />
+
+                    <View
+                        android:id="@+id/viewDownload"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvContentFileSize"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@drawable/bg_filter_category"
+                    android:backgroundTint="@color/white"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_8ssp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="@id/ivDownloadToolbar"
+                    app:layout_constraintStart_toStartOf="@id/ivDownloadToolbar"
+                    app:layout_constraintTop_toBottomOf="@id/ivDownloadToolbar" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFav"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:alpha="0.8"
+                    android:layout_marginVertical="@dimen/_3sdp"
+                    android:background="@drawable/bg_toolbar_icon"
+                    android:elevation="@dimen/_3sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_25sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivDownloadToolbar"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/ivFavToolbar"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_gravity="center"
+                        app:lottie_autoPlay="false"
+                        app:lottie_loop="false"
+                        app:lottie_scale="@integer/material_motion_duration_long_1" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ivDeleteToolbar"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginVertical="@dimen/_3sdp"
+                    android:background="@drawable/bg_toolbar_icon"
+                    android:elevation="@dimen/_3sdp"
+                    android:src="@drawable/vd_delete"
+                    android:visibility="gone"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/cardFav"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ivShareToolbar"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginVertical="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/bg_toolbar_icon"
+                    android:elevation="@dimen/_3sdp"
+                    android:src="@drawable/vd_share"
+                    android:visibility="gone"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivDeleteToolbar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ivLikeToolbar"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginVertical="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/bg_toolbar_icon"
+                    android:elevation="@dimen/_3sdp"
+                    android:src="@drawable/ic_vd_dislike"
+                    android:visibility="gone"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivShareToolbar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ivSaveToolbar"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginVertical="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/bg_toolbar_icon"
+                    android:elevation="@dimen/_3sdp"
+                    android:src="@drawable/vd_save"
+                    android:visibility="gone"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivShareToolbar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ivEditToolbar"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginVertical="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/bg_toolbar_icon"
+                    android:elevation="@dimen/_3sdp"
+                    android:src="@drawable/ic_pencil_grey"
+                    android:visibility="gone"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivSaveToolbar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardProfile"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:background="@drawable/bg_toolbar_icon"
+                android:visibility="gone"
+                android:backgroundTint="@color/shimmer_light_50"
+                app:cardCornerRadius="@dimen/_25sdp"
+                app:cardElevation="@dimen/_3sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfileImageToolbar"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_gravity="center"
+                    android:animateLayoutChanges="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_profile_default" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNewJournal"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@drawable/bg_toolbar_icon"
+                android:backgroundTint="@color/gold_semi_light"
+                android:elevation="@dimen/_3sdp"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cardProfile"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_pencil"
+                    android:drawablePadding="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:paddingEnd="@dimen/_15sdp"
+                    android:text="@string/new_journal"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

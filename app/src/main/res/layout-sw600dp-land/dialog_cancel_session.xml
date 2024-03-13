@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_curve_20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostMediumStyle"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/are_you_sure"
+                android:textColor="@color/neutral_900"
+                android:textSize="@dimen/_15ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostBoldStyle"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/clear_mind"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:text="@string/on"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:text="May 22, 2022"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="@string/wll_canceled"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/selector_btn_switch_selector"
+                    android:checked="true"
+                    android:padding="0dp"
+                    android:thumb="@null"
+                    app:track="@null" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="@string/notify_followers"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                app:cardElevation="0dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancelSession"
+                    style="@style/ButtonGoldStyle"
+                    app:backgroundTint="@null"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:fontFamily="@font/font_jost_semi_bold"
+                    app:icon="@drawable/vd_white_calender"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="@string/yes_cancel_it"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSkip"
+                    style="@style/ButtonWhiteStyle"
+                    android:fontFamily="@font/font_jost_regular"
+                    android:background="@drawable/bg_white_curve"
+                    android:text="@string/continue_editing"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_12ssp" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

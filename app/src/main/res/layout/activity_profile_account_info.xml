@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:paddingBottom="@dimen/_50sdp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleToolbar"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:letterSpacing="-0.02"
+                    android:maxLines="1"
+                    android:text="@string/account_info"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_28ssp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_15sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlProfileInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/rlProfilePic"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivUserProfile"
+                                android:layout_width="@dimen/_90sdp"
+                                android:layout_height="@dimen/_90sdp"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_3sdp" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_90sdp"
+                                android:layout_height="@dimen/_90sdp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/bg_semitransparent_95" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTapToChange"
+                                style="@style/TextViewJostBoldStyle"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_18sdp"
+                                android:gravity="center"
+                                android:text="@string/tap_to_change"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvTapToChange"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:src="@drawable/vd_camera"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:id="@+id/ivRemoveProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_vd_remove_profile"
+                                tools:ignore="ContentDescription" />
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tlFirstName"
+                            style="@style/TextInputLayoutMediumBoxStyle"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_toEndOf="@id/rlProfilePic">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etFirstName"
+                                style="@style/EditTextStyle"
+                                android:focusable="true"
+                                android:hint="@string/first_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textVisiblePassword"
+                                android:nextFocusRight="@id/tlLastName" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tlLastName"
+                            style="@style/TextInputLayoutMediumBoxStyle"
+                            android:layout_below="@id/tlFirstName"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_toEndOf="@id/rlProfilePic">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etLastName"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/last_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textVisiblePassword"
+                                android:nextFocusDown="@id/tlEmailAddress" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlEmailAddress"
+                        style="@style/TextInputLayoutMediumBoxStyle"
+                        android:layout_marginTop="-5dp"
+                        app:boxBackgroundColor="@color/shimmer_light">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etEmailAddress"
+                            style="@style/EditTextStyle"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:hint="@string/email_address"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:nextFocusDown="@id/tlPassword"
+                            android:textColor="@color/medium_grey"
+                            tools:ignore="Deprecated"
+                            tools:text="test@gmail.com" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_weight="6"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tlPhoneNumber"
+                            style="@style/TextInputLayoutMediumBoxStyle"
+                            android:layout_toEndOf="@+id/flCountryPicker">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etPhoneNumber"
+                                style="@style/EditTextStyle"
+                                android:digits="+0123456789"
+                                android:hint="@string/mobile"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:maxLength="18"
+                                android:nextFocusDown="@id/tlPassword" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <FrameLayout
+                            android:id="@+id/flCountryPicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                            android:visibility="gone">
+
+                            <com.hbb20.CountryCodePicker
+                                android:id="@+id/countryCodePicker"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_46sdp"
+                                android:layout_marginStart="@dimen/_12sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center_vertical"
+                                app:ccp_autoDetectCountry="true"
+                                app:ccp_clickable="true"
+                                app:ccp_contentColor="@color/secondary_black"
+                                app:ccp_showArrow="false"
+                                app:ccp_showFlag="false"
+                                app:ccp_showNameCode="false"
+                                app:ccp_textSize="@dimen/_14ssp" />
+                        </FrameLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/relRegion"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.58"
+                            android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/ivRegion"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:text="@string/region"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvRegion"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/secondary_black"
+                                    android:textSize="@dimen/_15ssp"
+                                    tools:text="North America" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivRegion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/vd_gray_arrow_down" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/relCountry"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="0.42"
+                            android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                            android:padding="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/ivCountry"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:text="@string/country"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCountry"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="@string/select"
+                                    android:textColor="@color/secondary_black"
+                                    android:textSize="@dimen/_15ssp"
+                                    tools:text="Canada" />
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivCountry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/vd_gray_arrow_down" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlAboutMe"
+                        style="@style/TextInputLayoutMediumBoxStyle"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:longClickable="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etAboutMe"
+                            style="@style/EditTextStyleMultiLine"
+                            android:gravity="top"
+                            android:hint="@string/about_me"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:lines="5"
+                            android:maxHeight="@dimen/_100sdp"
+                            android:minLines="5"
+                            android:nextFocusDown="@id/tlPassword"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:textSize="@dimen/_14ssp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <RelativeLayout
+                            android:id="@+id/relLanguage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                            android:padding="@dimen/_10sdp"
+                            tools:ignore="UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:text="@string/language"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLanguage"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:textColor="@color/secondary_black"
+                                    android:textSize="@dimen/_15ssp"
+                                    tools:text="All" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                app:srcCompat="@drawable/vd_gray_arrow_down" />
+                        </RelativeLayout>
+
+                        <!--<androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/_7sdp"
+                                android:paddingTop="@dimen/_5ssp"
+                                android:paddingEnd="@dimen/_2sdp"
+                                android:paddingBottom="@dimen/_5sdp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:paddingStart="@dimen/_5sdp"
+                                    android:paddingEnd="0dp"
+                                    android:text="@string/language"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_11ssp" />
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spLanguage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/_3sdp"
+                                android:paddingTop="@dimen/_5ssp"
+                                android:paddingEnd="@dimen/_2sdp"
+                                android:paddingBottom="@dimen/_5sdp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="0dp"
+                                    android:text="@string/gender"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_11ssp" />
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spGender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>-->
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="start"
+                        android:text="@string/show_rooms_and_sessions_in_other_languages"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:id="@+id/relYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivYes"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_toEndOf="@+id/tvYes"
+                                android:src="@drawable/vd_status_unselected" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvYes"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_14ssp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_30sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivNo"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_toEndOf="@+id/tvNo"
+                                android:src="@drawable/vd_status_selected" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvNo"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_centerVertical="true"
+                                android:text="@string/no"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_14ssp" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                        android:padding="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:text="@string/gender"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvGender"
+                                style="@style/TextViewJostRegularStyle"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_15ssp"
+                                tools:text="Other" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            app:srcCompat="@drawable/vd_gray_arrow_down" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="start"
+                        android:text="@string/birthdate"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:layout_marginEnd="@dimen/_7sdp"
+                            android:text="@string/we_would_like_to"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBirthdaySet"
+                            style="@style/TextViewJostRegularStyle"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_15ssp"
+                            android:text="@string/set"
+                            android:layout_marginBottom="@dimen/_3sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_gravity="bottom"
+                            />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switchSetBirthdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_gravity="bottom"
+                            android:gravity="bottom"
+                            android:background="@null"
+                            android:button="@drawable/selector_btn_switch_selector"
+                            android:checked="false"
+                            android:thumb="@null"
+                            app:track="@null" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_gravity="bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_7sdp"
+                            android:src="@drawable/vd_gift"
+                            />
+
+                    </LinearLayout>
+
+                    <DatePicker
+                        android:id="@+id/datePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:calendarViewShown="false"
+                        android:datePickerMode="spinner" />
+
+                    <RelativeLayout
+                        android:id="@+id/relAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/bg_shimmer_light_medium_curve_12dp"
+                        android:padding="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:text="@string/age_range"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAge"
+                                style="@style/TextViewJostRegularStyle"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_15ssp"
+                                tools:text="under 29" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            app:srcCompat="@drawable/vd_gray_arrow_down" />
+                    </RelativeLayout>
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:id="@+id/btnSave"-->
+<!--                        style="@style/MaterialGoldButtonStyle"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:layout_marginBottom="@dimen/_50sdp"-->
+<!--                        android:drawableEnd="@drawable/ic_lock"-->
+<!--                        android:text="@string/save" />-->
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/btnSave"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/save">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bg_light_dark_golden_curve" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSave"
+                                style="@style/TextViewJostMediumStyle"
+                                android:text="@string/save"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white_90"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivLockSave"
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/ic_lock"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <!--                        Dont Remove below line we need to add this in phase 2-->
+                        <!--                        android:background="@drawable/bg_light_gray_curve_top_35dp"-->
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:animateLayoutChanges="true"
+                            android:clipToPadding="false"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:paddingVertical="@dimen/_15sdp"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="start"
+                                android:text="@string/public_profile"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/allow_others_to_find_me"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_13ssp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchAllowOthers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:button="@drawable/selector_btn_switch_selector"
+                                    android:checked="false"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtAllowOthersDesc"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_width="match_parent"
+                                android:gravity="start|center_vertical"
+                                android:text="@string/your_profile_will_not_searchable"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <LinearLayout
+                                android:id="@+id/llLink"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_white_curve_gold_border"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_5sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_marginStart="@dimen/_3sdp"
+                                        android:gravity="start"
+                                        android:text="@string/private_profile_link"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvShareContent"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_marginStart="@dimen/_3sdp"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:autoLink="none"
+                                        android:ellipsize="end"
+                                        android:lines="1"
+                                        android:linksClickable="false"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_11ssp"
+                                        tools:text="xxxx://xxxx.xxx/xxxx/xx" />
+                                </LinearLayout>
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnShare"
+                                    style="@style/MaterialGoldButtonStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/share" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginVertical="@dimen/_15sdp"
+                                android:background="@color/shimmer_light" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:gravity="start"
+                                android:text="@string/show_the_following_on_my_profile"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_12ssp"
+                                tools:ignore="TooManyViews" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/birthday"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_13ssp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchBirthday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:button="@drawable/selector_btn_switch_selector"
+                                    android:checked="true"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/about_me"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_13ssp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchAboutMe"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:button="@drawable/selector_btn_switch_selector"
+                                    android:checked="true"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/gender"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_13ssp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchGender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:button="@drawable/selector_btn_switch_selector"
+                                    android:checked="true"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="@string/interests"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_13ssp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchInterest"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:button="@drawable/selector_btn_switch_selector"
+                                    android:checked="true"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+                            </RelativeLayout>
+
+
+<!--                            <com.google.android.material.button.MaterialButton-->
+<!--                                android:id="@+id/btnSaveChanges"-->
+<!--                                style="@style/MaterialGoldButtonStyle"-->
+<!--                                android:layout_marginTop="@dimen/_15sdp"-->
+<!--                                android:layout_marginBottom="@dimen/_5sdp"-->
+<!--                                android:text="@string/save_changes" />-->
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/btnSaveChanges"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:background="@drawable/bg_light_dark_golden_curve"
+                                android:text="@string/save_changes">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/bg_light_dark_golden_curve" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    >
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSaveChanges"
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:text="@string/save_changes"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/white_90"
+                                        android:textSize="@dimen/_13ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivLockSaveChanges"
+                                        android:layout_width="@dimen/_10sdp"
+                                        android:layout_height="@dimen/_12sdp"
+                                        android:src="@drawable/ic_lock"
+                                        android:layout_marginStart="@dimen/_7sdp"
+                                        />
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/mbPreviewPrivateProfile"
+                                style="@style/MaterialWhiteButtonStyle"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:text="@string/preview_my_private_profile"
+                                android:textColor="@color/secondary_black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llChangePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_pale_peach_top_right_curve_border_35dp"
+                            android:clipToPadding="false"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:paddingTop="@dimen/_15sdp"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="start"
+                                android:text="@string/change_password"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tlPassword"
+                                style="@style/TextInputLayoutMediumBoxStyle"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                app:errorEnabled="false"
+                                app:passwordToggleDrawable="@drawable/selector_btn_show_password_selector"
+                                app:passwordToggleEnabled="true">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etPassword"
+                                    style="@style/EditTextStyle"
+                                    android:hint="@string/password"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textPassword" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tlNewPassword"
+                                style="@style/TextInputLayoutMediumBoxStyle"
+                                android:layout_marginTop="10dp"
+                                app:errorEnabled="false"
+                                app:passwordToggleDrawable="@drawable/selector_btn_show_password_selector"
+                                app:passwordToggleEnabled="true">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etNewPassword"
+                                    style="@style/EditTextStyle"
+                                    android:hint="@string/new_password"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textPassword" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/relPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                tools:visibility="visible">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_6sdp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@id/lblPasswordStrength"
+                                    app:cardCornerRadius="@dimen/_10sdp">
+
+                                    <ProgressBar
+                                        android:id="@+id/passwordStrength"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_6sdp"
+                                        android:indeterminate="false"
+                                        android:max="100"
+                                        android:maxHeight="@dimen/_30sdp"
+                                        android:minHeight="@dimen/_30sdp"
+                                        android:progressBackgroundTint="@color/white"
+                                        android:progress="0"
+                                        android:scaleY="2"
+                                        android:shadowRadius="5" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblPasswordStrength"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/_6sdp"
+                                    android:text="@string/password_strength"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_12sdp" />
+                            </RelativeLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tlConfirmPassword"
+                                style="@style/TextInputLayoutMediumBoxStyle"
+                                android:layout_marginTop="10dp"
+                                app:errorEnabled="false"
+                                app:passwordToggleDrawable="@drawable/selector_btn_show_password_selector"
+                                app:passwordToggleEnabled="true">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etConfirmPassword"
+                                    style="@style/EditTextStyle"
+                                    android:hint="@string/confirm_password"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="textPassword" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lblPwdMustMatch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|end"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imgPassword"
+                                    android:layout_width="@dimen/_14sdp"
+                                    android:layout_height="@dimen/_14sdp"
+                                    android:layout_marginEnd="@dimen/_1sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvPwdMustMatch"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/password_must_match"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_12sdp" />
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnChange"
+                                style="@style/MaterialGoldButtonStyle"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginBottom="@dimen/_15sdp"
+                                android:text="@string/change" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

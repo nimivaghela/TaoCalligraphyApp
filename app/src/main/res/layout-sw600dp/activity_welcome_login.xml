@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.welcome_login.WelcomeLoginActivity">
+
+        <ImageView
+            android:id="@+id/ivSignupBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_bg_welcome_login" />
+
+        <ImageView
+            android:id="@+id/ivLoginBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_bg_sign_up" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/blue_gradient_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+        <LinearLayout
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/welcomeTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="0.25" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/welcomeTitle"
+            style="@style/TextViewCormorantBoldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_100dp"
+            android:layout_marginBottom="@dimen/_100dp"
+            android:gravity="start"
+            android:textColor="@color/gold_90"
+            android:textSize="@dimen/_40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emptyView"
+            app:layout_constraintVertical_weight="0.75"
+            tools:text="@string/login" />
+
+        <RelativeLayout
+            android:id="@+id/rlWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/relLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:visibility="visible"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llLoginWithEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:animateLayoutChanges="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardLoginWithEmail"
+                            style="@style/CardViewStyle"
+                            android:layout_marginStart="@dimen/_100dp"
+                            android:layout_marginEnd="@dimen/_100dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnLoginWithEmail"
+                                style="@style/ButtonGoldStyle"
+                                android:background="@drawable/bg_light_dark_golden_curve"
+                                android:text="@string/login_with_email" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cvOrContinue"
+                            style="@style/CardViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_100dp"
+                            android:layout_marginEnd="@dimen/_100dp"
+                            android:elevation="@dimen/_80dp"
+                            app:cardBackgroundColor="@color/shimmer_light_90"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp">
+
+                            <RelativeLayout
+                                android:id="@+id/relOrContinue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblOrContinue"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:paddingTop="@dimen/_16dp"
+                                    android:text="@string/or_continue_with"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_16sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lblOrContinue"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/_16dp"
+                                    android:layout_marginBottom="@dimen/_24dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/btnGmailLogin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingStart="@dimen/_20dp"
+                                        android:paddingEnd="@dimen/_20dp"
+                                        app:srcCompat="@drawable/vd_gmail_icon" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/btnFacebookLogin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingStart="@dimen/_20dp"
+                                        android:paddingEnd="@dimen/_20dp"
+                                        app:srcCompat="@drawable/vd_facebook_icon" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <LinearLayout
+                            android:id="@+id/llSignUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_50dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/lblAccount"
+                                style="@style/TextViewJostRegularStyle"
+                                android:text="@string/don_t_have_an_account"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_18sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSignUp"
+                                style="@style/TextViewJostBoldStyle"
+                                android:paddingStart="@dimen/_10dp"
+                                android:paddingEnd="0dp"
+                                android:text="@string/sign_up_with_underline"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relSignup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:animateLayoutChanges="true"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llSignUpWithEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardSignUpWithEmail"
+                            style="@style/CardViewStyle"
+                            android:layout_marginStart="@dimen/_100dp"
+                            android:layout_marginEnd="@dimen/_100dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnSignUpWithEmail"
+                                style="@style/ButtonGoldStyle"
+                                android:background="@drawable/bg_light_dark_golden_curve"
+                                android:text="@string/signup_with_email" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cvSignupOrContinue"
+                            style="@style/CardViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_100dp"
+                            android:layout_marginEnd="@dimen/_100dp"
+                            android:elevation="@dimen/_80dp"
+                            app:cardBackgroundColor="@color/shimmer_light_80"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp">
+
+                            <RelativeLayout
+                                android:id="@+id/relSignupOrContinue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblSignUpOrContinue"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:paddingTop="@dimen/_16dp"
+                                    android:text="@string/or_continue_with"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_16sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/lblSignUpOrContinue"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/_16dp"
+                                    android:layout_marginBottom="@dimen/_24dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/btnGmailSignUp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingStart="@dimen/_20dp"
+                                        android:paddingEnd="@dimen/_20dp"
+                                        app:srcCompat="@drawable/vd_gmail_icon" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/btnFacebookSignUp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingStart="@dimen/_20dp"
+                                        android:paddingEnd="@dimen/_20dp"
+                                        app:srcCompat="@drawable/vd_facebook_icon" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblLoginAccount"
+                            style="@style/TextViewJostRegularStyle"
+                            android:text="@string/already_have_an_account"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_18sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLogin"
+                            style="@style/TextViewJostBoldStyle"
+                            android:paddingStart="@dimen/_10dp"
+                            android:paddingEnd="0dp"
+                            android:text="@string/login_with_underline"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_18sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

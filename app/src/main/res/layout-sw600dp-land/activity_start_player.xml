@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/llPortraitView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rrMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:keepScreenOn="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/centerMargin"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/topMargin"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.25" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMeditationImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toTopOf="@+id/centerMargin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@drawable/dummy_session_image_dummy_1" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bg_white_gradient_tablet"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="@id/centerMargin"
+                        app:layout_constraintTop_toTopOf="@id/topMargin" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/view_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/ffPlayerView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toTopOf="@id/llMeditationData"
+                        app:layout_constraintDimensionRatio="1:0.6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cardPlayer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_5dp"
+                            android:layout_marginEnd="@dimen/_5dp"
+                            app:cardBackgroundColor="@color/medium_grey"
+                            app:cardCornerRadius="@dimen/_20dp"
+                            app:cardElevation="@dimen/_5dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.exoplayer2.ui.PlayerView
+                                    android:id="@+id/playerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:keep_content_on_player_reset="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:resize_mode="fill"
+                                    app:show_buffering="when_playing"
+                                    app:surface_type="texture_view"
+                                    app:use_artwork="true"
+                                    app:use_controller="false" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivAudioImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:srcCompat="@drawable/ic_dummy_women_bird"
+                                    tools:visibility="gone" />
+
+                                <com.google.android.exoplayer2.ui.SubtitleView
+                                    android:id="@+id/subTitleView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toTopOf="@id/navigationView"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/navigationView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:background="@color/transparent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivSubtitle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_3sdp"
+                                        android:paddingStart="@dimen/_5sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/vd_subtitle" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvCaption"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_3sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_6ssp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/ivMediaSetting"
+                                        app:layout_constraintStart_toEndOf="@id/ivSubtitle"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:text="with Peter Hudoba, MD, Neurosurgeon" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivMediaSetting"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_3sdp"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/ivMediaFullScreen"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/ic_playback_settings_icon" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivMediaFullScreen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_3sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/vd_fullscreen" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMeditationData"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/ffPlayerView"
+                        app:layout_constraintStart_toStartOf="@+id/ffPlayerView"
+                        app:layout_constraintTop_toBottomOf="@+id/ffPlayerView"
+                        app:layout_constraintVertical_bias="0">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="@dimen/_20dp"
+                            app:layout_constraintEnd_toEndOf="@+id/ffPlayerView"
+                            app:layout_constraintStart_toStartOf="@+id/ffPlayerView"
+                            app:layout_constraintVertical_bias="0">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTitle"
+                                style="@style/TextViewCormorantBoldStyle"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_weight="7"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_16ssp"
+                                tools:text="Support Surgery Recovery" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvMeditationVideoPlaylist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="3"
+                                android:orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:itemCount="3" />
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rrPlayerController"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/ffPlayerView"
+                            app:layout_constraintStart_toStartOf="@+id/ffPlayerView"
+                            app:layout_constraintTop_toBottomOf="@+id/llMeditationData"
+                            app:layout_constraintVertical_bias="0">
+
+                            <LinearLayout
+                                android:id="@+id/llSpeedController"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                android:gravity="center_vertical">
+
+                                <FrameLayout
+                                    android:id="@+id/ffBackForwardMedia"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        app:srcCompat="@drawable/vd_left_forward" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostSemiBoldStyle"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:text="15"
+                                        android:textColor="@color/gold"
+                                        android:textSize="@dimen/_6ssp" />
+                                </FrameLayout>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivMediaPlayPlause"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginStart="@dimen/_7sdp"
+                                    android:layout_marginEnd="@dimen/_7sdp"
+                                    app:srcCompat="@drawable/vd_playing" />
+
+                                <FrameLayout
+                                    android:id="@+id/ffMoveForwardMedia"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        app:srcCompat="@drawable/vd_right_forward" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostSemiBoldStyle"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:text="15"
+                                        android:textColor="@color/gold"
+                                        android:textSize="@dimen/_6ssp" />
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/llSlider"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_toEndOf="@id/llSpeedController">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMusicTime"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="center"
+                                    android:text="00:00 / 00:00"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_6ssp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.google.android.material.slider.Slider
+                                    android:id="@+id/sliderVideoProgress"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:value="0"
+                                    android:valueFrom="0.0"
+                                    android:valueTo="100.0"
+                                    app:labelBehavior="floating"
+                                    app:labelStyle="@style/SliderLabel"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/tvMusicTime"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:thumbColor="@color/gold"
+                                    app:trackColorActive="@color/dandelion"
+                                    app:trackColorInactive="@color/medium_grey_50"
+                                    app:trackHeight="@dimen/_2sdp" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llRepeatMode"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_alignParentEnd="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivRepeatVideo"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    app:srcCompat="@drawable/vd_video_repeat" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llUpComingPlaylist"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_white_top_radius_25dp"
+                android:elevation="@dimen/_25sdp"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_7sdp"
+                android:visibility="gone"
+                app:behavior_hideable="false"
+                app:behavior_peekHeight="@dimen/_60sdp"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                tools:visibility="visible">
+
+
+                <View
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_gravity="center"
+                    android:alpha="0.1"
+                    android:background="@drawable/bg_black_radius_100dp" />
+
+                <LinearLayout
+                    android:id="@+id/llUpNextItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/_14sdp"
+                    android:paddingEnd="@dimen/_14sdp"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:src="@drawable/ic_playlist_list" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPlaylistNameCollapse"
+                            style="@style/TextViewJostRegularItalicStyle"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_8ssp"
+                            tools:text="From My Energy Regulation List" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvUpNext"
+                                style="@style/TextViewJostBoldStyle"
+                                android:text="@string/up_next_collan"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_8ssp"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvUpNextPlaylistContentName"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_9ssp"
+                                tools:text="Noon Refresh and Recharge" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llNextPlaylist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:alpha="0.0"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/llBottomSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBottomMediaPlayPause"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/vd_playing" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBottomTitle"
+                            style="@style/TextViewCormorantBoldStyle"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_16ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivBottomMediaPlayPause"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Support Surgery Recovery" />
+
+                        <androidx.constraintlayout.widget.Barrier
+                            android:id="@+id/barrier1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:barrierDirection="bottom"
+                            app:constraint_referenced_ids="tvBottomTitle, ivBottomMediaPlayPause" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBottomMusicTime"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:text="00:00 / 00:00"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_6ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/barrier1" />
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderBottomVideoProgress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:value="0"
+                            android:valueFrom="0.0"
+                            android:valueTo="100.0"
+                            app:labelBehavior="floating"
+                            app:labelStyle="@style/SliderLabel"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tvBottomMusicTime"
+                            app:layout_constraintTop_toBottomOf="@+id/barrier1"
+                            app:thumbColor="@color/gold"
+                            app:trackColorActive="@color/dandelion"
+                            app:trackColorInactive="@color/medium_grey_50"
+                            app:trackHeight="@dimen/_2sdp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:text="@string/up_next"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPlaylistNameExpand"
+                            style="@style/TextViewJostRegularItalicStyle"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_8ssp"
+                            tools:text="From My Energy Regulation List" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvUpNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_10sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/item_playlist_view_list" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:id="@+id/dialogZenMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="?android:attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:ignore="UselessParent"
+            tools:visibility="gone">
+
+            <include
+                android:id="@+id/zenModeView"
+                layout="@layout/dialog_zen_mode_on_off" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </FrameLayout>
+
+</layout>

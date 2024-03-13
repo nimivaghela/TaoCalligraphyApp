@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedAlertData"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@id/btnSetAlarmCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/notificationTitle"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:gravity="start"
+                    android:text="@string/alarm"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_28ssp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostMediumStyle"
+                        android:text="@string/wake_up_meditation"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/alarmSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:background="@null"
+                        android:button="@drawable/selector_btn_switch_selector"
+                        android:checked="true"
+                        android:padding="0dp"
+                        android:thumb="@null"
+                        app:track="@null" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/fmAlarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/llAlertData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TimePicker
+                            android:id="@+id/timePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:timePickerMode="spinner"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:text="@string/repeat"
+                            android:textAllCaps="true"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_13ssp" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_20sdp">
+
+                            <LinearLayout
+                                android:id="@+id/llSunday"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/bg_white_light_grey_circle"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.12">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSunday"
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:text="@string/sunday"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_12ssp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llMonday"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/bg_white_light_grey_circle"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toStartOf="@id/llTuesday"
+                                app:layout_constraintStart_toEndOf="@id/llSunday"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.12">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMonday"
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:text="@string/monday"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_12ssp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llTuesday"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/bg_white_light_grey_circle"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toStartOf="@id/llWednesday"
+                                app:layout_constraintStart_toEndOf="@id/llMonday"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.12">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvTuesday"
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:text="@string/tuesday"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_12ssp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llWednesday"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/bg_white_light_grey_circle"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toStartOf="@id/llThursday"
+                                app:layout_constraintStart_toEndOf="@id/llTuesday"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.12">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvWednesday"
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:text="@string/wednesday"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_12ssp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llThursday"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/bg_white_light_grey_circle"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toStartOf="@id/llFriday"
+                                app:layout_constraintStart_toEndOf="@id/llWednesday"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.12">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvThursday"
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:text="@string/thursday"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_12ssp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llFriday"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/bg_white_light_grey_circle"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toStartOf="@id/llSaturday"
+                                app:layout_constraintStart_toEndOf="@id/llThursday"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.12">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFriday"
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:text="@string/friday"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_12ssp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llSaturday"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:background="@drawable/bg_white_light_grey_circle"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/llFriday"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.12">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSaturday"
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:text="@string/sunday"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_12ssp" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMeditation"
+                                style="@style/TextViewJostRegularStyle"
+                                android:text="@string/meditation"
+                                android:textAllCaps="true"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_13ssp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMeditateTitle"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_width="0dp"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:ellipsize="end"
+                                android:gravity="end"
+                                android:maxLines="1"
+                                android:text="@string/set_alarm"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_13ssp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/tvMeditation"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_20sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/ivMeditationImage"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:scaleType="centerCrop"
+                                android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"
+                                app:cornerFamily="rounded"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:0.55"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_dummy_morning_freshen_up" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnChangeMeditation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_30sdp"
+                                android:background="@drawable/bg_black_radius_100dp"
+                                android:backgroundTint="@color/white_80"
+                                android:fontFamily="@font/font_jost_medium"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="@string/change"
+                                android:textAllCaps="true"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="gone"
+                                app:backgroundTint="@color/white_80"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSetAlarmCard"
+            style="@style/CardViewStyle"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSetAlarm"
+                style="@style/ButtonGoldStyle"
+                android:alpha="0.5"
+                android:background="@drawable/bg_gold_semi_light_bottom_curve_5dp"
+                android:enabled="false"
+                android:fontFamily="@font/font_jost_medium"
+                android:text="@string/set_alarm"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_12ssp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

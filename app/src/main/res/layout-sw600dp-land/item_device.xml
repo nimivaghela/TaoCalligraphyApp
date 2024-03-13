@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/bg_white_left_curve"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_5sdp"
+        android:paddingStart="@dimen/_20dp"
+        android:paddingEnd="@dimen/_30dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_54sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgSystemType"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="@id/tvSystemType"
+                app:layout_constraintStart_toStartOf="@id/tvSystemType"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_apple" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSystemType"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgSystemType"
+                tools:text="iPhone" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="@id/imgSystemType"
+                app:layout_constraintEnd_toStartOf="@id/tvLogoutProfile"
+                app:layout_constraintStart_toEndOf="@id/imgSystemType"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/tvLocation"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sp"
+                    tools:text="Ahmedabad, 380058" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBrowserType"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/tvLocation"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocation"
+                    tools:text="Android Phone"
+                    tools:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLastUsed"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_0dp"
+                    android:layout_below="@id/tvBrowserType"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvBrowserType"
+                    tools:text="Last Used : 1 hour ago" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLogoutProfile"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="wrap_content"
+                android:background="@drawable/bg_light_gray_border_30dp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:text="@string/logout"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvSystemType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imgSystemType" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

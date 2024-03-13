@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearMain"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_10sdp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/shimmer_light"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_60dp"
+                        android:layout_height="@dimen/_60dp"
+                        android:src="@drawable/ic_tao_logo_small" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:text="@string/zen_mode_on"
+                            android:textColor="@color/dark_gold"
+                            android:textSize="@dimen/_14sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:text="@string/zen_mode_instruction"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_14sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnDontShowAgain"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_light_grey_curve"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:text="@string/do_not_show_again"
+                        android:textAllCaps="true"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/iv_close_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/vd_close_button_grey" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_gravity="bottom"
+                android:background="@color/gold" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</layout>

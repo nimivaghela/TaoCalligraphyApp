@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.chip.Chip
+        style="@style/CustomChipChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:fontFamily="@font/font_jost_regular"
+        android:textSize="@dimen/_7ssp"
+        app:chipBackgroundColor="@color/selector_chip"
+        app:chipEndPadding="@dimen/_10sdp"
+        app:chipMinTouchTargetSize="0dp"
+        app:chipStartPadding="@dimen/_10sdp"
+        app:chipStrokeColor="@color/gold_semi_light"
+        app:chipStrokeWidth="@dimen/_1sdp"
+        app:textEndPadding="@dimen/_5sdp"
+        app:textStartPadding="@dimen/_5sdp"
+        tools:text="Breathwork" />
+
+</layout>

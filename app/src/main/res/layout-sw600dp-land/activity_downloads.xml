@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ffDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_download_bg" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_white_gradient_download" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_100dp"
+                        android:layout_marginEnd="-70dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/vd_calligraphy_watermark" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:layout_marginBottom="@dimen/_30dp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/clMain"
+                        app:shadowMarginBottom="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:id="@+id/llDeleteSelectedDownload"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@drawable/vd_delete_icon_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:text="@string/delete_selected"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_8ssp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMain"
+                        android:layout_width="@dimen/_210sdp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|start"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:animateLayoutChanges="true"
+                        android:gravity="start|center"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/titleView"
+                            style="@style/TextViewCormorantBoldStyle"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:letterSpacing="-0.02"
+                            android:maxLines="1"
+                            android:text="@string/downloads"
+                            android:textColor="@color/gold_90"
+                            android:textSize="@dimen/_15ssp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotalMb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/font_jost_regular"
+                            android:gravity="start"
+                            android:letterSpacing="-0.0"
+                            android:maxLines="1"
+                            android:text="@string/total_download_size"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_7ssp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@id/titleView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/titleView" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/bg_white_top_radius_30"
+                            android:paddingTop="@dimen/_5sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/titleView"
+                            tools:visibility="visible">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_25sdp"
+                                android:animateLayoutChanges="true">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvDownloads"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:clipToPadding="false"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/_20sdp"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:listitem="@layout/item_download_list" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvNotFound"
+                                    style="@style/TextViewJostSemiBoldStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_16sdp"
+                                    android:gravity="center"
+                                    android:paddingBottom="@dimen/_50sdp"
+                                    android:text="@string/no_download_found_for_category"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_8ssp"
+                                    android:visibility="gone"
+                                    tools:visibility="visible" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/viewEditDownloads"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:paddingEnd="@dimen/_5sdp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvEditDownload"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="0.4"
+                                    android:paddingTop="@dimen/_3sdp"
+                                    android:paddingBottom="@dimen/_3sdp"
+                                    android:text="@string/edit"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_7ssp" />
+
+                                <LinearLayout
+                                    android:id="@+id/llCategoryFilter"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:animateLayoutChanges="true"
+                                    android:background="@drawable/bg_white_curve_15dp_shimmer_border"
+                                    android:orientation="vertical"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingTop="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:paddingBottom="@dimen/_5sdp">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rrAllCategories"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvCurrentCategoryName"
+                                            style="@style/TextViewJostMediumStyle"
+                                            android:layout_width="match_parent"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toStartOf="@id/ivArrow"
+                                            android:ellipsize="end"
+                                            android:gravity="center"
+                                            android:maxLines="1"
+                                            android:text="@string/all_categories"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_6ssp" />
+
+                                        <ImageView
+                                            android:id="@+id/ivArrow"
+                                            android:layout_width="@dimen/_8sdp"
+                                            android:layout_height="@dimen/_4sdp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/vd_down_arrow_gold" />
+
+                                    </RelativeLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llCategoryList"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/rvCategory"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="0.4"
+                                    android:animateLayoutChanges="true"
+                                    android:background="@drawable/bg_white_curve_15dp_shimmer_border"
+                                    android:orientation="vertical"
+                                    android:paddingTop="@dimen/_5sdp"
+                                    android:paddingBottom="@dimen/_5sdp">
+
+                                    <LinearLayout
+                                        android:id="@+id/llSortByFilter"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvSortBy"
+                                            style="@style/TextViewJostMediumStyle"
+                                            android:gravity="center"
+                                            android:paddingStart="@dimen/_10sdp"
+                                            android:text="@string/sort_by"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_6ssp" />
+
+                                        <ImageView
+                                            android:id="@+id/ivArrowSort"
+                                            android:layout_width="@dimen/_8sdp"
+                                            android:layout_height="@dimen/_4sdp"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:src="@drawable/vd_down_arrow_gold" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llSortByList"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:background="@color/shimmer_light" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvSortByMostRecent"
+                                            style="@style/TextViewJostMediumStyle"
+                                            android:layout_width="match_parent"
+                                            android:layout_gravity="center"
+                                            android:ellipsize="end"
+                                            android:gravity="center"
+                                            android:maxLines="1"
+                                            android:paddingStart="@dimen/_10sdp"
+                                            android:paddingTop="@dimen/_5sdp"
+                                            android:paddingEnd="@dimen/_10sdp"
+                                            android:paddingBottom="@dimen/_5sdp"
+                                            android:text="@string/most_recent"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_6ssp" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.5dp"
+                                            android:background="@color/shimmer_light" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvSortByAToZ"
+                                            style="@style/TextViewJostMediumStyle"
+                                            android:layout_width="match_parent"
+                                            android:layout_gravity="center"
+                                            android:ellipsize="end"
+                                            android:gravity="center"
+                                            android:maxLines="1"
+                                            android:paddingStart="@dimen/_10sdp"
+                                            android:paddingTop="@dimen/_5sdp"
+                                            android:paddingEnd="@dimen/_10sdp"
+                                            android:text="@string/a_z"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_6ssp" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rlNoDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    tools:visibility="gone">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/startMargin"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.2" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/centerMargin"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.6" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_download_empty"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/startMargin" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_100dp"
+                        android:layout_marginEnd="-70dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/vd_calligraphy_watermark" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:rotation="180"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_white_right_gradient"
+                        app:layout_constraintEnd_toStartOf="@id/centerMargin"
+                        app:layout_constraintStart_toStartOf="@id/startMargin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleDownload"
+                        style="@style/TextViewCormorantBoldStyle"
+                        android:layout_width="@dimen/_210sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:letterSpacing="-0.02"
+                        android:maxLines="1"
+                        android:text="@string/downloads"
+                        android:textColor="@color/gold_90"
+                        android:textSize="@dimen/_15ssp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/titleDownload"
+                        app:shadowMarginBottom="@dimen/_5sdp">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_200sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_white_curve"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingVertical="@dimen/_30sdp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/vd_download_gold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="@string/no_download"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/btnDownloadFromFavourites"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@drawable/bg_white_curve"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardElevation="@dimen/_5sdp"
+                                app:shadowMarginBottom="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/bg_white_curve" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvFindDownloadFavourites"
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:text="@string/download_your_favorites"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/secondary_black"
+                                        android:textSize="@dimen/_7ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivLockDownloadFavourites"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_7sdp"
+                                        android:src="@drawable/ic_lock_gray" />
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/btnFindSomethingNew"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:background="@drawable/bg_white_curve"
+                                android:text="@string/save"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:cardElevation="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/bg_white_curve" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvFindSomeThing"
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:text="@string/find_something_new"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/secondary_black"
+                                        android:textSize="@dimen/_7ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivLockFindSomeThing"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_7sdp"
+                                        android:src="@drawable/ic_lock_gray" />
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

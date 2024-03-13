@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.wellness.BookConsultationActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_50sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_marginEnd="@dimen/_20sdp">
+
+                    <include
+                        android:id="@+id/toolbar"
+                        layout="@layout/toolbar" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:weightSum="1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clSecond"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:translationY="-10dp"
+                        app:layout_constraintBottom_toBottomOf="@id/clThird"
+                        app:layout_constraintEnd_toStartOf="@id/clThird"
+                        app:layout_constraintTop_toBottomOf="@id/clThird"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@android:color/transparent"
+                            android:padding="@dimen/_2sdp"
+                            android:scaleType="fitXY"
+                            android:theme="@style/ShapeAppearanceOverlay_Round"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/dummy_master_cecilia"
+                            app:strokeColor="@color/gold"
+                            app:strokeWidth="@dimen/_1sdp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clFirst"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/clSecond"
+                        app:layout_constraintEnd_toStartOf="@id/clSecond"
+                        app:layout_constraintTop_toBottomOf="@id/clSecond"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:elevation="@dimen/_1sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:scaleType="fitXY"
+                            android:theme="@style/ShapeAppearanceOverlay_Round"
+                            app:cornerFamily="rounded"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/dummy_master_david"
+                            app:strokeColor="@color/gold"
+                            app:strokeWidth="@dimen/_1sdp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clThird"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        app:layout_constraintBottom_toTopOf="@id/ivWorld"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:elevation="@dimen/_1sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:scaleType="fitXY"
+                            android:theme="@style/ShapeAppearanceOverlay_Round"
+                            app:cornerFamily="rounded"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/dummy_master_francisco"
+                            app:strokeColor="@color/gold"
+                            app:strokeWidth="@dimen/_1sdp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clForth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:translationY="-10dp"
+                        app:layout_constraintBottom_toBottomOf="@id/clThird"
+                        app:layout_constraintStart_toEndOf="@id/clThird"
+                        app:layout_constraintTop_toBottomOf="@id/clThird"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:elevation="@dimen/_1sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:scaleType="fitXY"
+                            android:theme="@style/ShapeAppearanceOverlay_Round"
+                            app:cornerFamily="rounded"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/dummy_master_david"
+                            app:strokeColor="@color/gold"
+                            app:strokeWidth="@dimen/_1sdp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clFifth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/clForth"
+                        app:layout_constraintStart_toEndOf="@id/clForth"
+                        app:layout_constraintTop_toBottomOf="@id/clForth"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:elevation="@dimen/_1sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:scaleType="fitXY"
+                            android:theme="@style/ShapeAppearanceOverlay_Round"
+                            app:cornerFamily="rounded"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/dummy_master_cecilia"
+                            app:strokeColor="@color/gold"
+                            app:strokeWidth="@dimen/_1sdp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivWorld"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/ic_world" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/not_do_it_alone"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/you_have_us"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/worldwide_help_you"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHelpYou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_coaches_help_info_list" />
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSaveAndJournal"
+                        style="@style/ButtonWhiteStyle"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@drawable/bg_white_curve_gold_border"
+                        android:text="@string/login_to_start_booking"
+                        android:textAllCaps="false"
+                        android:textColor="@color/dark_grey" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_white_top_gradient"
+            android:visibility="gone" />
+    </FrameLayout>
+</layout>

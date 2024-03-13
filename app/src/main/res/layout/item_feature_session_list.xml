@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_dummy_feature_session" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_transparent_bg_featured_session" />
+
+
+            <RelativeLayout
+                android:id="@+id/llDate"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_gold_without_border_12dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLiveSessionLabel"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/bg_red_curve_top"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/live"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8ssp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLiveSessionDay"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:text="SAT"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_10ssp"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSessionDay"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/tvLiveSessionLabel"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="27"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSessionDateGold"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/tvLiveSessionDay"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="27"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_14ssp"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

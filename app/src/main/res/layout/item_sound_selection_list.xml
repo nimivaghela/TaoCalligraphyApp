@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onSelectSoundItem"
+            type="com.app.taocalligraphy.ui.meditation_timer.adapter.MeditationMusicAdapter.OnSelectSoundItem" />
+
+        <variable
+            name="soundApiResponse"
+            type="com.app.taocalligraphy.models.response.meditation_timer.SoundApiResponse.SoundList" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_white_gold_border"
+        android:gravity="center_vertical"
+        android:onClick="@{()->onSelectSoundItem.onSelectSoundItem(position)}"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgTone"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_music" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSoundName"
+            style="@style/TextViewJostBoldStyle"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@{soundApiResponse.name}"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/_12ssp"
+            tools:text="Eleanor Pena" />
+
+
+    </LinearLayout>
+</layout>

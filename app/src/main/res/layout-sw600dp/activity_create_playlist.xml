@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/startMargin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/startMargin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endMargin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/endMargin" />
+
+            <include
+                android:id="@+id/mToolbar"
+                layout="@layout/view_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_60sdp"
+                app:layout_constraintEnd_toEndOf="@id/endMargin"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintTop_toBottomOf="@+id/mToolbar">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitleToolbar"
+                        style="@style/TextViewCormorantBoldStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="-10dp"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:letterSpacing="-0.02"
+                        android:maxLines="1"
+                        android:text="@string/create_playlist"
+                        android:textColor="@color/gold_90"
+                        android:textSize="@dimen/_15ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tlSessionName"
+                    style="@style/TextInputLayoutMediumBoxStyle"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:errorEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etSessionName"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name_your_list"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="255"
+                        android:textSize="@dimen/_8ssp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_20sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/llTitle"
+                        style="@style/TextViewJostSemiBoldStyle"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:text="@string/meditations"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeRecyclerView
+                            android:id="@+id/rvPlaylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fillViewport="true"
+                            android:orientation="vertical"
+                            app:item_layout="@layout/item_playlist_meditations_list"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="3" />
+
+                    </LinearLayout>
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBarForResult"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardSave"
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/_45sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_45sdp"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="false">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSave"
+                            style="@style/ButtonGoldStyle"
+                            android:background="@drawable/bg_light_dark_golden_curve"
+                            android:text="@string/save" />
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

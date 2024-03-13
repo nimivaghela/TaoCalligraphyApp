@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.app.taocalligraphy",
+  "variantName": "developDebug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 8,
+      "versionName": "1.0.0-a.13",
+      "outputFile": "app-develop-debug.apk"
+    }
+  ],
+  "elementType": "File"
+}

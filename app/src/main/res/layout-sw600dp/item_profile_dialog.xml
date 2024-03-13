@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/fmRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_13sdp"
+
+        android:layout_marginTop="@dimen/_2sdp"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.loopeer.shadow.ShadowView
+                    style="@style/ShadowViewProfileDialogStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-6dp"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    app:backgroundColor="@color/white"
+                    app:cornerRadiusTL="5600dp"
+                    app:cornerRadiusTR="5600dp"
+                    app:shadowMarginLeft="@dimen/_5sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/relProfile"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivProfileImageProfile"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_profile_default"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                </com.loopeer.shadow.ShadowView>
+
+
+                <ImageView
+                    style="@style/ShadowViewProfileImageStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/ic_subtract" />
+
+
+            </LinearLayout>
+
+            <com.loopeer.shadow.ShadowView
+                style="@style/ShadowViewProfileDialogStyle"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="wrap_content"
+                app:backgroundColor="@color/white"
+                app:cornerRadiusBL="@dimen/_12sdp"
+                app:cornerRadiusBR="@dimen/_12sdp"
+                app:cornerRadiusTR="@dimen/_12sdp"
+                app:shadowMarginBottom="@dimen/_4sdp"
+                app:shadowMarginLeft="@dimen/_5sdp"
+                app:shadowMarginRight="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_profile_gray_02"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProfileProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_profile_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_17sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/profile"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvChatProfile"
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_width="match_parent"
+                            android:drawableStart="@drawable/drawable_chat_icon"
+                            android:drawablePadding="@dimen/_14sdp"
+                            android:gravity="center_vertical"
+                            android:paddingStart="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_12sdp"
+                            android:text="@string/chat"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_13ssp" />
+
+
+                        <TextView
+                            android:id="@+id/tvChatBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_18sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/bg_red_circle_chat_badge"
+                            android:fontFamily="@font/font_jost_medium"
+                            android:paddingStart="@dimen/_6sdp"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:paddingEnd="@dimen/_6sdp"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"
+                            tools:text="9+" />
+                    </FrameLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPlaylistsProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_playlist_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/playlists"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDownloadProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_downloads_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/downloads"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvJournalProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_journal_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/journal"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCalendarProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_calender_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/calendar"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMeditationTimerProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_meditation_timer_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/meditation_timer"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCommunityProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_community_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/community"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSettingProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_settings_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/settings"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStatsProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_stats_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/stats"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHistoryProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_history_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:text="@string/history"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLogoutProfile"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:drawableStart="@drawable/drawable_logout_icon"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_15sdp"
+                        android:text="@string/logout"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13ssp" />
+
+                </LinearLayout>
+            </com.loopeer.shadow.ShadowView>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

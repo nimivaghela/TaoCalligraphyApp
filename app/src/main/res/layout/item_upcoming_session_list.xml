@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rrMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/flSessionHost"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMainPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_dummy_host_image" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHostLiveLabel"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/bg_red_curve_bottom_8dp"
+                android:gravity="center"
+                android:text="@string/live"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHostBorder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_tranparent_golden_curve_8dp"
+                android:scaleType="fitXY" />
+
+            <View
+                android:id="@+id/viewShimmerBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/shimmer_dark"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSessionMedia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp"
+                app:srcCompat="@drawable/vd_session_media" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/llSessionInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@id/llSessionLogoArrow"
+            android:layout_toEndOf="@id/flSessionHost"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTime"
+                style="@style/TextViewJostRegularStyle"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="3:00 – 4:00 PM"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_10ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCompleted"
+                style="@style/TextViewJostRegularStyle"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/completed_capital"
+                android:textColor="@color/light_green"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/TextViewJostMediumStyle"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/breathwork_for_boosting_energy"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubTitle"
+                style="@style/TextViewJostRegularStyle"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="with Harsha"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_10ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvYouAreHosting"
+                style="@style/TextViewJostMediumStyle"
+                android:drawableStart="@drawable/vd_session_host_icon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/you_are_hosting"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSessionLogoArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSessionByTaoSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_15sdp"
+                app:srcCompat="@drawable/vd_tao_session_logo" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/vd_grey_right_side_arrow" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

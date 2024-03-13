@@ -1,0 +1,505 @@
+﻿1
+00:00:50,616 --> 00:00:53,787
+♪ <i>Damas y caballeros, este es el ♪
+♪ momento que estaban esperando.</i> ♪
+
+2
+00:00:56,498 --> 00: 01:00,342
+♪ <i>He estado buscando en la oscuridad, tu sudor ♪
+♪ empapando el suelo.</i> ♪
+
+3
+00:01:02,882 --> 00:01:05,965
+♪ <i>Y enterrado en tus huesos hay ♪
+♪ un dolor que no puedes ignorar.</i> ♪
+
+4
+00:01:06,301 --> 00:01:12,789
+♪ <i>Tomando tu aliento, robando tu mente. ♪
+♪ Y todo lo que era real queda atrás.</i> ♪
+
+5
+00:01:12,973 --> 00:01:16,055
+♪ <i>No luches, viene ♪
+♪ por ti, corriendo hacia ti .</i> ♪
+
+6
+00:01:16,103 --> 00:01:19,147
+♪ <i>Es solo este momento, no ♪
+♪ importa lo que viene después.</i> ♪
+
+7
+00:01:19,270 --> 00:01:22,274
+♪ <i>Tu sueño de fiebre, no puede ♪
+♪ lo ves cada vez más cerca.</i> ♪
+
+8
+00:01:22,403 --> 00:01:25,406
+♪ <i> Solo ríndete porque ♪
+♪ sientes que el sentimiento te domina.</i> ♪
+
+9
+00:01:25,530 --> 00:01:28,958
+♪ <i>Es fuego, es libertad, ♪
+♪ se está inundando.</ i> ♪
+
+10
+00:01:28,960 --> 00:01:31,790
+♪ <i>Es un predicador en el púlpito ♪
+♪ y encontrarás devoción.</i> ♪
+
+11
+00:01:31,792 --> 00:01:35,950
+♪ <i>Algo se está rompiendo en el ladrillo de ♪
+♪ cada pared que contiene todo lo que sabes,</i> ♪
+
+12
+00:01:36,042 --> 00:01:38,544
+♪ <i> así que dime, ¿quieres ir?</i> ♪
+
+13
+00:01:38,668 --> 00:01:41,715
+♪ <i>Donde está cubierto de ♪
+♪ todas las luces de colores.</i> ♪
+
+14
+00: 01:41,839 --> 00:01:44,174
+♪ <i>Donde los fugitivos ♪
+♪ corren por la noche.</i> ♪
+
+15
+00:01:44,298 --> 00:01:47,469
+♪ <i>Lo imposible se hace realidad, ♪
+♪ se está apoderando de ti.</i> ♪
+
+16
+00:01 :47,593 --> 00:01:50,225
+♪ <i>Oh, este es el mejor espectáculo.</i> ♪
+
+17
+00:01:50,597 --> 00:01:53,729
+♪ <i>Lo encendemos, no bajaremos.</i> ♪
+
+18
+00:01:53,853 --> 00:01:56,355
+♪ <i>Y el sol no puede detenernos ahora.</i> ♪
+
+19
+00:01: 56,603 --> 00:01:59,567
+♪ <i>Ver cómo se hace realidad, ♪
+♪ te está dominando.</i> ♪
+
+20
+00:01:59,691 --> 00:02:02,487
+♪ <i>Oh, este es el mejor espectáculo.</i> ♪
+
+21
+00:02:03,238 --> 00:02:09,044
+♪ <i>Es todo lo que siempre quisiste. ♪
+♪ Es todo lo que necesitas.</i> ♪
+
+22
+00:02:09,246 --> 00:02:14,861
+♪ <i>Y está justo frente a ti. ♪
+♪ Aquí es donde quieres estar.</i> ♪
+
+23
+00:02:15,168 --> 00:02:21,255
+♪ <i>Es todo lo que siempre quisiste. ♪
+♪ Es todo lo que necesitas.</i> ♪
+
+24
+00:02:21,258 --> 00:02:27,103
+♪ <i>Y está justo frente a ti. ♪
+♪ Aquí es donde quieres estar.</i> ♪
+
+25
+00:02:27,721 --> 00:02:33,780
+♪ <i>Es todo lo que siempre quisiste ♪
+♪ Es todo lo que siempre necesitas.</i> ♪
+
+26
+00:02:33,813 --> 00:02:37,669
+♪ <i>Y está justo frente a ti.</i> ♪
+
+27
+00:02:37,671 --> 00:02:41,240
+♪ <i> Aquí es donde quieres estar.</i> ♪
+
+28
+00:02:41,697 --> 00:02:45,156
+♪ <i>Es todo lo que siempre quisiste.</i> ♪
+
+29
+00:02:45,493 --> 00:02:49,036
+♪ <i>Es todo lo que necesitas.</i> ♪
+
+30
+00:02:49,160 --> 00:02:51,955
+♪ <i>Y está justo frente a ti.</i > ♪
+
+31
+00:02:55,751 --> 00:02:58,507
+<i>Entiendo, sí. Muchas gracias
+, Sr. Jeffrey. Gracias.</i>
+
+32
+00:02:58,631 --> 00:03:00,633
+<i>Tienes el dinero
+al final del día.</i>
+
+33
+00:03:03,012 --> 00: 03:04,305
+Vamos.
+
+34
+00:03:05,611 --> 00:03:08,225
+Phineas, date prisa. Vamos
+a perder el tren.
+
+35
+00:03:14,941 --> 00:03:16,822
+Párate derecho.
+
+36
+00:03:17,762 --> 00:03:20,480
+Limpia esa porquería.
+
+37
+00:03:23,198 --> 00:03:24,615
+<i>Sigue así.</i>
+
+38
+00:03:27,118 --> 00:03:28,996
+<i>Brazo extendido, codo hacia afuera.</i >
+
+39
+00:03:31,249 --> 00:03:33,553
+<i>Beba y nunca sorba.</i>
+
+40
+00:03:37,213 --> 00:03:40,677
+<i>Empiece aquí, con el brazo extendido ...</i>
+
+41
+00:03:40,801 --> 00:03:42,218
+<i>codo hacia afuera.</i>
+
+42
+00:03:43,011 --> 00:03:47,411
+<i>Mantenga su nivel de copa.
+Baja tu taza.</i>
+
+43
+00:03:48,353 --> 00:03:52,340
+<i>¿Lo hacemos de nuevo?</i>
+
+44
+00:03:53,314 --> 00:03:57,785
+< i> Brazo extendido, codo afuera.
+Con gracia.</i>
+
+45
+00:04:02,808 --> 00:04:04,450
+Charity, ven aquí.
+
+46
+00:04:13,804 --> 00:04:18,400
+Tu vestido. ¿Es así como te
+hemos enseñado a comportarte?
+
+47
+00:04:19,427 --> 00:04:21,608
+Es mi culpa, señor.
+
+48
+00:04:21,808 --> 00:04:23,759
+La hice reír.
+
+49
+00:04:23,761 --> 00:04:26,393
+Bueno, gracias
+por tu honestidad.
+
+50
+00:04:29,229 --> 00:04:31,732
+Aléjate de mi hija.
+
+51
+00:04:53,756 --> 00:04:56,636
+- ¿Cómo saliste?
+- La ventana.
+
+52
+00:04:59,430 --> 00:05:02,012
+Papá me envía
+a terminar la escuela.
+
+53
+00:05:02,889 --> 00:05:05,388
+No sé cuál será mi futuro.
+
+54
+00:05:06,508 --> 00:05:07,676
+Sí.
+
+55
+00:05:09,648 --> 00:05:12,776
+♪ <i>Cierro los ojos ♪
+♪ y puedo ver.</i> ♪
+
+56
+00:05:12,945 --> 00:05:16,736
+♪ < i>El mundo que ♪
+♪ me está esperando.</i> ♪
+
+57
+00:05:16,865 --> 00:05:19,451
+♪ <i>Al que llamo mío.</i> ♪
+
+58
+00:05 :23,120 --> 00:05:26,160
+♪ <i>A través de la oscuridad, ♪
+♪ a través de la puerta</i> ♪
+
+59
+00:05:26,360 --> 00:05:29,400
+♪ <i>A través de donde nadie ♪
+♪ estado antes</i> ♪
+
+60
+00:05:30,335 --> 00:05:33,337
+♪ <i>pero se siente como en casa.</i> ♪
+
+61
+00:05:35,925 --> 00:05 :40,421
+♪ <i>Pueden decir, pueden ♪
+♪ decir que suena loco.</i> ♪
+
+62
+00:05:41,931 --> 00:05:46,937
+♪ <i>Pueden decir, pueden ♪
+♪ Di que he perdido la cabeza.</i> ♪
+
+63
+00:05:48,647 --> 00:05:54,747
+♪ <i>No me importa, no me ♪
+♪ me importa, así que llámame loco .</i> ♪
+
+64
+00:05:54,947 --> 00:05:59,410
+♪ <i>Podemos vivir en un mundo ♪
+♪ que diseñamos</i> ♪
+
+65
+00:06:01,661 --> 00 :06:04,456
+♪ <i>Porque todas las noches me acuesto en la cama.</i> ♪
+
+66
+00:06:04,580 --> 00:06:07,920
+♪ <i>Los colores más brillantes ♪
+♪ llenan mi cabeza.< /i> ♪
+
+67
+00:06: 08,044 --> 00:06:12,049
+♪ <i>Un millón de sueños ♪
+♪ me mantienen despierto.</i> ♪
+
+68
+00:06:14,635 --> 00:06:17,515
+♪ <i>Pienso en qué ♪
+♪ el mundo podría ser.</i> ♪
+
+69
+00:06:17,639 --> 00:06:20,641
+♪ <i>Una visión del que veo.</i> ♪
+
+70
+00:06:20,765 - -> 00:06:26,524
+♪ <i>Un millón de sueños es ♪
+♪ todo lo que se necesita.</i> ♪
+
+71
+00:06:27,024 --> 00:06:31,400
+♪ <i>Un millón de sueños para el ♪
+♪ mundo que vamos a hacer.</i> ♪
+
+72
+00:06:38,368 --> 00:06:42,665
+♪ <i>Pueden decir, pueden ♪
+♪ decir que todo suena loco.</i> ♪
+
+73
+00:06:44,543 --> 00:06:48,380
+♪ <i>Pueden decir, pueden ♪
+♪ decir que hemos perdido la cabeza.</i> ♪
+
+74
+00:06:48,382 --> 00 :06:50,344
+¡Caridad!
+
+75
+00:06:51,465 --> 00:06:55,409
+♪ <i>No me importa, no me importa ♪
+♪ si nos llaman locos.</i> ♪
+
+76
+00:06:57,558 -- > 00:07:03,521
+♪ <i>huye a un mundo ♪
+♪ que diseñamos.</i> ♪
+
+77
+00:07:03,920 --> 00:07:06,632
+♪ <i>Porque todas las noches me acuesto cama.</i> ♪
+
+78
+00:07:06,756 --> 00:07:09,970
+♪ <i>Los colores más brillantes llenan mi cabeza.</i> ♪
+
+79
+00:07:10,095 --> 00:07: 15,101
+♪ <i>Un millón de sueños ♪
+♪ me mantienen despierto.</i> ♪
+
+80
+00:07:16,726 --> 00:07:19,022
+♪ <i>Pienso en lo que ♪
+♪ podría ser el mundo.< /i> ♪
+
+81
+00:07:20,522 --> 00:07:23,026
+♪ <i>Una visión de ♪
+♪ el que veo.</i> ♪
+
+82
+00:07:23,150 --> 00:07: 25,736
+♪ <i>Un millón de sueños es ♪
+♪ todo lo que se necesita.</i> ♪
+
+83
+00:07:25,904 --> 00:07:26,990
+No.
+
+84
+00:07:29,491 --> 00:07: 33,412
+♪ <i>Un millón de sueños para el ♪
+♪ mundo que vamos a hacer.</i> ♪
+
+85
+00:07:49,514 --> 00:07:52,766
+Periódicos. Historias asombrosas
+de todo el mundo.
+
+86
+00:07:52,890 --> 00:07:58,980
+♪ <i>Un millón de sueños ♪
+♪ me mantienen despierto.</i> ♪
+
+87
+00:07:59,104 --> 00:08:02,316
+♪ <i >Pienso en lo que
+podría ser el mundo ♪ ♪.</i> ♪
+
+88
+00:08:02,444 --> 00:08:05,363
+♪ <i>Una visión de ♪
+♪ el que veo.</i> ♪
+
+89
+00:08:05,487 --> 00:08:10,325
+♪ <i>Un millón de sueños es ♪
+♪ todo lo que se necesita.</i> ♪
+
+90
+00:08:11,662 --> 00:08:16,667
+♪ < i>Un millón de sueños para el ♪
+♪ mundo que vamos a hacer.</i> ♪
+
+91
+00:08:19,170 --> 00:08:22,129
+<i>Únase al
+Great American Railroad.</i>
+
+92
+00:08:22,257 --> 00:08:24,800
+<i>Tres comidas al día. Un techo sobre tu cabeza.</i>
+
+93
+00:08:24,924 --> 00:08:29,136 Salarios
+justos y amplios.
+Ven, haz tu fortuna.
+
+94
+00:08:29,265 --> 00:08:31,648
+<i>Vea las llanuras abiertas de América.</i>
+
+95
+00:08:31,676 --> 00:08:35,033
+<i>La oportunidad lo espera, señor,
+sobre los rieles.</i>
+
+96
+00:08:51,245 --> 00:08:54,456
+Señor, sé que no
+vengo de mucho
+
+97
+00:08:54,585 --> 00:08:57,588
+pero Cuidaré
+de tu hija
+
+98
+00:08:57,713 --> 00:09:00,547
+y le daré una
+vida tan grande como esta.
+
+99
+00:09:06,970 --> 00:09:08,432
+Adiós, madre.
+
+100
+00:09:09,973 --> 00:09:11,142 Volverá
+.
+
+101
+00:09:11,311 --> 00:09:16,023
+Tarde o temprano ella se cansará
+de tu vida de no tener nada
+
+102
+00:09:16,148 --> 00:09:18,301
+y seguirá
+corriendo de regreso a casa.
+
+103
+00:09:27,660 --> 00:09:30,579
+♪ <i>Cada noche me acuesto en la cama.</i> ♪
+
+104
+00:09:30,704 --> 00:09:33,999
+♪ <i>La más brillante los colores llenan mi cabeza.</i> ♪
+
+105
+00:09:34,127 --> 00:09:39,257
+♪ <i>Un millón de sueños ♪
+♪ me mantienen despierto.</i> ♪
+
+106
+00:09:40,258 - -> 00:09:43,510
+♪ <i>Pienso en lo que
+podría ser el mundo ♪ ♪.</i> ♪
+
+107
+00:09:43,638 --> 00:09:46,849
+♪ <i>Una visión del Ya veo.</i> ♪
+
+108
+00:09:46,974 --> 00:09:51,894
+♪ <i>Un millón de sueños es todo ♪
+♪ va a tomar.</i> ♪
+
+109
+00:09:53,728 -- > 00:09:57,609
+♪ <i>Un millón de sueños para el ♪
+♪ mundo que vamos a hacer.</i> ♪
+

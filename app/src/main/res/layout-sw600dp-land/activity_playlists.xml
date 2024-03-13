@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_60sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlaylist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/progressBarPlaylist"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    android:paddingBottom="@dimen/_20sdp"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/item_playlist_list" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNotFound"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/progressBarPlaylist"
+                    android:gravity="center"
+                    android:text="@string/no_playlist_found"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8ssp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarPlaylist"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/viewHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleToolbar"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:letterSpacing="-0.02"
+                    android:maxLines="1"
+                    android:text="@string/playlists"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_15ssp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/llFilterLatestMeditation"
+                    android:layout_width="@dimen/_150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:animateLayoutChanges="true"
+                    android:background="@drawable/bg_white_light_grey_border"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_10dp">
+
+                    <LinearLayout
+                        android:paddingStart="@dimen/_20dp"
+                        android:paddingEnd="@dimen/_20dp"
+                        android:paddingBottom="@dimen/_10dp"
+                        android:id="@+id/llLatest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivDownUpArrow"
+                            android:layout_width="@dimen/_8sdp"
+                            android:layout_height="@dimen/_8sdp"
+                            android:src="@drawable/vd_medium_grey_down_arrow" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLatest"
+                            style="@style/TextViewLatoBoldStyle"
+                            android:layout_marginStart="@dimen/_7sdp"
+                            android:text="@string/latest"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llLatestAtoZ"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:id="@+id/viewMeditation"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginStart="@dimen/_20dp"
+                            android:layout_marginEnd="@dimen/_20dp"
+                            android:background="@color/medium_grey" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAtoZ"
+                            android:paddingStart="@dimen/_20dp"
+                            android:paddingEnd="@dimen/_20dp"
+                            android:paddingBottom="@dimen/_10dp"
+                            android:paddingTop="@dimen/_10dp"
+                            style="@style/TextViewLatoBoldStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/a_to_z"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

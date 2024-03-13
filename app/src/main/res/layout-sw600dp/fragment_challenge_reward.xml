@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_60sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_20sdp"
+            tools:context=".ui.program.fragment.ProgramsProgramFragment">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostSemiBoldStyle"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/complete_reward"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_18ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_challenge_reward_list"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

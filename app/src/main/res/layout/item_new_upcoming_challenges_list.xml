@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/bg_gold_12dp"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewJostSemiBoldStyle"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/_7_day_gratitude_challenge"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewJostRegularStyle"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/lorem_ipsum_dolor_sit_amet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewJostMediumStyle"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="Starts Today | 431 Joined | Closes MMM DD ‘YY"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+    </LinearLayout>
+
+</layout>

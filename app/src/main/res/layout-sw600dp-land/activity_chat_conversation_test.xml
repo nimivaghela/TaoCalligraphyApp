@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gold"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gold_90"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/gold"
+                app:expandedTitleMarginEnd="@dimen/_40sdp"
+                app:expandedTitleMarginStart="@dimen/_40sdp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:scrollbars="none">
+
+                        <FrameLayout
+                            android:id="@+id/fmTCFMasterImages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:layout_marginEnd="0dp"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="horizontal"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="@dimen/_50sdp"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_marginStart="@dimen/_336sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dummy_master_sher"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_marginStart="@dimen/_288sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dummy_master_sher"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_marginStart="@dimen/_240sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dummy_master_sher"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_marginStart="@dimen/_192sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dummy_master_allan"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_marginStart="@dimen/_144sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dummy_master_cecilia"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_marginStart="@dimen/_96sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dummy_master_david"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:layout_marginStart="@dimen/_48sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dummy_master_francisco"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_60sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dummy_master_sha"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                        </FrameLayout>
+
+                    </HorizontalScrollView>
+                </RelativeLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8dp"
+                android:padding="@dimen/_300sdp"
+                android:text="@string/lorem"
+                android:textSize="20sp" />
+
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

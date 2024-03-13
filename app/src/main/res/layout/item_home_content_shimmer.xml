@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingStart="@dimen/_14sdp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivFeaturedBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"
+                    app:cornerFamily="rounded"
+                    app:srcCompat="@color/light_grey"
+                    tools:visibility="visible" />
+
+
+            </FrameLayout>
+
+        <View
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@color/shimmer_light" />
+    </LinearLayout>
+</layout>

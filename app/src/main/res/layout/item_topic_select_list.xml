@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="0dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_gold_round" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTopicSelect"
+                android:layout_width="@dimen/_54sdp"
+                android:layout_height="@dimen/_54sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_gold_gradient_circle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                app:srcCompat="@drawable/vd_productivity_black" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewLatoRegularStyle"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/productivity"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_10ssp" />
+    </LinearLayout>
+</layout>

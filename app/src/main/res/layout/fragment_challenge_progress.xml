@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".ui.program.fragment.ProgramsProgressFragment">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostSemiBoldStyle"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/you_re_on_your_way_francisco"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_18ssp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toStartOf="@id/tvCompletePercentage"
+                    android:text="@string/you_ve_completed_of_the_steps_so_far"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCompletePercentage"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:text="75%"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_60sdp" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_80sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

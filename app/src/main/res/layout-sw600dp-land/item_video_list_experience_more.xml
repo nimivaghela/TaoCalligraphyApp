@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="@dimen/_87sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fmVideoBeginExperience"
+            android:layout_width="@dimen/_87sdp"
+            android:layout_height="@dimen/_53sdp">
+
+            <!-- <androidx.appcompat.widget.AppCompatImageView
+                 android:id="@+id/ivThumbImage"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@android:color/transparent"
+                 android:scaleType="fitXY"
+                 tools:srcCompat="@drawable/ic_dummy_girl_with_bird" />-->
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivThumbImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"
+                app:cornerFamily="rounded"
+                tools:srcCompat="@drawable/ic_river_dummy" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPlay"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:srcCompat="@drawable/vd_play_button"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|bottom|start"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/vd_video_cc" />
+
+            <!-- <androidx.appcompat.widget.AppCompatImageView
+                 android:id="@+id/ivFav"
+                 android:layout_width="@dimen/_20sdp"
+                 android:layout_height="@dimen/_20sdp"
+                 android:layout_gravity="end"
+                 android:layout_marginTop="@dimen/_6sdp"
+                 android:layout_marginEnd="@dimen/_6sdp"
+                 android:layout_marginBottom="@dimen/_8sdp"
+                 android:src="@drawable/vd_add_to_favorites_white"
+                 app:srcCompat="@drawable/vd_play_button" />-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|bottom|end"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/vd_video_expand" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAudioVideoName"
+            style="@style/TextViewJostMediumStyle"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/_16sp"
+            tools:text="Relieve &amp; Prevent Burnout" />
+
+    </LinearLayout>
+
+</layout>

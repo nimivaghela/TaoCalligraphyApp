@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="@dimen/_210sdp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:windowSoftInputMode="adjustResize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".ui.journal.JournalListingActivity">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtTitle"
+                style="@style/TextViewCormorantBoldStyle"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:hint="@string/title"
+                android:imeOptions="actionNext"
+                android:maxLength="255"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/_14sdp"
+                android:singleLine="true"
+                android:textColor="@color/gold"
+                android:textColorHint="@color/gold"
+                android:textCursorDrawable="@drawable/journal_title_cursor_gold"
+                android:textSize="@dimen/_18ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvJournalDate"
+                style="@style/TextViewJostRegularStyle"
+                android:paddingEnd="@dimen/_14sdp"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_6ssp"
+                tools:text="NOV 30, 2021" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_white_top_radius_30"
+                >
+
+            <jp.wasabeef.richeditor.RichEditor
+                android:id="@+id/editor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:paddingBottom="@dimen/_30sdp" />
+
+            <LinearLayout
+                android:id="@+id/llFormatTool"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/bg_white_light_grey_border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llBold"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_weight="1.3"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/vd_bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/llItalic"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivItalic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/vd_italic" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/llunderline"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.25"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_3sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivUnderline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/vd_underline" />
+
+                        <View
+                            android:id="@+id/viewUnderline"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_4dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:background="@color/dark_grey" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/llStrikeThrough"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:layout_weight="1.3"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivStrikethrough"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/vd_strikethrough" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/bg_white_light_grey_border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llList"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.25">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivList"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.25"
+                            android:src="@drawable/vd_list" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/llOrderList"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.25">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivOrderList"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.25"
+                            android:src="@drawable/vd_list_ordered" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/bg_white_light_grey_border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llIndent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.25">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivIndent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.25"
+                            android:src="@drawable/vd_indent" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:background="@color/light_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/llOutdent"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.25">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivOutdent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.25"
+                            android:src="@drawable/vd_outdent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

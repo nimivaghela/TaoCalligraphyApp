@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llWellnessDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/transparent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible">
+
+            <include layout="@layout/dialog_wellness" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/bottom_nav_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@drawable/bg_drop_shadow"
+            android:rotation="180"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            app:itemIconSize="@dimen/_10sdp"
+            app:itemTextAppearanceActive="@style/BottomNavigationTextAppearance"
+            app:itemTextAppearanceInactive="@style/BottomNavigationTextAppearance"
+            app:itemTextColor="@color/bottom_tab_color_selector"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_menu_nav" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

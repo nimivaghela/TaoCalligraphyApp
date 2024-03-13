@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_8ssp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gold"
+            android:textSize="@dimen/_13ssp"
+            tools:text="Adrenal Glands" />
+
+    </LinearLayout>
+
+</layout>

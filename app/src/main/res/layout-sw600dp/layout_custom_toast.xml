@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/llLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/bg_validation_snackbar_rounded_corner_error"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/imgStart"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/vd_validation_error" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCustomMessage"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text="@string/sounds"
+            android:textColor="@color/medium_grey"
+            android:textSize="@dimen/_18sp" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:padding="5dp"
+            android:src="@drawable/vd_close" />
+    </LinearLayout>
+</layout>

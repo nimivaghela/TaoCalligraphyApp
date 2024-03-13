@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_curve_20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSoundNotFound"
+                style="@style/TextViewJostSemiBoldStyle"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:text="@string/sound_not_found"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_8ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSound"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_260sdp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_40sdp"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="20"
+                tools:listitem="@layout/item_sound_selection_list" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDone"
+                    style="@style/ButtonGoldStyle"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="@string/done"
+                    android:textSize="@dimen/_8ssp" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

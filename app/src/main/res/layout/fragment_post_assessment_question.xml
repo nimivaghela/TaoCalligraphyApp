@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieMascot"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="mascot_standing_idle_loop.json"
+            app:lottie_loop="false"
+            app:lottie_speed="1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtQuestion"
+            style="@style/TextViewJostSemiBoldStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:gravity="center|start"
+            android:textAllCaps="true"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lottieMascot"
+            tools:text="PLEASE RATE YOUR CURRENT LEVEL\nOF HEADACHE." />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llPain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            app:layout_constraintTop_toBottomOf="@id/txtQuestion">
+
+            <LinearLayout
+                android:id="@+id/llRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivExtremePain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/vd_pain_extreme_high_emoji_normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivHighPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:srcCompat="@drawable/vd_pain_high_emoji_normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivNormalPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:srcCompat="@drawable/vd_pain_normal_emoji_normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLowPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:srcCompat="@drawable/vd_pain_low_emoji_normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivNoPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:srcCompat="@drawable/vd_no_pain_emoji_normal" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="@id/llRating"
+                app:layout_constraintStart_toStartOf="@id/llRating"
+                app:layout_constraintTop_toBottomOf="@id/llRating">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtFeelLow"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/extreme_pain"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtFeelHappy"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/no_pain"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_10ssp" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/viewSave"
+            style="@style/CardViewStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llPain">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinue"
+                style="@style/ButtonGoldStyle"
+                android:alpha="0.5"
+                android:background="@drawable/bg_light_dark_golden_curve"
+                android:enabled="false"
+                android:text="@string/btn_continue" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:background="@drawable/bg_cultured_gray_radius_30dp"
+            android:elevation="@dimen/_12sdp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQuestion"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:text="@string/what_brings_you_here_question"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintEnd_toStartOf="@id/ivClose"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/vd_cross_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toTopOf="@id/flBottomButton"
+                    app:layout_constraintTop_toBottomOf="@id/tvQuestion">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupBrings1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="@dimen/_20sdp"
+                            app:chipSpacingHorizontal="5dp"
+                            app:chipSpacingVertical="6dp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupBrings2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="@dimen/_20sdp"
+                            android:visibility="gone"
+                            app:chipSpacingHorizontal="5dp"
+                            app:chipSpacingVertical="6dp" />
+                    </FrameLayout>
+
+
+                </androidx.core.widget.NestedScrollView>
+
+                <FrameLayout
+                    android:id="@+id/flBottomButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.loopeer.shadow.ShadowView
+                        android:id="@+id/shadowViewNext"
+                        style="@style/ShadowViewStyle"
+                        android:layout_marginHorizontal="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_25sdp"
+                        app:cornerRadius="@dimen/_10sdp"
+                        app:shadowMargin="@dimen/_5sdp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnNext"
+                            style="@style/ButtonWhiteStyle"
+                            android:background="@drawable/bg_white_curve"
+                            android:enabled="true"
+                            android:text="@string/next"
+                            android:textSize="@dimen/_16ssp" />
+
+                    </com.loopeer.shadow.ShadowView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSave"
+                        style="@style/MaterialGoldButtonStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_25sdp"
+                        android:alpha="0.5"
+                        android:visibility="gone"
+                        android:text="@string/save"
+                        />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/llProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ProgressBar
+                        android:id="@+id/progressBarInProgressPrograms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

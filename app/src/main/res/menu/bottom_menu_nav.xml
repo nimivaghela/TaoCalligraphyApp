@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/selector_home_btn_selector"
+        android:title="@string/home_tab" />
+
+    <item
+        android:id="@+id/wellness"
+        android:icon="@drawable/selector_wellness_btn_selector"
+        android:title="@string/wellness_tab" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/selector_search_btn_selector"
+        android:title="@string/search_tab" />
+
+<!--    <item-->
+<!--        android:id="@+id/rooms"-->
+<!--        android:icon="@drawable/selector_rooms_btn_selector"-->
+<!--        android:title="@string/rooms_tab" />-->
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/selector_notification_btn_selector"
+        android:title="@string/notification_tab" />
+</menu>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_12sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostBoldStyle"
+                android:layout_width="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="NOV"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostBoldStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="-8dp"
+                android:layout_marginBottom="-8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="14"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_34ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="12:35 pm"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAnnouncementText"
+            style="@style/TextViewOpenSansRegularStyle"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_12ssp"
+            tools:text="@string/lorem_ipsum" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewOpenSansRegularStyle"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum..."
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostSemiBoldStyle"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_64sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="More >>"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_12ssp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

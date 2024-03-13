@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_gold_border_12dp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/lblWellness"
+            style="@style/TextViewJostBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wellness Boost"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:configChanges="keyboardHidden|orientation"
+        tools:context=".ui.journal.JournalListingActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startMargin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/startMargin" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endMargin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/endMargin" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@id/endMargin"
+            app:layout_constraintStart_toStartOf="@id/startMargin">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/journalTitle"
+                        style="@style/TextViewCormorantBoldStyle"
+                        android:gravity="start"
+                        android:text="@string/journal"
+                        android:textColor="@color/gold_90"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlSearchBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/bg_gray95_border_white_35dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@id/ivClearSearch"
+                            android:background="@android:color/transparent"
+                            android:drawableStart="@drawable/vd_search_grey"
+                            android:drawablePadding="@dimen/_8sdp"
+                            android:fontFamily="@font/font_jost_regular"
+                            android:hint="@string/search_tab"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="0dp"
+                            android:textColor="@color/dark_grey"
+                            android:textCursorDrawable="@drawable/search_cursor"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <ImageView
+                            android:id="@+id/ivClearSearch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/vd_clear_search_grey"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNotFound"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/no_journal_found"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_8ssp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvJournal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_20sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/progressBar"
+            layout="@layout/item_progress"
+            android:visibility="gone" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

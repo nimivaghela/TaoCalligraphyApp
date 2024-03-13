@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <FrameLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_60sdp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"
+                    app:cornerFamily="rounded"
+                    app:srcCompat="@drawable/ic_dummy_morning_freshen_up" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCenterImage"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/vd_play_button" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ivSubscribeLock"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_20sdp"
+                    android:layout_gravity="bottom"
+                    app:cardBackgroundColor="@color/dark_grey_80"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_6sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/ic_lock"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/tVGet"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gold_top_left_bottom_right_10dp"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@string/get"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_6sdp"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/ivFeaturedImage"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:src="@drawable/ic_iv_featured_ribbon"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llPlaylistInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvContentTitle"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:text="Morning Freshen Up"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvContentCategory"
+                        style="@style/TextViewJostRegularStyle"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/health_mental_amp_emotional"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvContentDuratiom"
+                        style="@style/TextViewJostRegularStyle"
+                        android:text="40 mins"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/shimmer_light" />
+    </LinearLayout>
+</layout>

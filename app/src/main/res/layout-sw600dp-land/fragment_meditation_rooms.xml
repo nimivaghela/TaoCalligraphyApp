@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                tools:context=".ui.meditation_rooms_list.MeditationRoomsFragment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:animateLayoutChanges="true"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/mToolbar"
+                        layout="@layout/toolbar" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMeditationTabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clipToPadding="false"
+                        android:fadeScrollbars="false"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="0dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/item_custom_tab_view" />
+
+                    <FrameLayout
+                        android:id="@+id/root_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:id="@+id/footerSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="bottom"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/ic_white_search_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/bg_search_background_with_curve"
+                android:drawableStart="@drawable/vd_search_grey"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:text="@string/search_rooms"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/bg_gray_95_light_gray_border_30dp"
+                android:drawableStart="@drawable/vd_gray_search"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/font_jost_regular"
+                android:hint="@string/search_tab"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/secondary_black"
+                android:textColorHint="@color/dark_grey" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:src="@drawable/vd_cancel_grey"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurViewLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        android:outlineProvider="bounds"
+        app:blurOverlayColor="@color/shimmer_light"
+        tools:targetApi="lollipop">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/linearMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_80"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:background="@drawable/bg_white_gold_border_12dp"
+                    android:elevation="@dimen/_12sdp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_centerInParent="true"
+                            android:text="Wellness Boost"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_18ssp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/vd_cross_gray"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:text="Sat 27 Nov, 8:00 – 9:00 AM"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@color/shimmer_light" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostMediumStyle"
+                        android:gravity="center"
+                        android:padding="@dimen/_15sdp"
+                        android:text="$50 CAD"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/shimmer_light" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostMediumStyle"
+                        android:drawableEnd="@drawable/vd_golder_heart"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_15sdp"
+                        android:text="Unlock with 50"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/shimmer_light" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/CardViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        app:cardCornerRadius="@dimen/_25sdp"
+                        app:cardElevation="0dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnCancelSession"
+                            style="@style/ButtonWhiteStyle"
+                            android:background="@drawable/bg_gold_white_ripple"
+                            android:fontFamily="@font/font_jost_semi_bold"
+                            android:text="@string/free_with_subscription"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15ssp" />
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </eightbitlab.com.blurview.BlurView>
+</layout>

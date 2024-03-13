@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/toolbar"
+                        layout="@layout/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginTop="@dimen/_50sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="start"
+                            android:text="@string/current_balance"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_silver_gradient"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_15sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_55sdp"
+                                    android:layout_height="@dimen/_55sdp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_silver_heart" />
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="center"
+                                    android:text="31"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_24ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:gravity="center"
+                                    android:text="@string/silver"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginHorizontal="1.5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_gold_gradient"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_15sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_55sdp"
+                                    android:layout_height="@dimen/_55sdp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_golden_heart" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="center"
+                                    android:text="31"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_24ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:gravity="center"
+                                    android:text="@string/gold"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_diamond_gradient"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_15sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_55sdp"
+                                    android:layout_height="@dimen/_55sdp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_diamond_heart" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="center"
+                                    android:text="31"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_24ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:gravity="center"
+                                    android:text="@string/diamond"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:background="@color/pale_peach_40"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:gravity="start"
+                            android:text="@string/redeem_rewards"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:gravity="start"
+                            android:text="@string/you_can_use_your_heart_to_unlock"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/MaterialGoldButtonStyle"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:text="@string/find_now" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:gravity="start"
+                            android:text="@string/as_a_subscriber_you_can_choose_your_heart"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnGoToMyRoom"
+                            style="@style/MaterialGoldButtonStyle"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:text="@string/go_to_my_rooms" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="start"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:text="@string/reward_history"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRewards"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_30sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_reward_history" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_white_top_gradient" />
+    </FrameLayout>
+</layout>

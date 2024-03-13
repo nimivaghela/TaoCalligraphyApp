@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSpinnerText"
+        style="@style/TextViewJostRegularStyle"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_10ssp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_10ssp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:textColor="@color/secondary_black"
+        android:textSize="@dimen/_14ssp"
+        tools:text="English" />
+
+</layout>

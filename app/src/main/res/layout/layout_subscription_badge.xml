@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvSubscriptionBadge"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:background="@drawable/bg_white_circle_subscribe_badge"-->
+<!--        android:layout_marginTop="@dimen/_9sdp"-->
+<!--        android:fontFamily="@font/font_jost_medium"-->
+<!--        android:paddingStart="@dimen/_6sdp"-->
+<!--        android:paddingTop="@dimen/_1sdp"-->
+<!--        android:paddingEnd="@dimen/_6sdp"-->
+<!--        android:paddingBottom="@dimen/_1sdp"-->
+<!--        android:textColor="@color/red"-->
+<!--        android:textSize="@dimen/_8sdp"-->
+<!--        android:text="@string/subscribe"-->
+<!--        tools:text="Subscribe" />-->
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSubscriptionLockBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_lock_gray"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_13sdp"
+        />
+
+</merge>

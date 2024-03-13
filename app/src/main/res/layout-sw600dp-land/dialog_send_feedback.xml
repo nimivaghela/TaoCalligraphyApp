@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/bg_cultured_gray_radius_30dp"
+            android:elevation="@dimen/_12sdp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true">
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:layout_width="@dimen/_280sdp"-->
+<!--                    android:layout_height="@dimen/_280sdp"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:layout_marginTop="@dimen/_60sdp"-->
+<!--                    android:layout_marginEnd="-100dp"-->
+<!--                    app:srcCompat="@drawable/vd_calligraphy_watermark" />-->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/send_us_feedback_"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/vd_cross_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_4sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/rrAccessHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/llAccessHeader"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:text="@string/nature_of_feedback"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_7ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSelectedSessionAccess"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:textColor="@color/secondary_black"
+                                        android:textSize="@dimen/_8ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llAccessType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    tools:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvPublicSession"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_width="wrap_content"
+                                        android:paddingTop="@dimen/_5sdp"
+                                        android:text="@string/suggestion_for_improvement"
+                                        android:textColor="@color/gold"
+                                        android:textSize="@dimen/_8ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvPrivateSession"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_width="wrap_content"
+                                        android:paddingTop="@dimen/_5sdp"
+                                        android:text="@string/compliment"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_8ssp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivSessionAccessArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                app:srcCompat="@drawable/vd_gray_arrow_down" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/bg_semi_white_semi_medium_curve_12dp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostRegularStyle"
+                            android:text="@string/your_message"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_7ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start|top"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:background="@null"
+                            android:fontFamily="@font/font_jost_regular"
+                            android:gravity="start|top"
+                            android:textColor="@color/secondary_black"
+                            android:textColorHint="@color/medium_grey"
+                            android:textSize="@dimen/_8ssp"
+                            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum lacinia luctus risus pharetra dui elementum ornare. Arcu ut interdum ullamcorper potenti. Sed tellus egestas et nunc lacus " />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/CardViewStyle"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSend"
+                            style="@style/ButtonGoldStyle"
+                            android:background="@drawable/bg_light_dark_golden_curve"
+                            android:text="@string/send" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

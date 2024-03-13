@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/llOptionDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/bg_white_rectangle_3_side_corner"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/vd_edit_icon_gold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEdit"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text="@string/edit"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_8ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llClone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llEdit"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClone"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/vd_clone_icon_gold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvClone"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="@string/clone"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_8ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llClone"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_20sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/vd_delete_icon_gold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDelete"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_8ssp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

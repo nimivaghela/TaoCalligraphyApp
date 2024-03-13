@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/relTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:background="@drawable/bg_grey_95_curve"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTab"
+            style="@style/TextViewJostMediumStyle"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:textAllCaps="true"
+            android:textColor="@color/medium_grey"
+            android:textSize="@dimen/_7ssp"
+            tools:text="FAVORITES" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRequestCount"
+            style="@style/TextViewJostMediumStyle"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_toEndOf="@id/tvTab"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            tools:text="14" />
+    </RelativeLayout>
+
+
+</layout>

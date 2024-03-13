@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    tools:context=".ui.home.HomeFragment">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/startMargin"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="@dimen/startMargin" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/endMargin"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="@dimen/endMargin" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_70sdp"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toStartOf="@id/endMargin"
+                        app:layout_constraintStart_toEndOf="@id/startMargin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:paddingBottom="@dimen/_20sdp">
+
+
+                        <LinearLayout
+                            android:id="@+id/llTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewCormorantBoldStyle"
+                                android:gravity="start"
+                                android:text="@string/welcome_to"
+                                android:textColor="@color/gold_90"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCategoryName"
+                                style="@style/TextViewCormorantBoldStyle"
+                                android:layout_marginTop="-5dp"
+                                android:gravity="start"
+                                android:text=" "
+                                android:textColor="@color/gold_90"
+                                android:textSize="@dimen/_20ssp"
+                                tools:text="Health" />
+
+                        </LinearLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <include layout="@layout/item_subscription_price_shimmer" />
+
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerHeroImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@android:color/transparent"
+                            tools:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <include layout="@layout/hero_image_shimmer" />
+
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivHero"
+                            android:layout_width="@dimen/_200sdp"
+                            android:layout_height="@dimen/_180sdp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="-50dp"
+                            android:visibility="gone"
+                            android:scaleType="centerCrop" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="start"
+                                android:text="@string/programs"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/tvProgramsSeeAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtProgramsSeeAll"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_marginEnd="@dimen/_4sdp"
+                                    android:gravity="start"
+                                    android:text="@string/see_all"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_6ssp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/ivProgramsSeeAll"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivProgramsSeeAll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/vd_see_more_arrow"
+                                    app:layout_constraintBottom_toBottomOf="@+id/txtProgramsSeeAll"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblNoProgram"
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:gravity="center"
+                            android:text="@string/no_program_result_found"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_8ssp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="gone" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvProgram"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal"
+                                android:paddingEnd="@dimen/_30sdp"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:listitem="@layout/item_multi_session_list"
+                                tools:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/wellnessProgramShadow"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="0dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_white_right_gradient"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerForYou"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:visibility="gone">
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollIndicators="none"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <include layout="@layout/item_home_content_shimmer" />
+
+                                    <include layout="@layout/item_home_content_shimmer" />
+
+                                    <include layout="@layout/item_home_content_shimmer" />
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="start"
+                            android:text="@string/today"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_18ssp"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvFeatureSession"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_feature_session_list"
+                            tools:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvUpcomingSession"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/item_calender_event_list"
+                            tools:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostSemiBoldStyle"
+                                    android:gravity="start"
+                                    android:text="@string/meditations"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btnFilter"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/filterImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/filter_button"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/filterRemoved"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/filter_button_not_selected"
+                                    android:visibility="gone"
+                                    tools:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSubCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:text="@string/topic"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostBoldStyle"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:text="@string/choose_one"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_6ssp" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="0dp"
+                            android:orientation="horizontal"
+                            android:paddingEnd="0dp"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="4"
+                            tools:listitem="@layout/item_select_category"
+                            tools:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtFilteredData"
+                            style="@style/TextViewJostBoldStyle"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:textSize="@dimen/_7ssp"
+                            tools:text="31" />
+
+                        <LinearLayout
+                            android:id="@+id/llVideoTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/vd_video_grey_icon" />
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:gravity="start"
+                                    android:text="@string/videos"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_8ssp" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/tvVideoSeeAll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txtVideoSeeAll"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_marginEnd="@dimen/_4sdp"
+                                        android:gravity="start"
+                                        android:text="@string/see_all"
+                                        android:textColor="@color/dark_grey"
+                                        android:textSize="@dimen/_6ssp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/ivVideoSeeAll"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivVideoSeeAll"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/vd_see_more_arrow"
+                                        app:layout_constraintBottom_toBottomOf="@+id/txtVideoSeeAll"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNoVideo"
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_width="@dimen/_67sdp"
+                            android:layout_height="@dimen/_43sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/bg_no_category"
+                            android:gravity="center"
+                            android:text="@string/no_video_data_found"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_8ssp"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerForVideoList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            tools:visibility="gone">
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollIndicators="none"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvVideoList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clipToPadding="false"
+                                android:fadeScrollbars="false"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="horizontal"
+                                android:paddingEnd="@dimen/_30sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:itemCount="6"
+                                tools:listitem="@layout/item_video_list"
+                                tools:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/videoShadow"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="0dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_white_right_gradient"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llGuidedAudioTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:contentDescription="@null"
+                                android:src="@drawable/vd_audio_grey_icon" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:gravity="start"
+                                    android:text="@string/guided_audio"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_8ssp" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/tvGuidedAudioSeeAll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txtGuidedAudioSeeAll"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_marginEnd="@dimen/_4sdp"
+                                        android:gravity="start"
+                                        android:text="@string/see_all"
+                                        android:textColor="@color/dark_grey"
+                                        android:textSize="@dimen/_6ssp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/ivGuidedAudioSeeAll"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivGuidedAudioSeeAll"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/vd_see_more_arrow"
+                                        app:layout_constraintBottom_toBottomOf="@+id/txtGuidedAudioSeeAll"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNoAudio"
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_width="@dimen/_67sdp"
+                            android:layout_height="@dimen/_43sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/bg_no_category"
+                            android:gravity="center"
+                            android:text="@string/no_audio_data_found"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_8ssp"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerForAudioList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            tools:visibility="gone">
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollIndicators="none"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvGuidedAudioList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clipToPadding="false"
+                                android:fadeScrollbars="false"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="horizontal"
+                                android:paddingEnd="@dimen/_30sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:itemCount="6"
+                                tools:listitem="@layout/item_video_list"
+                                tools:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/audioShadow"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="0dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_white_right_gradient"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llMusicTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/vd_music_grey_icon" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:gravity="start"
+                                    android:text="@string/music"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_8ssp" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/tvMusicSeeAll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txtMusicSeeAll"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_marginEnd="@dimen/_4sdp"
+                                        android:gravity="start"
+                                        android:text="@string/see_all"
+                                        android:textColor="@color/dark_grey"
+                                        android:textSize="@dimen/_6ssp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/ivMusicSeeAll"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivMusicSeeAll"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/vd_see_more_arrow"
+                                        app:layout_constraintBottom_toBottomOf="@+id/txtMusicSeeAll"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNoMusic"
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_width="@dimen/_67sdp"
+                            android:layout_height="@dimen/_43sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:background="@drawable/bg_no_category"
+                            android:gravity="center"
+                            android:text="@string/no_music_data_found"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_8ssp"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerForMusicList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            tools:visibility="gone">
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollIndicators="none"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+
+                                    <include layout="@layout/item_video_list_shimmer" />
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvMusicList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:clipToPadding="false"
+                                android:fadeScrollbars="false"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="horizontal"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="@dimen/_30sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:itemCount="2"
+                                tools:listitem="@layout/item_video_list"
+                                tools:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/musicShadow"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="0dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_white_right_gradient"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:animateLayoutChanges="true"
+                            android:background="@drawable/bg_white_smoke_top_radius_18dp"
+                            android:elevation="@dimen/_15sdp"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostSemiBoldStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/_25sdp"
+                                    android:layout_marginEnd="@dimen/_25sdp"
+                                    android:layout_weight="1"
+                                    android:text="@string/field_healing"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_18ssp" />
+
+                                <LinearLayout
+                                    android:id="@+id/llHideShow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvHideShow"
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:layout_marginStart="@dimen/_25sdp"
+                                        android:layout_marginEnd="@dimen/_5sdp"
+                                        android:gravity="center"
+                                        android:text="@string/hide"
+                                        android:textColor="@color/gold"
+                                        android:textSize="@dimen/_14ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivArrowUpDown"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginEnd="@dimen/_25sdp"
+                                        android:rotation="180"
+                                        android:src="@drawable/vd_down_arrow_gold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llFieldHealing"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <!--<com.app.taocalligraphy.ui.field_healing.CenteringTabLayout
+                                    android:id="@+id/tabLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@color/transparent"
+                                    android:textSize="@dimen/_24ssp"
+                                    app:elevation="0dp"
+                                    app:tabBackground="@drawable/selector_tab_selector"
+                                    app:tabGravity="fill"
+                                    app:tabIndicatorHeight="0dp"
+                                    app:tabMode="scrollable"
+                                    app:tabPaddingEnd="@dimen/_20sdp"
+                                    app:tabPaddingStart="@dimen/_20sdp"
+                                    app:tabRippleColor="@null"
+                                    app:tabSelectedTextColor="@color/white"
+                                    app:tabTextColor="@color/gold" />-->
+                                <io.github.vejei.carouselview.CarouselView
+                                    android:id="@+id/carousel_view_side_by_side_preview_scale"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_12sdp"
+                                    app:carouselMargin="@dimen/_40sdp"
+                                    app:carouselMode="preview"
+                                    app:carouselPreviewOffset="@dimen/_50sdp"
+                                    app:carouselPreviewScaleFactor="0.80"
+                                    app:carouselPreviewSide="sides"
+                                    app:carouselPreviewSideBySideStyle="scale"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    tools:layout_height="@dimen/_40sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSelections"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:gravity="center"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <androidx.core.widget.NestedScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:animateLayoutChanges="true"
+                                    android:clipToPadding="false"
+                                    android:fillViewport="true"
+                                    android:paddingTop="@dimen/_20sdp"
+                                    android:paddingBottom="@dimen/_50sdp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:id="@+id/llTwoThreeFour"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:animateLayoutChanges="true"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone"
+                                            tools:context=".ui.field_healing.fragment.InternalOrgansFragment">
+
+                                            <FrameLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:orientation="vertical">
+
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:id="@+id/ivMaleInternalOrgans"
+                                                        android:layout_width="@dimen/_380sdp"
+                                                        android:layout_height="@dimen/_480sdp"
+                                                        android:layout_marginStart="-70dp"
+                                                        android:layout_marginTop="-25dp"
+                                                        android:src="@drawable/vd_figure_male_with_lines"
+                                                        android:visibility="visible" />
+
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:id="@+id/ivFemaleInternalOrgans"
+                                                        android:layout_width="@dimen/_380sdp"
+                                                        android:layout_height="@dimen/_480sdp"
+                                                        android:layout_marginStart="-70dp"
+                                                        android:layout_marginTop="-25dp"
+                                                        android:src="@drawable/vd_figure_female_with_lines"
+                                                        android:visibility="gone" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginStart="@dimen/_65sdp"
+                                                        android:layout_marginTop="-30dp"
+                                                        android:orientation="horizontal">
+
+                                                        <androidx.appcompat.widget.AppCompatImageView
+                                                            android:id="@+id/ivMale"
+                                                            android:layout_width="@dimen/_40sdp"
+                                                            android:layout_height="@dimen/_40sdp"
+                                                            android:layout_marginEnd="@dimen/_3sdp"
+                                                            android:src="@drawable/vd_male_icon_select" />
+
+                                                        <androidx.appcompat.widget.AppCompatImageView
+                                                            android:id="@+id/ivFemale"
+                                                            android:layout_width="@dimen/_40sdp"
+                                                            android:layout_height="@dimen/_40sdp"
+                                                            android:layout_marginStart="@dimen/_3sdp"
+                                                            android:src="@drawable/vd_female_icon" />
+
+                                                    </LinearLayout>
+
+                                                </LinearLayout>
+
+                                                <FrameLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="@dimen/_400sdp"
+                                                    android:layout_gravity="end">
+
+                                                    <androidx.recyclerview.widget.RecyclerView
+                                                        android:id="@+id/rvListOfNames"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="@dimen/_370sdp"
+                                                        android:layout_gravity="end"
+                                                        android:clipToPadding="false"
+                                                        android:fadeScrollbars="false"
+                                                        android:nestedScrollingEnabled="true"
+                                                        android:orientation="vertical"
+                                                        android:paddingTop="@dimen/_20sdp"
+                                                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                                        tools:itemCount="14"
+                                                        tools:listitem="@layout/item_field_healing_text" />
+
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom|center"
+                                                        android:layout_marginBottom="@dimen/_10sdp"
+                                                        android:src="@drawable/ic_white_small_rectangle"
+                                                        android:visibility="gone" />
+
+                                                    <androidx.appcompat.widget.AppCompatImageView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="bottom|center"
+                                                        android:layout_marginBottom="@dimen/_16sdp"
+                                                        android:src="@drawable/vd_down_arrow_grey" />
+
+                                                </FrameLayout>
+
+                                            </FrameLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/llPhysicalBody"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:animateLayoutChanges="true"
+                                            android:orientation="vertical"
+                                            android:visibility="visible"
+                                            tools:context=".ui.field_healing.fragment.PhysicalBodyFragment">
+
+                                            <com.richpath.RichPathView
+                                                android:id="@+id/ivMalePhysicalBody"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="visible"
+                                                app:vector="@drawable/vd_figure_male_without_lines" />
+
+                                            <com.richpath.RichPathView
+                                                android:id="@+id/ivFemalePhysicalBody"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:visibility="gone"
+                                                app:vector="@drawable/vd_figure_female_without_lines" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="@dimen/_10sdp"
+                                                android:orientation="horizontal"
+                                                android:visibility="visible">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivPBMale"
+                                                    android:layout_width="@dimen/_40sdp"
+                                                    android:layout_height="@dimen/_40sdp"
+                                                    android:layout_marginEnd="@dimen/_3sdp"
+                                                    android:src="@drawable/vd_male_icon_select" />
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivPBFemale"
+                                                    android:layout_width="@dimen/_40sdp"
+                                                    android:layout_height="@dimen/_40sdp"
+                                                    android:layout_marginStart="@dimen/_3sdp"
+                                                    android:src="@drawable/vd_female_icon" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/llBodyChannel"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:animateLayoutChanges="true"
+                                            android:orientation="vertical"
+                                            android:paddingBottom="@dimen/_50sdp"
+                                            android:visibility="gone"
+                                            tools:context=".ui.field_healing.fragment.BodyChannelsFragment">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="0dp"
+                                                android:layout_gravity="center"
+                                                android:layout_marginStart="@dimen/_12sdp"
+                                                android:layout_marginEnd="@dimen/_12sdp"
+                                                android:layout_weight="1"
+                                                android:orientation="vertical">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivMaleBody"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:src="@drawable/vd_male_body_channel" />
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivFemaleBody"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:src="@drawable/vd_female_body_channel"
+                                                    android:visibility="gone" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="@dimen/_30sdp"
+                                                android:orientation="horizontal"
+                                                android:visibility="visible">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivBodyChannelMale"
+                                                    android:layout_width="@dimen/_40sdp"
+                                                    android:layout_height="@dimen/_40sdp"
+                                                    android:layout_marginEnd="@dimen/_3sdp"
+                                                    android:src="@drawable/vd_male_icon_select" />
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivBodyChannelFeMale"
+                                                    android:layout_width="@dimen/_40sdp"
+                                                    android:layout_height="@dimen/_40sdp"
+                                                    android:layout_marginStart="@dimen/_3sdp"
+                                                    android:src="@drawable/vd_female_icon" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+
+                                </androidx.core.widget.NestedScrollView>
+
+                                <androidx.viewpager2.widget.ViewPager2
+                                    android:id="@+id/viewPager"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:layout_marginStart="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_25sdp"
+                                android:text="@string/need_support"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_18ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_marginStart="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_marginEnd="@dimen/_25sdp"
+                                android:text="@string/need_support_dummy_text"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                style="@style/CardViewStyle"
+                                android:layout_width="match_parent"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_14sdp"
+                                app:cardElevation="0dp">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnBookConsultation"
+                                    style="@style/ButtonWhiteStyle"
+                                    android:background="@drawable/bg_light_dark_golden_curve"
+                                    android:fontFamily="@font/font_jost_semi_bold"
+                                    android:text="@string/book_a_consultation"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:backgroundTint="@null"
+                                    app:icon="@drawable/vd_book_consultation"
+                                    app:iconGravity="textStart"
+                                    app:iconTint="@color/white" />
+
+                            </com.google.android.material.card.MaterialCardView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

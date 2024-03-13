@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="0dp">
+
+            <FrameLayout
+                android:id="@+id/fmVideoBeginExperience"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivFeaturedBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"
+                    app:cornerFamily="rounded"
+                    app:srcCompat="@color/light_grey"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+        <View
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/shimmer_light" />
+    </LinearLayout>
+
+</layout>

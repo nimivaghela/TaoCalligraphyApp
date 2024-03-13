@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    android:gravity="start|center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@color/shimmer_light"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"/>
+
+    <LinearLayout
+        android:id="@+id/llIcon"
+        android:gravity="center"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vd_chat_small" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        style="@style/TextViewJostRegularStyle"
+        android:layout_gravity="center_vertical"
+        android:text="@string/send_message"
+        android:layout_width="wrap_content"
+        android:textColor="@color/secondary_black"
+        android:textSize="@dimen/_11ssp" />
+
+</LinearLayout>

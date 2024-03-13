@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/_350dp"
+            android:layout_height="@dimen/_270dp"
+            android:paddingTop="@dimen/_10sdp"
+            android:background="@drawable/bg_white_curve_20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <NumberPicker
+                    android:descendantFocusability="blocksDescendants"
+                    android:id="@+id/numberPickerTimer"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_5sdp"
+                    android:theme="@style/AppTheme.Picker" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_height="@dimen/_40dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDone"
+                    android:layout_height="@dimen/_40dp"
+                    style="@style/ButtonGoldStyle"
+                    android:textSize="@dimen/_14sp"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="@string/done" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

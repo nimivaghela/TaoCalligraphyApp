@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerMargin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <RelativeLayout
+            android:id="@+id/rrHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:animateLayoutChanges="true"
+            app:layout_constraintBottom_toBottomOf="@id/centerMargin"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMeditationImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/ic_dummy_women_bird" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMeditationBg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_transparent_bg_meditation_detail" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="-50dp"
+            android:background="@drawable/meditation_bg"
+            app:layout_constraintTop_toTopOf="@id/centerMargin" />
+
+        <LinearLayout
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="-230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/centerMargin">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieMascot"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="mascot_standing_idle_loop.json"
+                app:lottie_loop="true"
+                app:lottie_speed="1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-80dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/preAssessmentMsg"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/your_wellness_matter"
+                    android:textColor="@color/secondary_black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="@dimen/_8ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/secondary_black"
+                    app:layout_constraintStart_toStartOf="@id/preAssessmentMsg"
+                    app:layout_constraintTop_toBottomOf="@id/preAssessmentMsg"
+                    android:textSize="@dimen/_8ssp"
+                    tools:text="PLEASE RATE YOUR CURRENT LEVEL OF HEADACHE." />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/emojisView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivExtremePain"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivHighPain"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/vd_pain_extreme_high_emoji_normal" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivHighPain"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivNormalPain"
+                        app:layout_constraintStart_toEndOf="@id/ivExtremePain"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/vd_pain_high_emoji_normal" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivNormalPain"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivLowPain"
+                        app:layout_constraintStart_toEndOf="@id/ivHighPain"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/vd_pain_normal_emoji_normal" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLowPain"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivNoPain"
+                        app:layout_constraintStart_toEndOf="@id/ivNormalPain"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/vd_pain_low_emoji_normal" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivNoPain"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivLowPain"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/vd_no_pain_emoji_normal" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtFeelLow"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="@string/extreme_pain"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_7ssp"
+                        app:layout_constraintStart_toStartOf="@id/ivExtremePain"
+                        app:layout_constraintTop_toBottomOf="@id/ivExtremePain" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtFeelHappy"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="@string/no_pain"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_7ssp"
+                        app:layout_constraintEnd_toEndOf="@id/ivNoPain"
+                        app:layout_constraintTop_toBottomOf="@id/ivNoPain" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/viewSave"
+                    style="@style/CardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="0dp"
+                    app:layout_constraintEnd_toEndOf="@id/emojisView"
+                    app:layout_constraintStart_toStartOf="@id/emojisView"
+                    app:layout_constraintTop_toBottomOf="@id/emojisView"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSaveAndStart"
+                        style="@style/ButtonGoldStyle"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:alpha="0.5"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:enabled="false"
+                        android:text="@string/save_start" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnSkip"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/skip_for_now"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/viewSave"
+                    app:layout_constraintStart_toStartOf="@id/viewSave"
+                    app:layout_constraintTop_toBottomOf="@id/viewSave"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_8ssp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

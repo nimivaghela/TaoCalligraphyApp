@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="test">#221224</color>
+    <color name="defaultContentColor">#ff000000</color>
+    <color name="defaultBorderFlagColor">@android:color/transparent</color>
+</resources>

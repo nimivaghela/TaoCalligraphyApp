@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_nature_bg_1"
+        android:fitsSystemWindows="true"
+        android:windowSoftInputMode="adjustResize">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_80" />
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/clEmail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="0.2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clEmail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emptyView"
+            app:layout_constraintVertical_weight="0.8">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/verifyEmail"
+                style="@style/TextViewCormorantBoldStyle"
+                android:layout_marginStart="@dimen/_100dp"
+                android:gravity="start"
+                android:text="@string/verify_email"
+                android:textColor="@color/gold_90"
+                android:textSize="@dimen/_40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblEnterCodeInfo"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_75dp"
+                android:gravity="center"
+                android:text="@string/enter_the_code_sent_to"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintTop_toBottomOf="@id/verifyEmail" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblEnterCodeInfo"
+                android:gravity="center"
+                android:paddingTop="@dimen/_8dp"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintTop_toBottomOf="@id/lblEnterCodeInfo"
+                tools:text="a***9@email.com" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/otpView"
+                style="@style/TextInputLayoutMediumBoxStyle"
+                android:layout_width="@dimen/_240dp"
+                app:boxStrokeColor="@color/medium_grey_30"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="1dp"
+                app:errorEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtEmail">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etotp"
+                    style="@style/EditTextStyle"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:letterSpacing="0.5"
+                    android:maxLength="6"
+                    android:nextFocusDown="@id/tlPassword"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_24sp"
+                    app:text_typeface="@string/jost_regular"
+                    tools:text="222222" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblErrorMsg"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:gravity="center"
+                android:text="@string/invalid_code_please_try_again"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_20sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/otpView"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/llFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/_50dp"
+                android:background="@color/transparent"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVResendCode"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_80dp"
+                    android:layout_marginEnd="@dimen/_40dp"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:text="@string/resend_code"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_80dp"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_gravity="center"
+                        android:background="@color/dark_grey" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVStartOver"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_80dp"
+                    android:layout_marginStart="@dimen/_40dp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/start_over"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

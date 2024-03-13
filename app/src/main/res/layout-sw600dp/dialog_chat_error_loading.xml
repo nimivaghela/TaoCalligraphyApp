@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_curve_20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <ImageView
+                android:src="@drawable/vd_offline_icon"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostSemiBoldStyle"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:text="@string/page_error_loading"
+                android:textColor="@color/neutral_900"
+                android:textSize="@dimen/_14ssp" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                app:cardElevation="0dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRetry"
+                    style="@style/ButtonGoldStyle"
+                    app:backgroundTint="@null"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:fontFamily="@font/font_jost_semi_bold"
+                    app:icon="@drawable/vd_refresh_icon"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="@string/retry"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

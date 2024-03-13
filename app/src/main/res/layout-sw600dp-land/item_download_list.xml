@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ru.rambler.libs.swipe_layout.SwipeLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_swipe_enabled="false"
+        app:right_swipe_enabled="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="@color/medium_grey_10"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivSelect"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/vd_ellipse_blank"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <FrameLayout
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_35sdp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"
+                        app:cornerFamily="rounded"
+                        tools:srcCompat="@drawable/ic_dummy_garden_stack" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/vd_play_button" />
+                </FrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8sdp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/circleProgressDownload"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvContentTitle"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_7ssp"
+                            tools:text="Release Back Pain" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCategoryTitle"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_5ssp"
+                            tools:text="Health>Physical" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvContentFileSize"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_5ssp"
+                            tools:text="200 MB" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivDownloadComplete"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:src="@drawable/vd_download_complete"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circleProgressDownload"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:indeterminate="false"
+                        android:progress="0"
+                        android:progressTint="@color/gold"
+                        android:visibility="gone"
+                        app:indicatorColor="@color/gold"
+                        app:indicatorSize="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ivDownloadComplete"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackColor="@color/white"
+                        app:trackThickness="@dimen/_2sdp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/videoDeletedView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/white_smoke_50"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:text="@string/video_no_longer_available"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            app:bring_to_clamp="@dimen/_80sdp"
+            app:clamp="self"
+            app:gravity="right"
+            app:sticky="@dimen/_80sdp">
+
+            <LinearLayout
+                android:id="@+id/llDeleteDownload"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/vd_delete_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ru.rambler.libs.swipe_layout.SwipeLayout>
+</layout>

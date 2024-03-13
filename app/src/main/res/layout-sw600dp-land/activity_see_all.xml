@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.home.SeeAllActivity">
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeToRefreshLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginEnd="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleToolbar"
+                            style="@style/TextViewCormorantBoldStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:letterSpacing="-0.02"
+                            android:maxLines="1"
+                            android:text="@string/for_you"
+                            android:textColor="@color/gold_90"
+                            android:textSize="@dimen/_16ssp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/llAlertTab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMeditation"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_white_gold_border_22dp"
+                                android:gravity="center"
+                                android:paddingVertical="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:text="@string/meditations"
+                                android:textAllCaps="true"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_7ssp"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPrograms"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:background="@drawable/bg_gray_95_radius_22dp"
+                                android:gravity="center"
+                                android:paddingVertical="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:text="@string/programs"
+                                android:textAllCaps="true"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_7ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLiveSessions"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:background="@drawable/bg_gray_95_radius_22dp"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:text="@string/live_sessions"
+                                android:textAllCaps="true"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_11ssp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        tools:visibility="gone"
+                        android:id="@+id/llMeditations"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvNoProgressFoundMeditation"
+                            style="@style/TextViewJostBoldStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/no_data_found"
+                            android:textSize="@dimen/_8ssp"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvMeditations"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="10"
+                            tools:listitem="@layout/item_meditation_see_all" />
+
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerMeditation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            tools:visibility="visible">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollIndicators="none"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+                                </LinearLayout>
+                            </ScrollView>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llPrograms"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPrograms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="10"
+                            tools:listitem="@layout/item_program_see_all" />
+
+                        <TextView
+                            android:id="@+id/tvNoProgressFoundPrograms"
+                            style="@style/TextViewJostBoldStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/no_data_found"
+                            android:textSize="@dimen/_8ssp"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerPrograms"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            tools:visibility="visible">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollIndicators="none"
+                                android:scrollbars="none">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+
+                                    <include layout="@layout/item_content_list_shimmer" />
+                                </LinearLayout>
+                            </ScrollView>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- <LinearLayout
+         android:id="@+id/llProgress"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_gravity="center"
+         android:visibility="gone">
+
+         <include
+             android:id="@+id/progressBar"
+             layout="@layout/item_progress" />
+     </LinearLayout>-->
+
+</layout>

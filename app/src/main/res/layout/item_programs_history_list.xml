@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingTop="@dimen/_10ssp"
+        android:paddingEnd="@dimen/_10ssp"
+        android:paddingBottom="@dimen/_10ssp">
+
+        <FrameLayout
+            android:id="@+id/flMultiImage"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_102sdp"
+                android:layout_height="@dimen/_62sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_rounded_right_corner_border" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProgram"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay_card_custom_corners_15_5_program"
+                app:srcCompat="@drawable/ic_gratitude_dummy" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:srcCompat="@drawable/vd_play_small_multi_item" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flProgress"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_white_round"
+            android:elevation="@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf="@id/flMultiImage"
+            app:layout_constraintEnd_toEndOf="@id/flMultiImage"
+            app:layout_constraintStart_toEndOf="@id/flMultiImage"
+            app:layout_constraintTop_toTopOf="@id/flMultiImage">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProgressCount"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_gravity="center"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_10ssp"
+                tools:text="80%" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/circleProgressTrophy"
+                android:layout_width="@dimen/_39sdp"
+                android:layout_height="@dimen/_39sdp"
+                android:layout_gravity="center"
+                android:indeterminate="false"
+                android:progressTint="@color/gold_90"
+                app:indicatorColor="@color/gold_90"
+                app:indicatorSize="@dimen/_39sdp"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/_3sdp"
+                tools:progress="75" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flProgress"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_12ssp"
+                tools:text="7 Days to Transform Pain" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblDate"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_below="@+id/tvTitle"
+                android:text="@string/started_on"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_10ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                style="@style/TextViewJostBoldStyle"
+                android:layout_below="@+id/tvTitle"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_toEndOf="@id/lblDate"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_10ssp"
+                tools:text="MMM DD 'YY" />
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

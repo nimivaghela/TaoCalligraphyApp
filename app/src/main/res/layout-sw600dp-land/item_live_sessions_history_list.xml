@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingTop="@dimen/_10ssp"
+        android:paddingEnd="@dimen/_15ssp"
+        android:paddingBottom="@dimen/_10ssp">
+
+        <FrameLayout
+            android:id="@+id/flMultiImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.35">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_6"
+                app:cornerFamily="rounded"
+                app:srcCompat="@drawable/ic_dummy_live_session_person"
+                app:strokeColor="@color/shimmer_light"
+                app:strokeWidth="1.5dp" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flMultiImage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_toStartOf="@id/ivMore"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:text="Breathwork"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="Mindfulness for IT Professionals"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/lorem_ipsum"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostBoldStyle"
+                        android:text="MMM DD"
+                        android:gravity="center"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <com.willy.ratingbar.ScaleRatingBar
+                        android:id="@+id/rbRating"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_height="wrap_content"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="true"
+                        app:srb_drawableEmpty="@drawable/ic_star"
+                        app:srb_drawableFilled="@drawable/ic_star_fill"
+                        app:srb_isIndicator="true"
+                        app:srb_minimumStars="1"
+                        app:srb_numStars="5"
+                        app:srb_rating="3"
+                        app:srb_scrollable="true"
+                        app:srb_starHeight="14dp"
+                        app:srb_starPadding="1dp"
+                        app:srb_starWidth="14dp"
+                        app:srb_stepSize="1"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRateCount"
+                        style="@style/TextViewPoppinsMediumStyle"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:text="4"
+                        android:includeFontPadding="false"
+                        android:gravity="center"
+                        android:alpha="0.6"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_10ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/vd_more_white"
+                app:tint="@color/dark_grey" />
+
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

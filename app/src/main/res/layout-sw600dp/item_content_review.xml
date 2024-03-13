@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReviewTitle"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:gravity="end|center_vertical"
+            android:text="@string/relaxed"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/_8ssp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_weight="0.7"
+            android:gravity="start">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressRating"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_7sdp"
+                android:layout_gravity="start"
+                android:layout_toStartOf="@id/tvReviewCount"
+                android:gravity="center_vertical"
+                android:progress="100"
+                android:progressTint="@color/shimmer_dark"
+                app:indicatorColor="@color/shimmer_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvReviewCount"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.87"
+                app:trackColor="@color/white"
+                app:trackCornerRadius="@dimen/_3sdp"
+                app:trackThickness="@dimen/_5sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReviewCount"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:gravity="start"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_7ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/progressRating"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="18" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardReadMeditate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardUseCompatPadding="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivMeditate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:scaleType="centerCrop"
+                            tools:src="@drawable/ic_dummy_seven_energy" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/ivSubscribeLock"
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="@color/dark_grey_80"
+                            app:cardCornerRadius="@dimen/_20sdp"
+                            tools:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_4sdp"
+                                android:layout_height="@dimen/_6sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="1dp"
+                                android:src="@drawable/ic_lock" />
+                        </com.google.android.material.card.MaterialCardView>
+                    </FrameLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMeditateTitle"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_width="match_parent"
+                        android:lines="2"
+                        android:ellipsize="end"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:textColor="@color/dark_gold"
+                        android:lineSpacingMultiplier="0.9"
+                        android:textSize="@dimen/_7ssp"
+                        tools:text="How to benefit from these meditations" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMeditateDescription"
+                        style="@style/TextViewJostRegularStyle"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:lineSpacingMultiplier="0.9"
+                        android:textColor="@color/neutral_900"
+                        android:textSize="@dimen/_6ssp"
+                        tools:text="@string/lorem_ipsum" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTime"
+                        style="@style/TextViewJostRegularStyle"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_6ssp"
+                        tools:text="2 min read" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tVGet"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gold_top_left_bottom_right_10dp"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/get"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_6ssp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_66"
+                    android:visibility="gone"
+                    tools:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLock"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/vd_background_lock_icon" />
+
+                </RelativeLayout>
+            </FrameLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>

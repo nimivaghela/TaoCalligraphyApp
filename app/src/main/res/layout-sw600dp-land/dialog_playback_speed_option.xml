@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_1sdp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2F2F2F2"
+                android:paddingStart="@dimen/_3sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vd_close_button_grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblAdjustSpeed"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:text="@string/adjust_speed"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_8ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv5Speed"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/bg_white_curve_24dp"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/speed_0_5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_6ssp"
+                    android:translationZ="@dimen/_5sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/tv75Speed"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAdjustSpeed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv75Speed"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/bg_white_curve_24dp"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/speed_0_75"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvNormalSpeed"
+                    app:layout_constraintStart_toEndOf="@+id/tv5Speed"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAdjustSpeed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNormalSpeed"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/bg_white_curve_24dp"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/speed_1_0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/tv15Speed"
+                    app:layout_constraintStart_toEndOf="@+id/tv75Speed"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAdjustSpeed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv15Speed"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/bg_white_curve_24dp"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/speed_1_5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/tv2Speed"
+                    app:layout_constraintStart_toEndOf="@+id/tvNormalSpeed"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAdjustSpeed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv2Speed"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/bg_white_curve_24dp"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/speed_2_0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv15Speed"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAdjustSpeed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFaster"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:drawableTint="@color/dark_grey"
+                    android:text="@string/faster"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNormalSpeed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSlower"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:drawableTint="@color/dark_grey"
+                    android:text="@string/slower"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_6ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNormalSpeed" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

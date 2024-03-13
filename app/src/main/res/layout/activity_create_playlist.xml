@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/mToolbar"
+                    layout="@layout/view_toolbar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleToolbar"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:letterSpacing="-0.02"
+                    android:maxLines="1"
+                    android:text="@string/create_playlist"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_28ssp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <!--<com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlSessionName"
+                style="@style/TextInputLayoutMediumBoxStyle"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_16sdp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etSessionName"
+                    style="@style/EditTextStyle"
+                    android:background="@drawable/bg_tran_gray_border"
+                    android:hint="@string/name_your_list"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:textSize="@dimen/_12sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlSessionName"
+                style="@style/TextInputLayoutMediumBoxStyle"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:errorEnabled="false">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etSessionName"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_your_list"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="255"
+                    android:textSize="@dimen/_12sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_50sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/llTitle"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:text="@string/meditations"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18ssp" />
+
+<!--                <androidx.core.widget.NestedScrollView-->
+<!--                    android:id="@+id/nscMain"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:fillViewport="true">-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.ernestoyaquello.dragdropswiperecyclerview.DragDropSwipeRecyclerView
+                            android:id="@+id/rvPlaylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:item_layout="@layout/item_playlist_meditations_list"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:fillViewport="true"
+                            tools:itemCount="3" />
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/llAddNew"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:paddingHorizontal="@dimen/_16sdp"-->
+<!--                            android:paddingVertical="@dimen/_10sdp">-->
+
+<!--                            <ImageView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:src="@drawable/vd_drag"-->
+<!--                                android:visibility="visible" />-->
+
+<!--                            <FrameLayout-->
+<!--                                android:layout_width="@dimen/_100sdp"-->
+<!--                                android:layout_height="@dimen/_60sdp"-->
+<!--                                android:layout_marginStart="@dimen/_10sdp">-->
+
+<!--                                <com.google.android.material.imageview.ShapeableImageView-->
+<!--                                    android:id="@+id/ivImage"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:background="@android:color/transparent"-->
+<!--                                    android:scaleType="fitXY"-->
+<!--                                    android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"-->
+<!--                                    app:cornerFamily="rounded"-->
+<!--                                    app:srcCompat="@color/shimmer_light" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatImageButton-->
+<!--                                    android:id="@+id/ivAddNew"-->
+<!--                                    android:layout_width="@dimen/_28sdp"-->
+<!--                                    android:layout_height="@dimen/_28sdp"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:background="@drawable/bg_gold_round"-->
+<!--                                    android:src="@drawable/vd_add_icon_white" />-->
+
+<!--                            </FrameLayout>-->
+
+
+<!--                            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                style="@style/TextViewJostMediumStyle"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_marginStart="@dimen/_10sdp"-->
+<!--                                android:text="@string/add_new"-->
+<!--                                android:textColor="@color/medium_grey"-->
+<!--                                android:textSize="@dimen/_12ssp" />-->
+
+
+<!--                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/progressBarForResult"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:visibility="gone" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSave"
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSave"
+                        style="@style/ButtonGoldStyle"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/save" />
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

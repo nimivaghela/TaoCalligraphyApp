@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rrMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/sand"
+                tools:context=".ui.chat.ChatConversationActivity">
+
+                <LinearLayout
+                    android:id="@+id/llHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/sand"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/ivAddNew"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivBackToolbar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/_16sdp"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:src="@drawable/vd_white_back_arrow" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvChatConversation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="0dp"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/ivAddNew"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:background="@drawable/bg_white_round"
+                            android:src="@drawable/vd_add_icon_white"
+                            android:tint="@color/gold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/llChatSendController"
+                    android:layout_below="@id/llHeader"
+                    android:layout_margin="0dp"
+                    android:orientation="vertical"
+                    android:theme="@style/CardViewTopCorner"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/_25sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/llChatSendController"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/shimmer_light"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_42sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_15sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/ivStartRecording"
+                            android:background="@drawable/bg_white_curve_30dp">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/ivSendMessage"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/font_jost_regular"
+                                android:hint="@string/type_message"
+                                android:imeOptions="actionDone"
+                                android:inputType="text"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingTop="@dimen/_12sdp"
+                                android:paddingEnd="0dp"
+                                android:paddingBottom="@dimen/_12sdp"
+                                android:textColor="@color/dark_grey"
+                                android:textCursorDrawable="@color/white"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <ImageView
+                                android:id="@+id/ivSendMessage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:src="@drawable/ic_send_gray" />
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/ivStartRecording"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:src="@drawable/vd_mike_gray" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_white_top_gradient"
+            android:visibility="gone" />
+    </FrameLayout>
+</layout>

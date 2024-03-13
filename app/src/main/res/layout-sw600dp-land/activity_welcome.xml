@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rlWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/_32dp"
+            tools:context=".ui.welcome.WelcomeActivity">
+
+            <LinearLayout
+                android:id="@+id/img_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/layout_image_center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/vg_tao_logo" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_oneness_heart_logo" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start"
+                android:layout_marginStart="-40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mountain2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mountain1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_image_center"
+                android:layout_width="@dimen/_700dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_24dp"
+                app:layout_constraintBottom_toTopOf="@+id/layout_buttons"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_logo">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtWelcomeHeader"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="-12dp"
+                    android:paddingStart="@dimen/_20dp"
+                    android:paddingEnd="@dimen/_20dp"
+                    android:text="@string/home_is"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/layout_image_center" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_home_goldenline"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="-2dp"
+                    android:layout_marginBottom="-10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/img_welcome_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.35"
+                    app:layout_constraintWidth_percent="0.35"
+                    app:srcCompat="@drawable/home_golden_line_drawing" />
+
+
+                <LinearLayout
+                    android:id="@+id/img_welcome_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/_20dp"
+                    android:paddingEnd="@dimen/_20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lblWelcome"
+                        style="@style/TextViewCormorantBoldStyleWelcomeNormal"
+                        android:layout_width="wrap_content"
+                        android:text="@string/welcome"
+                        android:textColor="@color/gold_90"
+                        android:textSize="@dimen/_45sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewCormorantBoldStyleWelcomeNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:text="@string/home"
+                        android:textColor="@color/gold_90"
+                        android:textSize="@dimen/_45sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_heart_animation"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="0:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="mascot_fly_in_for_welcome_screen.json"
+                    app:lottie_loop="true"
+                    app:lottie_speed="1"
+                    tools:visibility="gone" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_buttons"
+                android:layout_width="@dimen/_700dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_image_center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardBeginYourExperience"
+                    style="@style/CardViewStyle"
+                    android:layout_marginStart="@dimen/_100dp"
+                    android:layout_marginEnd="@dimen/_100dp"
+                    app:layout_constraintBottom_toTopOf="@+id/shadowView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnBeginYourExperienceSplash"
+                        style="@style/ButtonGoldStyle"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/begin_your_experience" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.loopeer.shadow.ShadowView
+                    android:id="@+id/shadowView"
+                    style="@style/ShadowViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="@dimen/_80dp"
+                    app:backgroundColor="@color/transparent"
+                    app:layout_constraintEnd_toStartOf="@id/signup_shadow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardBeginYourExperience"
+                    app:shadowMarginBottom="@dimen/_10dp"
+                    app:shadowMarginLeft="@dimen/_20dp"
+                    app:shadowMarginRight="@dimen/_20dp"
+                    app:shadowMarginTop="@dimen/_24dp"
+                    tools:layout_editor_absoluteY="21dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLoginWelcome"
+                        style="@style/ButtonWhiteStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:background="@drawable/bg_white_curve"
+                        android:text="@string/login"
+                        app:layout_gravity="center" />
+
+                </com.loopeer.shadow.ShadowView>
+
+                <com.loopeer.shadow.ShadowView
+                    android:id="@+id/signup_shadow"
+                    style="@style/ShadowViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/_80dp"
+                    app:backgroundColor="@color/transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/shadowView"
+                    app:layout_constraintTop_toBottomOf="@+id/cardBeginYourExperience"
+                    app:shadowMarginBottom="@dimen/_10dp"
+                    app:shadowMarginLeft="@dimen/_20dp"
+                    app:shadowMarginRight="@dimen/_20dp"
+                    app:shadowMarginTop="@dimen/_24dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSignUpWelcome"
+                        style="@style/ButtonWhiteStyle"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginEnd="@dimen/_20dp"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:background="@drawable/bg_white_curve"
+                        android:text="@string/sign_up"
+                        app:layout_gravity="center" />
+
+                </com.loopeer.shadow.ShadowView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

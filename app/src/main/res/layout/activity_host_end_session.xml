@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:background="@drawable/ic_end_session_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.meditation_session.HostEndSessionActivity">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/bg_gray_corner_diff_radius"
+                android:elevation="@dimen/_1sdp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_2sdp"
+                android:elevation="@dimen/_1sdp"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay_card_custom_corners"
+                app:srcCompat="@drawable/ic_dummy_session_bg_small" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewJostMediumStyle"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/clear_mind"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_22ssp"
+            app:lineHeight="@dimen/_22sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewLatoBoldStyle"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/session_ended"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_16ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp">
+
+            <com.loopeer.shadow.ShadowView
+                style="@style/ShadowViewStyle">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnScheduleSession"
+                    style="@style/ButtonGoldStyle"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="@string/schedule_another" />
+            </com.loopeer.shadow.ShadowView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp">
+
+            <com.loopeer.shadow.ShadowView
+                style="@style/ShadowViewStyle">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClose"
+                    style="@style/ButtonWhiteStyle"
+                    android:background="@drawable/bg_white_curve"
+                    android:text="@string/close_without_schedule" />
+            </com.loopeer.shadow.ShadowView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingTop="@dimen/_5ssp"
+        android:paddingEnd="@dimen/_5ssp"
+        android:paddingBottom="@dimen/_5ssp">
+
+        <FrameLayout
+            android:id="@+id/flMultiImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_rounded_right_corner_border" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_41sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay_card_custom_corners_13_5_8_5"
+                tools:srcCompat="@drawable/ic__meditation_timer_bg_2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCenterImage"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/vd_play_button" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ivAddNew"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_white_round"
+                android:src="@drawable/vd_add_icon_white"
+                android:tint="@color/gold"
+                android:visibility="gone" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ivSubscribeLock"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                app:cardBackgroundColor="@color/dark_grey_80"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/flMultiImage"
+                app:layout_constraintStart_toStartOf="@+id/flMultiImage"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_4sdp"
+                    android:layout_height="@dimen/_6sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="1dp"
+                    android:src="@drawable/ic_lock" />
+            </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flMultiImage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNewPlaylist"
+                style="@style/TextViewJostMediumStyle"
+                android:text="@string/new_playlist"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_8ssp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llPlaylistInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_8ssp"
+                    tools:text="My Energy Regulation List" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalMeditation"
+                    style="@style/TextViewJostRegularStyle"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_6ssp"
+                    tools:text="4 Meditations" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHoursMinute"
+                    style="@style/TextViewJostRegularStyle"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_6ssp"
+                    tools:text="40 mins" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

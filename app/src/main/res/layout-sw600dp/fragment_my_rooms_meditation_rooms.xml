@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.meditation_rooms_list.MyRoomsMeditationRoomsFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10ssp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostMediumStyle"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/welcome_to_your_rooms"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_18ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMyRooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:clipToPadding="false"
+                android:fadeScrollbars="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingStart="@dimen/_10ssp"
+                android:paddingEnd="@dimen/_10ssp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="4"
+                tools:listitem="@layout/items_my_rooms" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextViewJostRegularStyle"
+            android:text="\u2022"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_12ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInfo"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/find_purpose"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</layout>

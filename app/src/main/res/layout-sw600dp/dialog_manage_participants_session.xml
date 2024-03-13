@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/bg_white_medium_grey_border_30dp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHeader"
+                style="@style/TextViewJostSemiBoldStyle"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawableStart="@drawable/vd_member_group"
+                android:drawablePadding="@dimen/_20sdp"
+                android:text="@string/manage_participants"
+                android:textColor="@color/neutral_900"
+                android:textSize="@dimen/_18ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvParticipants"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/llMuteUnMuteParticipants"
+                android:layout_below="@id/tvHeader"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3" />
+
+            <LinearLayout
+                android:id="@+id/llMuteUnMuteParticipants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/etSearch"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="1">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMuteAllParticipants"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_weight="0.5"
+                    android:backgroundTint="@color/dark_grey"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/font_jost_semi_bold"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:shadowRadius="0"
+                    android:text="@string/mute_all"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    app:cornerRadius="@dimen/_20sdp"
+                    app:elevation="0dp"
+                    app:icon="@drawable/vd_mute_white_small"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/white"
+                    app:rippleColor="@color/white"
+                    app:strokeColor="@color/dark_grey"
+                    app:strokeWidth="@dimen/_1sdp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUnMuteAllParticipants"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_weight="0.5"
+                    android:backgroundTint="@color/white"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/font_jost_semi_bold"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:shadowRadius="0"
+                    android:text="@string/unmute_all"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_11ssp"
+                    app:cornerRadius="@dimen/_20sdp"
+                    app:elevation="0dp"
+                    app:icon="@drawable/vd_unmute_icon_gold"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/gold"
+                    app:rippleColor="@color/gold"
+                    app:strokeColor="@color/gold"
+                    app:strokeWidth="@dimen/_1sdp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ivDown"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_gray_95_light_gray_border_30dp"
+                android:drawableStart="@drawable/vd_gray_search"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/font_jost_regular"
+                android:hint="@string/search_tab"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/secondary_black"
+                android:textColorHint="@color/dark_grey" />
+
+            <ImageView
+                android:id="@+id/ivDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/vd_down_arrow_gold"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

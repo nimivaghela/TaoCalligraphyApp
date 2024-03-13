@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.settings.SettingsActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleToolbar"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:letterSpacing="-0.02"
+                    android:maxLines="1"
+                    android:text="@string/settings"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_28ssp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/notifications"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_14ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/in_app_notifications"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchInAppNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/selector_btn_switch_selector"
+                        android:checked="true"
+                        android:padding="0dp"
+                        android:thumb="@null"
+                        app:track="@null" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:text="@string/email_notifications"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_16ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvEmailId"
+                            style="@style/TextViewJostRegularStyle"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_14ssp"
+                            tools:text="@string/darrellstew_gmail_com" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchEmailNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/selector_btn_switch_selector"
+                        android:checked="true"
+                        android:padding="0dp"
+                        android:thumb="@null"
+                        app:track="@null" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/zen_mode"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_16ssp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchZenMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/selector_btn_switch_selector"
+                        android:checked="false"
+                        android:padding="0dp"
+                        android:thumb="@null"
+                        app:track="@null" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llZenMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivZenModeOpenClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/vd_down_arrow_gold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtVerticalText"
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:text="@string/silences_notifications_while_you_meditate"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_14sdp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llZenModeDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:background="@color/shimmer_light" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:drawableStart="@drawable/vd_bell_off"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:text="@string/when_to_silence"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_14ssp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/during_meditations"
+                                    android:textColor="@color/secondary_black"
+                                    android:textSize="@dimen/_16ssp"
+                                    tools:ignore="TooDeepLayout" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchSilenceDuringMeditation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:button="@drawable/selector_btn_switch_selector"
+                                    android:checked="true"
+                                    android:padding="0dp"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                tools:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/during_live_sessions"
+                                    android:textColor="@color/secondary_black"
+                                    android:textSize="@dimen/_16ssp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchSilenceLiveMeditation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:button="@drawable/selector_btn_switch_selector"
+                                    android:checked="true"
+                                    android:padding="0dp"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                tools:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/from_other_apps"
+                                    android:textColor="@color/secondary_black"
+                                    android:textSize="@dimen/_16ssp" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switchSilenceOtherMeditation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:button="@drawable/selector_btn_switch_selector"
+                                    android:checked="true"
+                                    android:padding="0dp"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSessionRemainderNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/session_reminder_notification"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llSession"
+                            android:layout_width="@dimen/_140sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_white_medium_grey_border_8dp"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/_7sdp"
+                            android:paddingTop="@dimen/_7sdp"
+                            android:paddingEnd="@dimen/_7sdp"
+                            android:paddingBottom="@dimen/_7sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSession"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_width="match_parent"
+                                android:drawableEnd="@drawable/vd_down_arrow_grey"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_15ssp"
+                                tools:text="@string/_30_mins" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/before_session"
+                            android:textColor="@color/secondary_black"
+                            android:textSize="@dimen/_16ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="@string/time_display"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_14ssp" />
+
+                <com.app.taocalligraphy.utils.SegmentedControlGroup
+                    android:id="@+id/segmented_control_group"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:customDividerColor="@color/black"
+                    app:customShadowColor="@color/medium_grey"
+                    app:customSliderColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.app.taocalligraphy.utils.SegmentedControlButton
+                        android:id="@+id/btn12hour"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:gravity="center"
+                        android:text="@string/hour_12"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.app.taocalligraphy.utils.SegmentedControlButton
+                        android:id="@+id/btn24hour"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:gravity="center"
+                        android:text="@string/hour_24"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_12ssp" />
+
+                </com.app.taocalligraphy.utils.SegmentedControlGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:background="@drawable/bg_light_grey_border_dark_grey_top_corners"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/app_languages"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:background="@color/medium_grey_30" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clipToPadding="false"
+                        android:fadeScrollbars="false"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/item_language" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLanguageNotFound"
+                        style="@style/TextViewJostSemiBoldStyle"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:text="@string/language_not_found"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_18ssp"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSave"
+                        style="@style/ButtonGoldStyle"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_40sdp"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/save" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/your_devices"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="@string/your_devices_dec"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDevice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:clipToPadding="false"
+                        android:fadeScrollbars="false"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/item_device" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_40sdp"
+                        android:text="@string/your_devices_note"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_14ssp"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_pale_peach_top_right_curve_border_35dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_50sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_width="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="@string/app_version"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_14ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAppVersion"
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:text="@string/_2_0"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_18ssp" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/checkForUpdateCard"
+                            style="@style/CardViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_weight="0.5"
+                            app:cardCornerRadius="@dimen/_8sdp"
+                            app:cardElevation="0dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/llCheckForUpdates"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/bg_white_curve_gold_border"
+                                android:gravity="center">
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imageUpdate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:src="@drawable/vd_update_gold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/tvLogout"
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLogout"
+                                    style="@style/ButtonWhiteStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@null"
+                                    android:gravity="center"
+                                    android:text="@string/check_for_updates"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/secondary_black"
+                                    android:textSize="@dimen/_13ssp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageUpdate"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/imageUpdate"
+                                    app:layout_constraintTop_toTopOf="@+id/imageUpdate" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:text="@string/interactive_tutorial"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_14ssp"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cvRelaunchTutorial"
+                            style="@style/CardViewStyle"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                style="@style/ButtonGoldStyle"
+                                android:background="@drawable/bg_light_dark_golden_curve"
+                                android:text="@string/relaunch_tutorial" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:text="@string/important_info"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvImportant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clipToPadding="false"
+                            android:fadeScrollbars="false"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/item_important" />
+
+                        <!--<com.google.android.material.card.MaterialCardView
+                            style="@style/CardViewStyle"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnSendFeedbackBg"
+                                    style="@style/ButtonGoldStyle"
+                                    android:background="@drawable/bg_light_dark_golden_curve"
+                                    android:clickable="false" />
+
+                                <ImageView
+                                    android:id="@+id/ivFeedback"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/vd_like_thumb_white"
+                                    tools:ignore="ContentDescription" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/send_us_feedback" />
+                                &lt;!&ndash;<androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnSendFeedback"
+                                    style="@style/ButtonGoldStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/bg_light_dark_golden_curve"
+                                    android:drawableStart="@drawable/vd_like_thumb_white"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:gravity="center"
+                                    android:text="@string/send_us_feedback" />&ndash;&gt;
+
+
+                            </RelativeLayout>
+
+                        </com.google.android.material.card.MaterialCardView>-->
+
+                        <!--                        <com.google.android.material.button.MaterialButton-->
+                        <!--                            android:id="@+id/btnSendFeedback"-->
+                        <!--                            style="@style/MaterialGoldWithIconButtonStyle"-->
+                        <!--                            android:layout_marginHorizontal="@dimen/_20sdp"-->
+                        <!--                            android:layout_marginTop="@dimen/_15sdp"-->
+                        <!--                            android:text="@string/send_us_feedback"-->
+                        <!--                            app:icon="@drawable/vd_like_thumb_white"-->
+                        <!--                            app:iconGravity="textStart" />-->
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btnSendFeedback"
+                            style="@style/MaterialGoldWithIconButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_45sdp"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/bg_light_dark_golden_curve"
+                            android:elevation="@dimen/_8sdp"
+                            android:text="@string/save"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_light_dark_golden_curve" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivThumbImage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:src="@drawable/vd_like_thumb_white" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvProgramHistory"
+                                    style="@style/TextViewJostSemiBoldStyle"
+                                    android:letterSpacing="0.09"
+                                    android:text="@string/send_us_feedback"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13ssp" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivLock"
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:src="@drawable/ic_lock" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnDeleteAccount"
+                            style="@style/MaterialRedButtonStyle"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/delete_account" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

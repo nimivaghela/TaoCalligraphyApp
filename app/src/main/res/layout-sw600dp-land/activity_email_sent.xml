@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_reset_password_1" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="0.2" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="@dimen/_400dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emptyView"
+            app:layout_constraintVertical_weight="0.8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/forgotPasswordTitle"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:gravity="start"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_40sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivEmailSent"
+                    android:layout_width="@dimen/_100dp"
+                    android:layout_height="@dimen/_75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/vd_email_sent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/forgotPasswordTitle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_height="75dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="@string/email_sent"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_45sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivEmailSent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/detailOne"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/we_have_sent_reset_instructions_to"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivEmailSent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEmailId"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/detailOne"
+                    tools:text="test@openxcell.com" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCheckYourEmail"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/check_your_email"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmailId" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

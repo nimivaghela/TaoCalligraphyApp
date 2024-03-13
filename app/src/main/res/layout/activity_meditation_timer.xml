@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:animateLayoutChanges="true"
+                        tools:context=".ui.meditation_timer.MeditationTimerActivity">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_80sdp"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTitleToolbar"
+                                style="@style/TextViewCormorantBoldStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:letterSpacing="-0.02"
+                                android:maxLines="1"
+                                android:text="@string/meditation_timer"
+                                android:textColor="@color/gold_90"
+                                android:textSize="@dimen/_28ssp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible" />
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/shimmerMeditationTimer"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@android:color/transparent"
+                                android:visibility="visible">
+
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal">
+
+                                            <include layout="@layout/item_meditation_timer_shimmer" />
+
+                                            <include layout="@layout/item_meditation_timer_shimmer" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_13sdp">
+
+                                            <include layout="@layout/item_meditation_timer_shimmer" />
+
+                                            <include layout="@layout/item_meditation_timer_shimmer" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </ScrollView>
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvMeditationTimer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/_15sdp"
+                                android:clipToPadding="false"
+                                android:fadeScrollbars="false"
+                                android:nestedScrollingEnabled="false"
+                                android:padding="@dimen/_10sdp"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                app:spanCount="2"
+                                tools:itemCount="20"
+                                tools:listitem="@layout/item_meditation_timer" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <include
+                android:id="@+id/mToolbar"
+                layout="@layout/view_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/llProgress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <include
+                    android:id="@+id/progressBar"
+                    layout="@layout/item_progress" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

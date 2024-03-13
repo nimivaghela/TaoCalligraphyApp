@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_2sdp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBackground"
+                    android:layout_width="@dimen/_87sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_rounded_right_corner_border" />
+
+                <FrameLayout
+                    android:layout_width="@dimen/_86sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_6sdp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivProgram"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_49sdp"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/_1sdp"
+                        android:scaleType="centerCrop"
+                        android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_13_5_8_5"
+                        app:cornerFamily="rounded"
+                        app:strokeColor="@color/gold" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivContentBgGradient"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_1sdp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_13_5"
+                        app:cornerFamily="rounded"
+                        app:srcCompat="@drawable/ic_black_gradient" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivFeaturedBg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_49sdp"
+                        android:scaleType="fitXY"
+                        android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_9_5"
+                        android:visibility="gone"
+                        app:cornerFamily="rounded"
+                        app:srcCompat="@drawable/ic_feature_bg_rectangle_8_4"
+                        tools:visibility="visible" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlay"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/vd_play_program" />
+
+
+                <FrameLayout
+                    android:id="@+id/flFavourite"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/_5sdp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieFavourite"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        app:lottie_autoPlay="false"
+                        app:lottie_loop="false"
+                        app:lottie_scale="@integer/material_motion_duration_long_1" />
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlLock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    tools:visibility="gone">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="@dimen/_82sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@color/white_66"
+                        android:scaleType="fitXY"
+                        android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_7_13_7"
+                        app:cornerFamily="rounded" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/vd_background_lock_icon" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ivSubscribeLock"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_9sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/dark_grey_80"
+                    app:cardCornerRadius="@dimen/_20sdp"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_4sdp"
+                        android:layout_height="@dimen/_6sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="1dp"
+                        android:src="@drawable/ic_lock" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tVGet"
+                    style="@style/GetTextViewJostRegularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/bg_gold_top_left_bottom_right_10dp"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/get"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_6ssp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivFeaturedImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_toEndOf="@id/tVGet"
+                    android:src="@drawable/ic_iv_featured_ribbon"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_8ssp"
+            tools:text="7 Days to Better Sleep" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleSearch"
+            style="@style/TextViewJostMediumStyle"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_8ssp"
+            android:visibility="gone"
+            tools:text="7 Days to Better Sleep" />
+
+        <LinearLayout
+            android:id="@+id/llRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/rbRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srb_clearRatingEnabled="true"
+                app:srb_clickable="true"
+                app:srb_drawableEmpty="@drawable/ic_star"
+                app:srb_drawableFilled="@drawable/dr_fill_star"
+                app:srb_isIndicator="true"
+                app:srb_minimumStars="1"
+                app:srb_numStars="5"
+                app:srb_scrollable="true"
+                app:srb_starHeight="@dimen/_5sdp"
+                app:srb_starPadding="1dp"
+                app:srb_starWidth="@dimen/_5sdp"
+                app:srb_stepSize="1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRateCount"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_16sp"
+                tools:text="27" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvJoinedUser"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:drawableStart="@drawable/vd_small_gold_user"
+                android:drawablePadding="@dimen/_3sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_16sp"
+                tools:text="45" />
+        </LinearLayout>
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/programProgress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:rcBackgroundColor="#1A000000"
+            app:rcMax="100"
+            app:rcProgress="35"
+            app:rcProgressColor="#FFD26D" />
+    </LinearLayout>
+</layout>

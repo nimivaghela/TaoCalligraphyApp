@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/startMargin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/startMargin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endMargin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/endMargin" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/endMargin"
+                app:layout_constraintStart_toEndOf="@id/startMargin">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/tvLogoutProfile">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="@dimen/_60sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleToolbar"
+                            style="@style/TextViewScreenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="@string/profile"
+                            android:textColor="@color/gold_90"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="visible" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlProfileInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_14sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_marginBottom="@dimen/_14sdp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivUserProfile"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_profile_default"
+                                app:civ_border_color="@color/gold"
+                                app:civ_border_width="@dimen/_2sdp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:layout_toEndOf="@+id/ivUserProfile">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvName"
+                                style="@style/TextViewCormorantBoldStyle"
+                                android:layout_marginBottom="0dp"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="2"
+                                android:textColor="@color/gold_90"
+                                android:textSize="@dimen/_40sp"
+                                tools:text="Francisco Quintero" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvEmailId"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_below="@+id/tvName"
+                                    android:ellipsize="end"
+                                    android:gravity="start"
+                                    android:lines="1"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_7sdp"
+                                    tools:text="francisco.quintero@drsha.com" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvProfileMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="4"
+                            tools:listitem="@layout/item_profile_menu">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLogoutProfile"
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                    android:background="@drawable/bg_gray_95_top_radius_18dp"
+                    android:drawableStart="@drawable/vd_logout_icon_grey"
+                    android:drawableEnd="@drawable/vd_right_arrow_gold"
+                    android:drawablePadding="@dimen/_14sdp"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/logout"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

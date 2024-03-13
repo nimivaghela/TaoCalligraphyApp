@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="@dimen/_550dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <LinearLayout
+                android:id="@+id/llToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleToolbar"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:letterSpacing="-0.02"
+                    android:maxLines="1"
+                    android:text="@string/profile_pic"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_15ssp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp">
+
+                <com.ortiz.touchview.TouchImageView
+                    android:id="@+id/ivProfilePicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:isScrollContainer="true"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:src="@drawable/vd_crop_guidline" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:text="@string/drag_pinch_zoom"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_7ssp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="10dp"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSave"
+                        style="@style/ButtonGoldStyle"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_6ssp"
+                        app:backgroundTint="@null"
+                        app:fontFamily="@font/font_jost_semi_bold"
+                        app:icon="@drawable/vd_true_tick"
+                        app:iconGravity="textEnd"
+                        app:iconTint="@color/white" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- <com.google.android.material.button.MaterialButton
+                     android:id="@+id/btnReset"
+                     style="@style/MaterialWhiteButtonStyle"
+                     android:layout_width="match_parent"
+                     android:layout_marginTop="@dimen/_10dp"
+                     android:background="@drawable/bg_white_curve"
+                     android:text="@string/reset"
+                     android:textColor="@color/secondary_black"
+                     app:icon="@drawable/vd_refresh_icon"
+                     app:iconGravity="textEnd"
+                     app:iconTint="@color/medium_grey"
+                     app:layout_constraintTop_toBottomOf="@+id/cvSave"
+                     app:layout_gravity="start" />-->
+
+                <com.loopeer.shadow.ShadowView
+
+                    style="@style/ShadowViewStyle"
+                    app:cornerRadius="@dimen/_10dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnReset"
+                        style="@style/ButtonWhiteStyle"
+                        android:text="@string/reset"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_6ssp"
+                        app:fontFamily="@font/font_jost_semi_bold"
+                        app:icon="@drawable/vd_refresh_icon"
+                        app:iconGravity="textEnd"
+                        app:iconTint="@color/medium_grey" />
+
+                </com.loopeer.shadow.ShadowView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/bg_white_top_gradient"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+             <com.loopeer.shadow.ShadowView
+                 style="@style/ShadowViewStyle"
+                 android:layout_width="wrap_content"
+                 android:layout_marginStart="@dimen/_4sdp"
+                 app:cornerRadius="@dimen/_25sdp"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
+
+                 <androidx.cardview.widget.CardView
+                     android:id="@+id/ivBack"
+                     android:layout_width="@dimen/_20sdp"
+                     android:layout_height="@dimen/_20sdp"
+                     android:background="@drawable/bg_toolbar_icon"
+                     app:cardCornerRadius="@dimen/_25sdp"
+                     app:cardElevation="@dimen/_3sdp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:src="@drawable/vd_grey_back_arrow" />
+
+                 </androidx.cardview.widget.CardView>
+             </com.loopeer.shadow.ShadowView>
+
+            <com.loopeer.shadow.ShadowView
+                style="@style/ShadowViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_4sdp"
+                app:cornerRadius="@dimen/_25sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardProfile"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/bg_toolbar_icon"
+                    android:backgroundTint="@color/shimmer_light_50"
+                    android:elevation="@dimen/_3sdp"
+                    app:cardCornerRadius="@dimen/_25sdp"
+                    app:cardElevation="@dimen/_3sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivProfileImageToolbar"
+                        android:layout_width="@dimen/_19sdp"
+                        android:layout_height="@dimen/_19sdp"
+                        android:layout_gravity="center"
+                        android:animateLayoutChanges="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_profile_default" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </com.loopeer.shadow.ShadowView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

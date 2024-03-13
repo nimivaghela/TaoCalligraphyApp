@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTab"
+            style="@style/TextViewJostMediumStyle"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_white_gold_50_curve"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:textAllCaps="true"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/_12ssp"
+            tools:text="FAVORITES" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelections"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/_16_selections"
+            android:textColor="@color/medium_grey"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</layout>

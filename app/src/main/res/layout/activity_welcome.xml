@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rlWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_16sdp"
+                tools:context=".ui.welcome.WelcomeActivity">
+
+                <LinearLayout
+                    android:id="@+id/img_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_image_center"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/vg_tao_logo" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_oneness_heart_logo" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_image_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/img_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/layout_buttons"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtWelcomeHeader"
+                        style="@style/TextViewCormorantBoldStyle"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:text="@string/home_is"
+                        android:textColor="@color/gold_90"
+                        android:textSize="@dimen/_24ssp"
+                        android:lineSpacingExtra="-12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/layout_image_center" />
+<!--                    android:autoSizeTextType="uniform"
+                        app:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="@dimen/_12ssp"
+                        android:autoSizeMaxTextSize="@dimen/_100ssp"
+                        android:autoSizeStepGranularity="@dimen/_2ssp" -->
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_mountain1" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_55sdp"
+                        app:srcCompat="@drawable/ic_mountain2" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_home_goldenline"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="-2dp"
+                        android:layout_marginBottom="-10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/img_welcome_home"
+                        app:srcCompat="@drawable/home_golden_line_drawing"
+                        app:layout_constraintWidth_percent="0.35"
+                        app:layout_constraintHeight_percent="0.35"
+                        />
+
+
+                    <LinearLayout
+                        android:id="@+id/img_welcome_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewCormorantBoldStyle"
+                            android:layout_width="wrap_content"
+                            android:text="@string/welcome"
+                            android:id="@+id/lblWelcome"
+                            android:textColor="@color/gold_90"
+                            android:textSize="@dimen/_28ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewCormorantBoldStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:text="@string/home"
+                            android:textColor="@color/gold_90"
+                            android:textSize="@dimen/_34ssp"/>
+
+                    </LinearLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_heart_animation"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:background="@color/transparent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="mascot_fly_in_for_welcome_screen.json"
+                        app:lottie_loop="true"
+                        app:lottie_speed="1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+
+                        />
+                    <!-- <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="@dimen/_65sdp"
+                         app:srcCompat="@drawable/vd_hear_gold_line" />
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="@dimen/_20sdp"
+                         android:layout_marginTop="@dimen/_200sdp"
+                         app:srcCompat="@drawable/vd_mascot" />-->
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_image_center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    >
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBeginYourExperience"
+                        style="@style/CardViewStyle"
+                        app:cardCornerRadius="@dimen/_12sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/shadowView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnBeginYourExperienceSplash"
+                            style="@style/ButtonGoldStyle"
+                            android:background="@drawable/bg_light_dark_golden_curve"
+                            android:text="@string/begin_your_experience" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.loopeer.shadow.ShadowView
+                        android:id="@+id/shadowView"
+                        style="@style/ShadowViewStyle"
+                        app:shadowMarginBottom="@dimen/_5sdp"
+                        app:shadowMarginTop="@dimen/_12sdp"
+                        tools:layout_editor_absoluteY="21dp"
+                        app:layout_constraintTop_toBottomOf="@+id/cardBeginYourExperience"
+                        app:layout_constraintBottom_toTopOf="@+id/signup_shadow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnLoginWelcome"
+                            style="@style/ButtonWhiteStyle"
+                            android:background="@drawable/bg_white_curve"
+                            android:text="@string/login" />
+
+                    </com.loopeer.shadow.ShadowView>
+
+                    <com.loopeer.shadow.ShadowView
+                        android:id="@+id/signup_shadow"
+                        style="@style/ShadowViewStyle"
+                        app:shadowMarginBottom="@dimen/_5sdp"
+                        app:shadowMarginTop="@dimen/_12sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/shadowView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSignUpWelcome"
+                            style="@style/ButtonWhiteStyle"
+                            android:background="@drawable/bg_white_curve"
+                            android:text="@string/sign_up" />
+
+                    </com.loopeer.shadow.ShadowView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

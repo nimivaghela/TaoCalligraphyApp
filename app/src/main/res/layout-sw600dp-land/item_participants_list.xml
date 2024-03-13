@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_15sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHostImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCoHost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_dummy_banner_first" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:id="@+id/viewCenter"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/cardHostImage"
+            app:layout_constraintEnd_toEndOf="@id/cardHostImage"
+            app:layout_constraintStart_toStartOf="@id/cardHostImage"
+            app:layout_constraintTop_toTopOf="@id/cardHostImage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivHostSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@id/cardHostImage"
+            app:layout_constraintStart_toEndOf="@id/cardHostImage"
+            app:layout_constraintTop_toTopOf="@id/cardHostImage"
+            app:srcCompat="@drawable/vd_session_host_icon" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVoiceLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardHostImage"
+            app:srcCompat="@drawable/vd_voice_left" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivVoiceRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardHostImage"
+            app:srcCompat="@drawable/vd_voice_right" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            style="@style/TextViewJostMediumStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="John Smith"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/ivVoiceRight"
+            app:layout_constraintStart_toEndOf="@id/ivVoiceLeft"
+            app:layout_constraintTop_toBottomOf="@id/cardHostImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            style="@style/TextViewJostMediumStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="Jan 15 2022"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivVoiceRight"
+            app:layout_constraintStart_toEndOf="@id/ivVoiceLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvNameStart" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameStart"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="John Smith"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/ivVoiceRight"
+            app:layout_constraintStart_toEndOf="@id/ivVoiceLeft"
+            app:layout_constraintTop_toBottomOf="@id/cardHostImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

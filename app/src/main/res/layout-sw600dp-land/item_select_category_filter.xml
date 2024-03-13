@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/_3sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlCategory"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivCategoryImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:theme="@style/ShapeAppearanceOverlay_Round"
+                tools:src="@drawable/ic_category_default" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivCategorySelectedImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:theme="@style/ShapeAppearanceOverlay_Round"
+                android:visibility="visible"
+                tools:src="@drawable/ic_category_default" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivFeaturedBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_gold_gradient_round"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ivFeaturedImage"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:src="@drawable/ic_iv_featured_ribbon"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCategoryTitle"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_6ssp"
+            tools:text="Health" />
+
+    </LinearLayout>
+
+
+</layout>

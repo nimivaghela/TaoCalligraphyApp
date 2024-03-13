@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_20sdp"
+        app:cardBackgroundColor="#E6FFFFFF"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp">
+
+            <RelativeLayout
+                android:id="@+id/rlFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/vd_refresh_grey" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_centerInParent="true"
+                    android:text="@string/filters"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCancelFilterCategoryDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:src="@drawable/vd_close_button_grey" />
+
+            </RelativeLayout>
+
+ <!--           <LinearLayout
+                android:id="@+id/llSubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFilter"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:text="@string/topic"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostBoldStyle"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="@string/choose_one"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llSubCategory"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_select_category" />-->
+
+            <LinearLayout
+                android:id="@+id/llTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFilter"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostBoldStyle"
+                    android:text="@string/tags"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostBoldStyle"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:text="@string/choose_one_or_more"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llTags"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@+id/cvApply"
+                android:layout_below="@+id/llTags"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:chipSpacing="@dimen/_8sdp" />
+            </ScrollView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvApply"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentBottom="true"
+                app:cardElevation="0dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnApplyFilterCategoryDialog"
+                    style="@style/ButtonGoldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_gold_semi_light_bottom_curve_5dp"
+                    android:text="@string/apply"
+                    android:textSize="@dimen/_12ssp" />
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.field_healing.FieldHealingActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:orientation="vertical"
+                    tools:context=".ui.field_healing.AllFieldHealingActivity">
+
+                    <include
+                        android:id="@+id/toolbar"
+                        layout="@layout/toolbar" />
+
+                    <io.github.vejei.carouselview.CarouselView
+                        android:id="@+id/carousel_view_side_by_side_preview_scale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        app:carouselMargin="@dimen/_40sdp"
+                        app:carouselMode="preview"
+                        app:carouselPreviewOffset="@dimen/_50sdp"
+                        app:carouselPreviewScaleFactor="0.80"
+                        app:carouselPreviewSide="sides"
+                        app:carouselPreviewSideBySideStyle="scale"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_height="@dimen/_40sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSelections"
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:textColor="@color/medium_grey"
+                        android:textSize="@dimen/_10ssp"
+                        tools:text="@string/app_name" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:animateLayoutChanges="true"
+                        android:clipToPadding="false"
+                        android:fillViewport="true"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_50sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llTwoThreeFour"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:animateLayoutChanges="true"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                tools:context=".ui.field_healing.fragment.InternalOrgansFragment">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/ivMaleInternalOrgans"
+                                            android:layout_width="@dimen/_380sdp"
+                                            android:layout_height="@dimen/_480sdp"
+                                            android:layout_marginStart="-70dp"
+                                            android:layout_marginTop="-25dp"
+                                            android:src="@drawable/vd_figure_male_with_lines"
+                                            android:visibility="visible" />
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/ivFemaleInternalOrgans"
+                                            android:layout_width="@dimen/_380sdp"
+                                            android:layout_height="@dimen/_480sdp"
+                                            android:layout_marginStart="-70dp"
+                                            android:layout_marginTop="-25dp"
+                                            android:src="@drawable/vd_figure_female_with_lines"
+                                            android:visibility="gone" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_65sdp"
+                                            android:layout_marginTop="-30dp"
+                                            android:orientation="horizontal">
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:id="@+id/ivMale"
+                                                android:layout_width="@dimen/_40sdp"
+                                                android:layout_height="@dimen/_40sdp"
+                                                android:layout_marginEnd="@dimen/_3sdp"
+                                                android:src="@drawable/vd_male_icon_select" />
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:id="@+id/ivFemale"
+                                                android:layout_width="@dimen/_40sdp"
+                                                android:layout_height="@dimen/_40sdp"
+                                                android:layout_marginStart="@dimen/_3sdp"
+                                                android:src="@drawable/vd_female_icon" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <FrameLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/_400sdp"
+                                        android:layout_gravity="end">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/rvListOfNames"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/_370sdp"
+                                            android:layout_gravity="end"
+                                            android:clipToPadding="false"
+                                            android:fadeScrollbars="false"
+                                            android:nestedScrollingEnabled="true"
+                                            android:orientation="vertical"
+                                            android:paddingTop="@dimen/_20sdp"
+                                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                            tools:itemCount="14"
+                                            tools:listitem="@layout/item_field_healing_text" />
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom|center"
+                                            android:layout_marginBottom="@dimen/_10sdp"
+                                            android:src="@drawable/ic_white_small_rectangle"
+                                            android:visibility="gone" />
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom|center"
+                                            android:layout_marginBottom="@dimen/_16sdp"
+                                            android:src="@drawable/vd_down_arrow_grey" />
+
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llPhysicalBody"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                tools:context=".ui.field_healing.fragment.PhysicalBodyFragment">
+
+                                <com.richpath.RichPathView
+                                    android:id="@+id/ivMalePhysicalBody"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible"
+                                    app:vector="@drawable/vd_figure_male_without_lines" />
+
+                                <com.richpath.RichPathView
+                                    android:id="@+id/ivFemalePhysicalBody"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    app:vector="@drawable/vd_figure_female_without_lines" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivPBMale"
+                                        android:layout_width="@dimen/_40sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_3sdp"
+                                        android:src="@drawable/vd_male_icon_select" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivPBFemale"
+                                        android:layout_width="@dimen/_40sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginStart="@dimen/_3sdp"
+                                        android:src="@drawable/vd_female_icon" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llBodyChannel"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical"
+                                android:paddingBottom="@dimen/_50sdp"
+                                android:visibility="gone"
+                                tools:context=".ui.field_healing.fragment.BodyChannelsFragment">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_12sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivMaleBody"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/vd_male_body_channel" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivFemaleBody"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/vd_female_body_channel"
+                                        android:visibility="gone" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/_30sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivBodyChannelMale"
+                                        android:layout_width="@dimen/_40sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_3sdp"
+                                        android:src="@drawable/vd_male_icon_select" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivBodyChannelFeMale"
+                                        android:layout_width="@dimen/_40sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginStart="@dimen/_3sdp"
+                                        android:src="@drawable/vd_female_icon" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </androidx.core.widget.NestedScrollView>
+
+                    <!--  <com.app.taocalligraphy.ui.field_healing.CenteringTabLayout
+                          android:id="@+id/tabLayout"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/_10sdp"
+                          android:background="@color/transparent"
+                          android:textSize="@dimen/_24ssp"
+                          android:visibility="gone"
+                          app:elevation="0dp"
+                          app:tabBackground="@drawable/selector_tab_selector"
+                          app:tabGravity="start"
+                          app:tabIndicatorHeight="0dp"
+                          app:tabMode="scrollable"
+                          app:tabPaddingEnd="@dimen/_20sdp"
+                          app:tabPaddingStart="@dimen/_20sdp"
+                          app:tabRippleColor="@null"
+                          app:tabSelectedTextColor="@color/white"
+                          app:tabTextAppearance="@style/tab_text"
+                          app:tabTextColor="@color/gold" />-->
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:touchscreenBlocksFocus="true"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_white_top_gradient"
+            android:visibility="gone" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_nature_bg_1"
+        android:windowSoftInputMode="adjustResize"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_80" />
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/verifyEmail"
+            style="@style/TextViewCormorantBoldStyle"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:gravity="start"
+            android:text="@string/verify_email"
+            android:textColor="@color/gold_90"
+            android:textSize="@dimen/_28ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <TextView
+            android:id="@+id/lblEnterCodeInfo"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center"
+            android:text="@string/enter_the_code_sent_to"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/verifyEmail" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblEnterCodeInfo"
+            android:gravity="center"
+            android:paddingTop="@dimen/_4sdp"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/lblEnterCodeInfo"
+            tools:text="a***9@email.com" />
+
+<!--        <in.aabhasjindal.otptextview.OtpTextView-->
+<!--            android:id="@+id/otpView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/txtEmail"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="@dimen/_40sdp"-->
+<!--            android:textColor="@color/dark_grey"-->
+<!--            app:bar_active_color="@color/gold"-->
+<!--            app:bar_enabled="true"-->
+<!--            app:bar_error_color="@color/red_50"-->
+<!--            app:bar_height="2dp"-->
+<!--            app:bar_inactive_color="@color/dark_grey"-->
+<!--            app:height="60dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/txtEmail"-->
+<!--            app:length="6"-->
+<!--            app:otp_text_size="24dp"-->
+<!--            app:text_typeface="@string/jost_regular"-->
+<!--            app:width="40dp" />-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otpView"
+            style="@style/TextInputLayoutMediumBoxStyle"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeColor="@color/medium_grey_30"
+            app:boxStrokeErrorColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtEmail"
+            app:errorEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etotp"
+                style="@style/EditTextStyle"
+                android:layout_height="65dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:inputType="number"
+                android:maxLength="6"
+                android:letterSpacing="0.5"
+                tools:text="222222"
+                android:textSize="24dp"
+                app:text_typeface="@string/jost_regular"
+                android:nextFocusDown="@id/tlPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/lblErrorMsg"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/invalid_code_please_try_again"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_15sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otpView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblErrorMsg">
+
+            <LinearLayout
+                android:id="@+id/llFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@color/transparent"
+                android:layout_gravity="bottom"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVResendCode"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:text="@string/resend_code"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_14sdp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:background="@color/dark_grey" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tVStartOver"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/start_over"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

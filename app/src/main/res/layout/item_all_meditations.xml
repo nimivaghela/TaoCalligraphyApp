@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14ssp"
+        android:layout_marginBottom="@dimen/_7sdp">
+
+        <FrameLayout
+            android:id="@+id/flMultiImage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.38">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProgram"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/_1sdp"
+                android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"
+                app:cornerFamily="rounded"
+                app:srcCompat="@drawable/ic_dummy_garden_stack" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivFeaturedBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_15_5"
+                android:visibility="gone"
+                app:cornerFamily="rounded"
+                app:srcCompat="@drawable/ic_feature_bg_rectangle"
+                tools:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/ivPlay"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/vd_play_button" />
+
+            <FrameLayout
+                android:id="@+id/flFavourite"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_3sdp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieFavourite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false"
+                    app:lottie_scale="@integer/material_motion_duration_long_1" />
+
+            </FrameLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/ivSubscribeLock"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/dark_grey_80"
+                app:cardCornerRadius="@dimen/_20sdp"
+                tools:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_6sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="1dp"
+                    android:src="@drawable/ic_lock" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <RelativeLayout
+                android:id="@+id/rlLock"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_66"
+                    android:scaleType="fitXY"
+                    android:theme="@style/ShapeAppearanceOverlay_card_custom_corners_10_10"
+                    app:cornerFamily="rounded" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLock"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/vd_background_lock_icon" />
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tVGet"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/bg_gold_top_left_bottom_right_10dp"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="@string/get"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_6sdp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ivFeaturedImage"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:src="@drawable/ic_iv_featured_ribbon"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flMultiImage"
+            app:layout_constraintTop_toTopOf="@+id/flMultiImage">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_15ssp"
+                    tools:text="Release Back Pain" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_13ssp"
+                    tools:text="Back pain can have physical or emotional causes. Let us bathe the root causes with light of high frequency and vibration from the transformative art field of the Tao Calligraphy Greatest Compassion to wash away the blockages causing the pain. Greatest compassion boosts energy, stamina, vitality, and immunity to heal and transform." />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

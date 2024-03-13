@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/startMargin"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="@dimen/startMargin" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/endMargin"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="@dimen/endMargin" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/centerMargin"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/topMargin"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.3" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBannerImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toTopOf="@+id/centerMargin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/dummy_master_sha" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_white_gradient_tablet"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="@id/centerMargin"
+                    app:layout_constraintTop_toTopOf="@id/topMargin" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="@id/endMargin"
+                    app:layout_constraintStart_toStartOf="@+id/startMargin"
+                    tools:layout_editor_absoluteX="0dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitle"
+                        style="@style/TextViewCormorantBoldStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_14sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_14sdp"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_45sp"
+                        tools:text="My Energy Regulation List" />
+
+                </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_white_top_radius_30"
+                        android:paddingBottom="@dimen/_35sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/endMargin"
+                        app:layout_constraintStart_toStartOf="@id/startMargin"
+                        app:layout_constraintTop_toBottomOf="@id/topMargin"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPlaylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:visibility="visible"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="10"
+                            tools:listitem="@layout/item_playlist_view_list" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNoContentFound"
+                            style="@style/TextViewJostRegularStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginHorizontal="@dimen/_15sdp"
+                            android:gravity="center"
+                            android:text="@string/no_content_found"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="@dimen/_8ssp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPlayAll"
+                    style="@style/CardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/endMargin"
+                    app:layout_constraintStart_toStartOf="@id/startMargin">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPlayAll"
+                        style="@style/ButtonGoldStyle"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/play_all"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@null"
+                        app:fontFamily="@font/font_jost_semi_bold"
+                        app:icon="@drawable/ic_play_polygon"
+                        app:iconGravity="textStart"
+                        app:iconPadding="@dimen/_7sdp"
+                        app:iconSize="@dimen/_8sdp"
+                        app:iconTint="@color/white" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBarForResult"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include layout="@layout/item_progress" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg_welcome_login"
+        android:orientation="vertical"
+        tools:context=".ui.login.LoginActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/blue_gradient_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_90dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/llSignUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/relLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/loginTitle"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:gravity="start"
+                    android:text="@string/login"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_40sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tlEmailAddress"
+                    style="@style/TextInputLayoutMediumBoxStyle"
+                    android:layout_below="@id/loginTitle"
+                    app:errorEnabled="false">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etEmailAddress"
+                        style="@style/EditTextStyle"
+                        android:hint="@string/email_address"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:nextFocusDown="@id/tlPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tlPassword"
+                    style="@style/TextInputLayoutMediumBoxStyle"
+                    android:layout_below="@+id/tlEmailAddress"
+                    android:layout_marginTop="@dimen/_10dp"
+                    app:errorEnabled="false"
+                    app:passwordToggleDrawable="@drawable/selector_btn_show_password_selector"
+                    app:passwordToggleEnabled="true">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPassword"
+                        style="@style/EditTextStyle"
+                        android:hint="@string/password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/chkRememberMe"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tlPassword"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:button="@drawable/bg_checkbox_drawables"
+                    android:checked="false"
+                    android:paddingStart="@dimen/_10dp"
+                    android:paddingEnd="@dimen/_10dp"
+                    android:text="@string/remember_me"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_16sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLogin"
+                    style="@style/CardViewStyle"
+                    android:layout_below="@+id/chkRememberMe"
+                    android:layout_marginTop="@dimen/_10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLogin"
+                        style="@style/ButtonGoldStyle"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/login"
+                        android:textSize="@dimen/_16sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvForgotPassword"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardLogin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:text="@string/forgot_password_que"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginBottom="@dimen/_50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:text="@string/don_t_have_an_account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSignUp"
+                style="@style/TextViewJostBoldStyle"
+                android:paddingStart="@dimen/_5dp"
+                android:paddingEnd="0dp"
+                android:text="@string/sign_up_with_underline"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

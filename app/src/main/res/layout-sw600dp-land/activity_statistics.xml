@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".ui.statistics.StatisticsActivity">
+
+                <LinearLayout
+                    android:layout_width="@dimen/_400sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_30sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitleToolbar"
+                        style="@style/TextViewCormorantBoldStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:letterSpacing="-0.02"
+                        android:maxLines="1"
+                        android:text="@string/stats"
+                        android:textColor="@color/gold_90"
+                        android:textSize="@dimen/_15ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/_400sdp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:visibility="visible"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDay"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/day"
+                            android:textAllCaps="false"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tvDay"
+                            android:background="@drawable/bg_white_radius_30">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clDayData"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible"
+                                tools:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDayDate"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:letterSpacing="0.1"
+                                    android:textColor="@color/medium_grey"
+                                    android:alpha="0.8"
+                                    android:textSize="@dimen/_6ssp"
+                                    app:layout_constraintBottom_toTopOf="@+id/flDailyActivityChart"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:textAllCaps="true"
+                                    tools:text="22 dec" />
+
+                                <FrameLayout
+                                    android:id="@+id/flDailyActivityChart"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginHorizontal="@dimen/_7sdp"
+                                    android:layout_marginTop="@dimen/_25sdp"
+                                    android:padding="@dimen/_4sdp"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                        android:id="@+id/dailyChart"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:cpb_background_progressbar_color="@color/gold"
+                                        app:cpb_background_progressbar_width="@dimen/_1sdp"
+                                        app:cpb_progress_direction="to_right"
+                                        app:cpb_progress_max="100"
+                                        app:cpb_progressbar_color_direction="bottom_to_top"
+                                        app:cpb_progressbar_color_end="@color/varden"
+                                        app:cpb_progressbar_color_start="@color/dandelion"
+                                        app:cpb_progressbar_width="@dimen/_7sdp"
+                                        app:cpb_round_border="true"
+                                        tools:cpb_progress="90" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvDayName"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:alpha="0.8"
+                                            android:letterSpacing="0.2"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_6ssp"
+                                            app:textAllCaps="true"
+                                            tools:text="SAT" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <LinearLayout
+                                                android:id="@+id/llPreviousDay"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_marginStart="@dimen/_5sdp"
+                                                android:gravity="center">
+
+                                                <ImageView
+                                                    android:id="@+id/ivPreviousDay"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:rotation="180"
+                                                    android:src="@drawable/vd_grey_right_side_arrow"
+                                                    tools:ignore="ContentDescription" />
+                                            </LinearLayout>
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvMinutes"
+                                                style="@style/TextViewJostMediumStyle"
+                                                android:layout_width="match_parent"
+                                                android:layout_centerInParent="true"
+                                                android:layout_marginTop="-10dp"
+                                                android:layout_marginBottom="-10dp"
+                                                android:layout_toStartOf="@id/llNextDay"
+                                                android:layout_toEndOf="@id/llPreviousDay"
+                                                android:gravity="center"
+                                                android:textColor="@color/gold"
+                                                android:textSize="@dimen/_15ssp"
+                                                tools:text="4003m" />
+
+                                            <LinearLayout
+                                                android:id="@+id/llNextDay"
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_20sdp"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_centerVertical="true"
+                                                android:layout_marginEnd="@dimen/_5sdp"
+                                                android:gravity="center">
+
+                                                <ImageView
+                                                    android:id="@+id/ivNextDay"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:alpha="0.5"
+                                                    android:src="@drawable/vd_grey_right_side_arrow"
+                                                    tools:ignore="ContentDescription" />
+                                            </LinearLayout>
+                                        </RelativeLayout>
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvGoal"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:alpha="0.8"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_6ssp"
+                                            tools:text="72% of goal" />
+                                    </LinearLayout>
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/flDailyActivityChart">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvMeditationCount"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:textColor="@color/gold"
+                                            android:textSize="@dimen/_15ssp"
+                                            tools:text="2" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:alpha="0.8"
+                                            android:letterSpacing="0.1"
+                                            android:text="@string/meditations"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_5ssp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvSessionCount"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:textColor="@color/gold"
+                                            android:textSize="@dimen/_45ssp"
+                                            tools:text="1" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:alpha="0.8"
+                                            android:text="@string/live_session_small"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_12ssp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvWeek"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/week"
+                            android:textAllCaps="false"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_white_radius_30">
+
+                            <LinearLayout
+                                android:id="@+id/llWeekData"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                tools:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvWeekDaysRange"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:alpha="0.8"
+                                    android:gravity="center"
+                                    android:letterSpacing="0.3"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_6ssp"
+                                    app:textAllCaps="true"
+                                    tools:text="22 NOV – 28 NOV" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvWeekTime"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:gravity="center"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_15ssp"
+                                    tools:text="8h 02m" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblTimeForWeek"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:alpha="0.8"
+                                    android:gravity="center"
+                                    android:letterSpacing="0.3"
+                                    android:text="@string/total_time"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_6ssp"
+                                    android:visibility="gone" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:orientation="vertical"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <View
+                                            android:id="@+id/divWeeklyMaxLine"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="@drawable/bg_dashed_line" />
+
+                                        <com.app.taocalligraphy.other.RoundedBarChart
+                                            android:id="@+id/barChartWeek"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_80sdp"
+                                            app:radius="@dimen/_5sdp" />
+
+                                    </LinearLayout>
+
+                                    <!--                                    <View-->
+                                    <!--                                        android:id="@+id/weeklyAverageLine"-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="0.5dp"-->
+                                    <!--                                        android:layout_gravity="center"-->
+                                    <!--                                        android:alpha="0.5"-->
+                                    <!--                                        android:background="@color/gold"-->
+                                    <!--                                        app:layout_constraintBottom_toBottomOf="parent"-->
+                                    <!--                                        app:layout_constraintTop_toTopOf="parent" />-->
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:letterSpacing="0.3"
+                                        android:text=""
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:letterSpacing="0.3"
+                                        android:text=""
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_11ssp" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvWeekMeditation"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:textColor="@color/gold"
+                                            android:textSize="@dimen/_15ssp"
+                                            tools:text="15" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/lblMeditationWeek"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:alpha="0.8"
+                                            android:letterSpacing="0.1"
+                                            android:text="@string/meditations"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_5ssp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvWeekSession"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:textColor="@color/gold"
+                                            android:textSize="@dimen/_45ssp"
+                                            tools:text="4" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/lblSessionWeek"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:alpha="0.8"
+                                            android:letterSpacing="0.2"
+                                            android:text="@string/live_session_small"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_12ssp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_margin="@dimen/_6sdp"
+                                    android:background="@drawable/bg_white_medium_grey_border_12dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvDailyAverageWeek"
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:background="@drawable/bg_medium_gray_two_side_corner_left"
+                                        android:gravity="center"
+                                        android:text="@string/daily_average"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_4ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvWeekTotal"
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="center"
+                                        android:text="@string/weekly_total"
+                                        android:textColor="@color/gold"
+                                        android:textSize="@dimen/_4ssp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMonth"
+                            style="@style/TextViewJostMediumStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/month"
+                            android:textAllCaps="false"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_8ssp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_white_radius_30">
+
+
+                            <LinearLayout
+                                android:id="@+id/llMonthData"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                tools:visibility="visible">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMonthDayRange"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:alpha="0.8"
+                                    android:gravity="center"
+                                    android:letterSpacing="0.2"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_6ssp"
+                                    tools:text="29 OCT – 28 NOV" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDailyAverageMonthCount"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:gravity="center"
+                                    android:textColor="@color/gold"
+                                    android:textSize="@dimen/_15ssp"
+                                    tools:text="59m" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblTimeForMonth"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:alpha="0.8"
+                                    android:gravity="center"
+                                    android:letterSpacing="0.2"
+                                    android:text="@string/daily_average_small"
+                                    android:textColor="@color/medium_grey"
+                                    android:textSize="@dimen/_6ssp"
+                                    android:visibility="gone" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:orientation="vertical"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <View
+                                            android:id="@+id/divMonthlyMaxLine"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="@drawable/bg_dashed_line" />
+
+                                        <com.github.mikephil.charting.charts.LineChart
+                                            android:id="@+id/lineChart"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_70sdp" />
+
+                                    </LinearLayout>
+
+                                    <!--                                    <View-->
+                                    <!--                                        android:id="@+id/monthlyAverageLine"-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="0.3dp"-->
+                                    <!--                                        android:alpha="0.5"-->
+                                    <!--                                        android:background="@color/gold"-->
+                                    <!--                                        app:layout_constraintBottom_toBottomOf="parent"-->
+                                    <!--                                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:paddingHorizontal="@dimen/_3sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvStartDate"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:letterSpacing="0.3"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_6ssp"
+                                        tools:text="29 OCT" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvEndDate"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:letterSpacing="0.3"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_6ssp"
+                                        tools:text="28 NOV" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvMonthMeditation"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:textColor="@color/gold"
+                                            android:textSize="@dimen/_16ssp"
+                                            tools:text="4.5" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/lblMeditationMonth"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:alpha="0.8"
+                                            android:letterSpacing="0.1"
+                                            android:text="@string/meditation_day"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_5ssp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvMonthSession"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:textColor="@color/gold"
+                                            android:textSize="@dimen/_45ssp"
+                                            tools:text="0.2" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/lblSessionMonth"
+                                            style="@style/TextViewJostRegularStyle"
+                                            android:alpha="0.8"
+                                            android:letterSpacing="0.2"
+                                            android:text="@string/live_session_day"
+                                            android:textColor="@color/medium_grey"
+                                            android:textSize="@dimen/_12ssp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_margin="@dimen/_6sdp"
+                                    android:background="@drawable/bg_white_medium_grey_border_12dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvDailyAverageMonth"
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:background="@drawable/bg_medium_gray_two_side_corner_left"
+                                        android:gravity="center"
+                                        android:text="@string/daily_average"
+                                        android:textColor="@color/medium_grey"
+                                        android:textSize="@dimen/_4ssp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvMonthTotal"
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.5"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="center"
+                                        android:text="@string/monthly_total"
+                                        android:textColor="@color/gold"
+                                        android:textSize="@dimen/_4ssp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- </androidx.core.widget.NestedScrollView>-->
+
+            <!--<LinearLayout
+                android:id="@+id/llWellnessDialog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_shadow"
+                android:layout_gravity="bottom"
+                android:animateLayoutChanges="true"
+                android:background="@color/transparent"
+                android:visibility="gone">
+
+                <include layout="@layout/dialog_wellness" />
+            </LinearLayout>-->
+
+            <!--<com.loopeer.shadow.ShadowView
+                android:id="@+id/bottom_shadow"
+                style="@style/ShadowViewStyle"
+                android:layout_alignParentBottom="true"
+                app:cornerRadius="0dp"
+                app:shadowColor="@color/black_10"
+                app:shadowDy="-2"
+                app:shadowMarginBottom="0dp"
+                app:shadowMarginLeft="0dp"
+                app:shadowMarginRight="0dp"
+                app:shadowMarginTop="2dp"
+                app:shadowRadius="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/view_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/shimmer_light" />
+
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/bottom_nav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        app:itemTextAppearanceActive="@style/BottomNavigationTextAppearance"
+                        app:itemTextAppearanceInactive="@style/BottomNavigationTextAppearance"
+                        app:itemTextColor="@color/bottom_tab_color_selector"
+                        app:labelVisibilityMode="labeled"
+                        app:menu="@menu/bottom_menu_nav" />
+                </LinearLayout>
+            </com.loopeer.shadow.ShadowView>-->
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

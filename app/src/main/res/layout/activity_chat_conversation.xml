@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/rrMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".ui.chat.ChatConversationActivity">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_60sdp">
+
+                        <LinearLayout
+                            android:id="@+id/llToolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/sand"
+                            android:orientation="vertical"
+                            android:paddingTop="@dimen/_50sdp">
+
+                            <include
+                                android:id="@+id/toolbar"
+                                layout="@layout/toolbar" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/llToolbar"
+                            android:background="@color/sand"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_50sdp"
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_10sdp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblFriend"
+                                    style="@style/TextViewJostSemiBoldStyle"
+                                    android:text="@string/friends"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13ssp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblFriendRequest"
+                                    style="@style/TextViewJostBoldStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_toEndOf="@+id/lblFriend"
+                                    android:background="@drawable/bg_red_curve_all"
+                                    android:paddingStart="@dimen/_8sdp"
+                                    android:paddingTop="@dimen/_2sdp"
+                                    android:paddingEnd="@dimen/_8sdp"
+                                    android:paddingBottom="@dimen/_2sdp"
+                                    android:text="@string/_3_new_requests"
+                                    android:textColor="@color/white"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvFriend"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:visibility="invisible"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/item_chat_friend_list"
+                                tools:visibility="visible" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/llHeader"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_white_top_radius_25dp"
+                            android:orientation="vertical"
+                            android:translationY="-50dp">
+
+                            <View
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_5sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:alpha="0.1"
+                                android:background="@drawable/bg_black_radius_100dp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:text="@string/conversations"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_18ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEditConversation"
+                                style="@style/TextViewJostRegularStyle"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:text="@string/edit"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_14ssp"
+                                android:visibility="gone" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvConversation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:orientation="vertical"
+                                android:visibility="invisible"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:visibility="visible" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerChatConversation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/llToolbar"
+                            android:background="@android:color/transparent"
+                            tools:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostSemiBoldStyle"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:text="@string/friends"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13ssp"
+                                        android:visibility="invisible" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:orientation="horizontal">
+
+                                        <View
+                                            android:layout_width="@dimen/_60sdp"
+                                            android:layout_height="@dimen/_60sdp"
+                                            android:layout_marginStart="@dimen/_15sdp"
+                                            android:background="@drawable/bg_barley_corn_8dp" />
+
+                                        <View
+                                            android:layout_width="@dimen/_60sdp"
+                                            android:layout_height="@dimen/_60sdp"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:background="@drawable/bg_barley_corn_8dp" />
+
+                                        <View
+                                            android:layout_width="@dimen/_60sdp"
+                                            android:layout_height="@dimen/_60sdp"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:background="@drawable/bg_barley_corn_8dp" />
+
+                                        <View
+                                            android:layout_width="@dimen/_60sdp"
+                                            android:layout_height="@dimen/_60sdp"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:background="@drawable/bg_barley_corn_8dp" />
+
+                                        <View
+                                            android:layout_width="@dimen/_60sdp"
+                                            android:layout_height="@dimen/_60sdp"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:background="@drawable/bg_barley_corn_8dp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="@dimen/_60sdp"
+                                        android:layout_height="@dimen/_5sdp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:alpha="0.1"
+                                        android:background="@drawable/bg_black_radius_100dp"
+                                        android:visibility="invisible" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostSemiBoldStyle"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:text="@string/conversations"
+                                        android:textColor="@color/gold"
+                                        android:textSize="@dimen/_18ssp"
+                                        android:visibility="invisible" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/lblEdit"
+                                        style="@style/TextViewJostRegularStyle"
+                                        android:paddingStart="@dimen/_15sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:paddingEnd="@dimen/_15sdp"
+                                        android:text="@string/edit"
+                                        android:textColor="@color/dark_grey"
+                                        android:textSize="@dimen/_14ssp"
+                                        android:visibility="gone" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_15sdp">
+
+                                        <include layout="@layout/item_chat_conversation_shimmer" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_15sdp">
+
+                                        <include layout="@layout/item_chat_conversation_shimmer" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_15sdp">
+
+                                        <include layout="@layout/item_chat_conversation_shimmer" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_15sdp">
+
+                                        <include layout="@layout/item_chat_conversation_shimmer" />
+                                    </LinearLayout>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    </RelativeLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_280sdp"
+                    android:layout_height="@dimen/_280sdp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_90sdp"
+                    android:layout_marginEnd="-100dp"
+                    app:srcCompat="@drawable/vd_calligraphy_watermark" />
+            </FrameLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llEditController"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:elevation="@dimen/_25sdp"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_30sdp"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="@string/pin"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="@string/read"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="@string/mute"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:text="@string/delete"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_14ssp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/bg_white_top_gradient"
+            android:visibility="gone" />
+    </FrameLayout>
+</layout>

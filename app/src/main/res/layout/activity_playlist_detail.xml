@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/cardPlayAll"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/llNestedScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fillViewport="true">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBannerImages"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_300sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img_default_for_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                            tools:layout_editor_absoluteX="0dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTitle"
+                                style="@style/TextViewCormorantBoldStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_30ssp"
+                                tools:text="My Energy Regulation List" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="@dimen/_280sdp"
+                            android:background="@drawable/bg_white_top_left_right_curve"
+                            android:orientation="vertical"
+                            android:translationY="-10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvPlaylist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:itemCount="10"
+                                tools:listitem="@layout/item_playlist_view_list" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvNoContentFound"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_100sdp"
+                                android:layout_marginHorizontal="@dimen/_15sdp"
+                                android:gravity="center"
+                                android:text="@string/no_content_found"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_20sdp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <ProgressBar
+                    android:id="@+id/progressBarForResult"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_280sdp"
+                android:layout_above="@id/cardPlayAll"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginEnd="-100dp"
+                app:srcCompat="@drawable/vd_calligraphy_watermark" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPlayAll"
+                style="@style/CardViewStyle"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/_50sdp"
+                app:cardElevation="0dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPlayAll"
+                    style="@style/ButtonGoldStyle"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="@string/play_all"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:backgroundTint="@null"
+                    app:fontFamily="@font/font_jost_semi_bold"
+                    app:icon="@drawable/ic_play_polygon"
+                    app:iconGravity="textStart"
+                    app:iconPadding="@dimen/_12sdp"
+                    app:iconSize="@dimen/_11sdp"
+                    app:iconTint="@color/white" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include layout="@layout/item_progress" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

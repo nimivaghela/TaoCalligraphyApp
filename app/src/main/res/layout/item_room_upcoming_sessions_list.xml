@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_12sdp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:cardBackgroundColor="@color/shimmer_light"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_1sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_1sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_1sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_mr_shah_transformative_art_drawing" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_width="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="NOV 18"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="3–5 pm"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_10ssp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTitle"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_above="@id/llSignup"
+                android:layout_below="@id/llDateTime"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/transformative_art_for_flourishing"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_13ssp" />
+
+            <LinearLayout
+                android:id="@+id/llSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSignUp"
+                    style="@style/CardViewStyle"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:elevation="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSignUp"
+                        style="@style/ButtonGoldStyle"
+                        android:layout_width="@dimen/_110sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/sign_up"
+                        android:textSize="@dimen/_10ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!--<androidx.cardview.widget.CardView
+                    android:id="@+id/cvSignUp"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_3sdp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:paddingTop="@dimen/_12sdp"
+                        android:paddingBottom="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAmount"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_gravity="center"
+                        android:text="@string/sign_up"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp" />
+
+
+                    &lt;!&ndash; <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:gravity="center"
+                         android:orientation="horizontal">
+
+
+                     </LinearLayout>
+                 </LinearLayout>&ndash;&gt;
+                </androidx.cardview.widget.CardView>-->
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:src="@drawable/vd_add_to_favorites_grey" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.journal.JournalListingActivity">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="@dimen/_300sdp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_40sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/favoriteTitle"
+                        style="@style/TextViewCormorantBoldStyle"
+                        android:gravity="start"
+                        android:text="@string/favorites"
+                        android:textColor="@color/gold_90"
+                        android:textSize="@dimen/_16ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_50sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/favoriteTitle">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMeditationGrey"
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:text="@string/meditations"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_10ssp"
+                                android:visibility="gone" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMeditationGold"
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:text="@string/meditations"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_10ssp"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/shimmerMeditation"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="gone">
+
+                                <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollIndicators="none"
+                                    android:scrollbars="none">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <include layout="@layout/item_meditation_shimmer" />
+
+                                        <include layout="@layout/item_meditation_shimmer" />
+
+                                        <include layout="@layout/item_meditation_shimmer" />
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvMeditationsList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="@dimen/_30sdp"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/shimmerMeditation"
+                                tools:itemCount="3"
+                                tools:layout_editor_absoluteX="16dp"
+                                tools:listitem="@layout/item_meditation_search"
+                                tools:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/favMeditationShadow"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="0dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_white_right_gradient"
+                                app:layout_constraintBottom_toBottomOf="@id/rvMeditationsList"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/rvMeditationsList" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/lblNoMeditation"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginEnd="@dimen/_20sdp"
+                                android:gravity="center"
+                                android:text="@string/you_havent_added_any_fav_meditation_yet"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_8sdp"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cvNoMeditation"
+                                style="@style/CardViewStyle"
+                                android:layout_marginStart="@dimen/_100dp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_100dp"
+                                android:layout_marginBottom="@dimen/_20sdp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/lblNoMeditation">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnNoMeditation"
+                                    style="@style/ButtonGoldStyle"
+                                    android:background="@drawable/bg_light_dark_golden_curve"
+                                    android:text="@string/see_our_recommendations" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvProgramGrey"
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:text="@string/programs"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_10ssp"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvProgramGold"
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:text="@string/programs"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_10ssp"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+
+
+                        </RelativeLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/shimmerPrograms"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="gone">
+
+                                <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scrollIndicators="none"
+                                    android:scrollbars="none">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <include layout="@layout/item_content_with_review_shimmer" />
+
+                                        <include layout="@layout/item_content_with_review_shimmer" />
+
+                                        <include layout="@layout/item_content_with_review_shimmer" />
+                                    </LinearLayout>
+                                </HorizontalScrollView>
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvProgramFavorites"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal"
+                                android:paddingEnd="@dimen/_30sdp"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintTop_toBottomOf="@+id/shimmerPrograms"
+                                tools:itemCount="5"
+                                tools:listitem="@layout/item_multi_session_list"
+                                tools:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/favProgramShadow"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="0dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bg_white_right_gradient"
+                                app:layout_constraintBottom_toBottomOf="@id/rvProgramFavorites"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/rvProgramFavorites" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/lblNoProgram"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginEnd="@dimen/_20sdp"
+                                android:gravity="center"
+                                android:text="@string/you_havent_added_any_fav_program_yet"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_8sdp"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cvNoProgram"
+                                style="@style/CardViewStyle"
+                                android:layout_marginStart="@dimen/_100dp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_100dp"
+                                android:layout_marginBottom="@dimen/_20sdp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/lblNoProgram">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnNoProgram"
+                                    style="@style/ButtonGoldStyle"
+                                    android:background="@drawable/bg_light_dark_golden_curve"
+                                    android:text="@string/browse_programs" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/live_sessions"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_18ssp"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            tools:visibility="gone">
+
+                            <androidx.recyclerview.widget.RecyclerView
+
+                                android:id="@+id/rvLiveSessionsList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:visibility="visible"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:itemCount="3"
+                                tools:listitem="@layout/item_live_sessions_search" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/lblNoSession"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_20sdp"
+                                android:gravity="center"
+                                android:text="@string/no_favorite_sessions_yet"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_8ssp"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cvNoSession"
+                                style="@style/CardViewStyle"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_20sdp"
+                                android:layout_marginBottom="@dimen/_40sdp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/lblNoSession">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnNoSession"
+                                    style="@style/ButtonGoldStyle"
+                                    android:background="@drawable/bg_light_dark_golden_curve"
+                                    android:text="@string/view_featured_sessions" />
+                            </com.google.android.material.card.MaterialCardView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/meditation_rooms"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_18ssp"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            tools:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/llMeditaitonRoom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10ssp"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="@dimen/_15ssp"
+                                    android:paddingEnd="@dimen/_15ssp">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/vd_tao_session_logo_big" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:text="@string/tao_calligraphy_fields"
+                                        android:textColor="@color/secondary_black"
+                                        android:textSize="@dimen/_18ssp" />
+
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvOfficialRooms"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:clipToPadding="false"
+                                    android:fadeScrollbars="false"
+                                    android:nestedScrollingEnabled="false"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="@dimen/_10ssp"
+                                    android:paddingTop="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5ssp"
+                                    android:paddingBottom="@dimen/_5sdp"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:itemCount="3"
+                                    tools:listitem="@layout/items_official_rooms" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_15sdp"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/vd_tao_session_logo_big" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:text="@string/featured_rooms"
+                                        android:textColor="@color/secondary_black"
+                                        android:textSize="@dimen/_18ssp" />
+
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvFeaturedRooms"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:clipToPadding="false"
+                                    android:fadeScrollbars="false"
+                                    android:nestedScrollingEnabled="false"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="@dimen/_10ssp"
+                                    android:paddingTop="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5ssp"
+                                    android:paddingBottom="@dimen/_5sdp"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:itemCount="2"
+                                    tools:listitem="@layout/items_featured_rooms" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10ssp"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="@dimen/_10ssp"
+                                    android:paddingEnd="@dimen/_10ssp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/TextViewJostMediumStyle"
+                                        android:layout_width="0dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:text="@string/community_rooms"
+                                        android:textColor="@color/secondary_black"
+                                        android:textSize="@dimen/_18ssp" />
+
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvCommunityRooms"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/_50sdp"
+                                    android:clipToPadding="false"
+                                    android:fadeScrollbars="false"
+                                    android:nestedScrollingEnabled="false"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="@dimen/_10ssp"
+                                    android:paddingTop="@dimen/_5sdp"
+                                    android:paddingEnd="@dimen/_5ssp"
+                                    android:paddingBottom="@dimen/_5sdp"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    tools:itemCount="6"
+                                    tools:listitem="@layout/items_community_rooms" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llNoMeditationRoom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/lblNoMediRoom"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:layout_marginEnd="@dimen/_20sdp"
+                                    android:gravity="center"
+                                    android:text="@string/no_favorite_rooms_yet"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_8ssp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/cvNoMediRoom"
+                                    style="@style/CardViewStyle"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:layout_marginEnd="@dimen/_20sdp"
+                                    android:layout_marginBottom="@dimen/_40sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/lblNoMediRoom">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnNoMediRoom"
+                                        style="@style/ButtonGoldStyle"
+                                        android:background="@drawable/bg_light_dark_golden_curve"
+                                        android:text="@string/explore_the_community" />
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFilterLatestMeditation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/bg_white_light_grey_border"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_3sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/favoriteTitle">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivDownUpArrow"
+                                android:layout_width="@dimen/_8sdp"
+                                android:layout_height="@dimen/_8sdp"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:src="@drawable/vd_medium_grey_down_arrow" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLatest"
+                                style="@style/TextViewLatoBoldStyle"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/_4sdp"
+                                android:paddingTop="@dimen/_2sdp"
+                                android:paddingEnd="@dimen/_4sdp"
+                                android:paddingBottom="@dimen/_2sdp"
+                                android:text="@string/latest"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_7ssp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llMeditationSort"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_1sdp"
+                                android:background="@color/medium_grey" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAtoZ"
+                                style="@style/TextViewLatoBoldStyle"
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/_2sdp"
+                                android:paddingBottom="@dimen/_2sdp"
+                                android:text="@string/a_to_z"
+                                android:textColor="@color/secondary_black"
+                                android:textSize="@dimen/_7ssp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/mToolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

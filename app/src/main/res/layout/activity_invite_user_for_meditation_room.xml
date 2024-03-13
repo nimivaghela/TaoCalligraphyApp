@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/ic_end_session_bg"
+        android:orientation="vertical"
+        tools:context=".ui.meditation_rooms_detail.InviteUserForMeditationRoomActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:padding="@dimen/_20sdp"
+            android:src="@drawable/vd_cross_gray"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/vd_invite_a_user" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostMediumStyle"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="0dp"
+                android:text="@string/mindfulness_for_it_professionals"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_22ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llInviteUserMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInviteUsersToFollow"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/invite_users_to_follow"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12ssp"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlEmailAddress"
+                style="@style/TextInputLayoutMediumBoxStyle"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                app:boxCornerRadiusTopStart="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etEmailAddress"
+                    style="@style/EditTextStyle"
+                    android:layout_height="@dimen/_50sdp"
+                    android:hint="@string/enter_an_email_address"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@id/tlSessionDescription"
+                    android:textSize="@dimen/_12sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvSendInvite"
+                style="@style/CardViewStyle"
+                android:layout_margin="0dp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSendInvite"
+                    style="@style/ButtonGoldStyle"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:text="@string/send_invite" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llInviteSentMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInviteSent"
+                style="@style/TextViewJostMediumStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/invite_successfully_sent_to"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmailId"
+                style="@style/TextViewLatoBoldStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/darrellstew_gmail_com"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:id="@+id/llSendAnother"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10ssp"
+                android:weightSum="1">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/CardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0.5"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSendAnother"
+                        style="@style/ButtonGoldStyle"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/send_another"
+                        android:textSize="@dimen/_10ssp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/CardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="0.5"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:cardElevation="0dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnClose"
+                        style="@style/ButtonWhiteStyle"
+                        android:background="@drawable/bg_white_curve_gold_border"
+                        android:text="@string/close"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/_10ssp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

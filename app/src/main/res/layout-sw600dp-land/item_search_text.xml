@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        style="@style/TextViewJostMediumStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:background="@drawable/bg_white_dark_grey_border"
+        android:drawableStart="@drawable/vd_search_small"
+        android:drawablePadding="@dimen/_4sdp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_9sdp"
+        android:paddingEnd="@dimen/_9sdp"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_6ssp"
+        tools:text="release stress" />
+
+</layout>

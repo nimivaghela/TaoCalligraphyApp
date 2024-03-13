@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Oneness Heart</string>
+
+    <!--Splash-->
+    <string name="home_is_where_the_heart_is">Home is\nwhere the Heart is.</string>
+    <string name="home_is">Home is where the</string>
+    <string name="heart_of_wellbeing">Heart of Wellbeing.</string>
+    <string name="subscription_unlock_full_experience">Unlock The Full Transformative Experience</string>
+
+
+</resources>

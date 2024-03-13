@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_white_curve_20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_subtitle" />
+
+            <com.loopeer.shadow.ShadowView
+                style="@style/ShadowViewStyle"
+                app:shadowMarginBottom="@dimen/_5sdp"
+                app:shadowMarginTop="@dimen/_12sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    style="@style/ButtonWhiteStyle"
+                    android:background="@drawable/bg_white_curve"
+                    android:text="@string/cancel" />
+
+            </com.loopeer.shadow.ShadowView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

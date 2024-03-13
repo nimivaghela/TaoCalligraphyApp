@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/fmRoot"
+        android:layout_width="@dimen/_145sdp"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:minHeight="@dimen/_225sdp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:animateLayoutChanges="true"
+            app:cardBackgroundColor="@color/shimmer_light"
+            app:cardCornerRadius="@dimen/_10sdp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCardBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_6sdp"
+            android:animateLayoutChanges="true"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_3sdp">
+
+            <LinearLayout
+                android:id="@+id/llRoomsDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_130sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_background_community_room" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieFavourite"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        app:lottie_autoPlay="false"
+                        app:lottie_loop="false"
+                        app:lottie_scale="@integer/material_motion_duration_long_1" />
+                    <!--  <androidx.appcompat.widget.AppCompatImageView
+                          android:id="@+id/ivLike"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="end"
+                          android:layout_margin="@dimen/_5sdp"
+                          android:src="@drawable/vd_heart_select"
+                          android:visibility="gone" />-->
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:src="@drawable/vd_edit_with_bg_circle"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:id="@+id/fmNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:src="@drawable/vd_new_bg" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_gravity="center"
+                            android:text="NEW"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/llStatusBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvName"
+                        style="@style/TextViewJostMediumStyle"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="Mindfulness for IT Professionals"
+                        android:textColor="@color/secondary_black"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <LinearLayout
+                        android:id="@+id/llNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFollowers"
+                            style="@style/TextViewJostMediumStyle"
+                            android:drawableStart="@drawable/vd_small_gold_user"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="5K followers"
+                            android:textColor="@color/medium_grey"
+                            android:textSize="@dimen/_10ssp"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <com.willy.ratingbar.ScaleRatingBar
+                                android:id="@+id/rbRating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                app:srb_clearRatingEnabled="true"
+                                app:srb_clickable="true"
+                                app:srb_drawableEmpty="@drawable/ic_star"
+                                app:srb_drawableFilled="@drawable/ic_star_fill"
+                                app:srb_isIndicator="true"
+                                app:srb_minimumStars="1"
+                                app:srb_numStars="5"
+                                app:srb_rating="3"
+                                app:srb_scrollable="true"
+                                app:srb_starHeight="14dp"
+                                app:srb_starPadding="1dp"
+                                app:srb_starWidth="14dp"
+                                app:srb_stepSize="1" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvRateCount"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="27"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_10ssp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llNotApproved"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/vd_not_approved" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="NOT\nAPPROVED"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llApprovalPending"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/vd_pending_approval" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewJostSemiBoldStyle"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="APPROVAL\nPENDING"
+                            android:textColor="@color/dark_gold"
+                            android:textSize="@dimen/_10ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRequestRooms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostBoldStyle"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:text="SUBSCRIBE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:text="TO CREATE\nOR CO-HOST\nA ROOM"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</layout>

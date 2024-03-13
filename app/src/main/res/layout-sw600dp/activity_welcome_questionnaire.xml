@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ffMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/transparent"
+        tools:context=".ui.post_signup_questionnaire.WelcomeQuestionnaireActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/rlBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBirds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/lottieLines"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="-35dp"
+                android:layout_marginBottom="-30dp"
+                app:srcCompat="@drawable/ic_flying_birds_1" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieLines"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100dp"
+                android:layout_above="@+id/rlCloud"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginEnd="-40dp"
+                android:layout_marginBottom="-100dp"
+                android:scaleType="fitXY"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="wavy_lines_animation.json"
+                app:lottie_loop="true"
+                app:lottie_speed="1" />
+
+            <LinearLayout
+                android:id="@+id/rlCloud"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_280dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|start"
+                android:layout_marginStart="-320dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClouds2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    app:srcCompat="@drawable/ic_blue_clouds_3" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClouds1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_blue_clouds_1" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rlQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/startMargin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/startMargin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endMargin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@dimen/endMargin" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rlContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@id/relFooter"
+                android:layout_centerInParent="true"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/relFooter"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/startMarginContent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="@dimen/startMargin" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/endMarginContent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="@dimen/endMargin" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/ivMascot"
+                    android:layout_width="245dp"
+                    android:layout_height="245dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_120dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/endMarginContent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_speed="1" />
+
+
+                <!--<LinearLayout
+                    android:id="@+id/llMaskot"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/ivMascot"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_constraintBottom_toBottomOf="@id/ivMascot"
+                    app:layout_constraintEnd_toStartOf="@id/ivMascot"
+                    app:layout_constraintStart_toEndOf="@id/startMarginContent"
+                    app:layout_constraintTop_toTopOf="@id/ivMascot">-->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQuestion"
+                    style="@style/TextViewJostRegularStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="-40dp"
+                    android:animateLayoutChanges="true"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/_24sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/ivMascot"
+                    app:layout_constraintEnd_toStartOf="@id/ivMascot"
+                    app:layout_constraintStart_toEndOf="@id/startMarginContent"
+                    app:layout_constraintTop_toTopOf="@id/ivMascot"
+                    tools:text="Which language do you speak?\n We would love to prepare wellness coaches in your language."
+                    tools:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ivWelcomeText"
+                    style="@style/TextViewCormorantBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:lineSpacingExtra="-10dp"
+                    android:text="@string/welcome_with_comma"
+                    android:textColor="@color/gold_90"
+                    android:textSize="@dimen/_40sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/ivMascot"
+                    app:layout_constraintStart_toEndOf="@id/startMarginContent"
+                    app:layout_constraintTop_toTopOf="@id/ivMascot"
+                    tools:text="Welcome, TestUser"
+                    tools:visibility="visible" />
+
+                <!--</LinearLayout>-->
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nestedScroll"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="-40dp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/endMarginContent"
+                    app:layout_constraintStart_toEndOf="@id/startMarginContent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivMascot">
+
+                    <FrameLayout
+                        android:id="@+id/flContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llWelcome1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tlLetsGo"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_width="match_parent"
+                                android:text="@string/let_s_get_to_know_you_answer_just_a_few_questions_so_we_can"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_20sp" />
+
+                            <LinearLayout
+                                android:id="@+id/llContentOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivOne"
+                                    android:layout_width="@dimen/_5dp"
+                                    android:layout_height="@dimen/_5dp"
+                                    app:srcCompat="@drawable/bg_dark_grey_round" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvOne"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_marginStart="@dimen/_15dp"
+                                    android:text="@string/recommend_our_most_ideal_meditations_for_you"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_20sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llContentTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivTwo"
+                                    android:layout_width="@dimen/_5dp"
+                                    android:layout_height="@dimen/_5dp"
+                                    app:srcCompat="@drawable/bg_dark_grey_round" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvTwo"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_marginStart="@dimen/_15dp"
+                                    android:text="@string/point_you_to_live_community_sessions_you_might_like"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_20sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llContentThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_50dp"
+                                android:layout_marginTop="@dimen/_15dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivThree"
+                                    android:layout_width="@dimen/_5dp"
+                                    android:layout_height="@dimen/_5dp"
+                                    app:srcCompat="@drawable/bg_dark_grey_round" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvThree"
+                                    style="@style/TextViewJostRegularStyle"
+                                    android:layout_marginStart="@dimen/_15dp"
+                                    android:text="@string/create_the_perfect_new_releases_to_keep_you_motivated"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_20sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_20dp"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="4"
+                            tools:listitem="@layout/item_welcome_questionnaire_type"
+                            tools:visibility="visible" />
+
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/_20dp"
+                            android:paddingBottom="@dimen/_20dp"
+                            android:visibility="gone"
+                            app:chipSpacing="@dimen/_12dp"
+                            tools:visibility="visible" />
+
+
+                    </FrameLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <ImageView
+                    android:id="@+id/ivBgWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_questionnaries_gradient"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/relFooter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:clipToPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/endMargin"
+                app:layout_constraintStart_toEndOf="@id/startMargin">
+
+                <!--<com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvPersonalize"
+                    style="@style/CardViewStyle"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="@dimen/_70dp"
+                    android:visibility="visible"
+                    tools:visibility="visible">-->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPersonalize"
+                    style="@style/MaterialGoldButtonStyle"
+                    android:layout_marginBottom="@dimen/_60dp"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:text="@string/personalize"
+                    tools:visibility="gone" />
+                <!--</com.google.android.material.card.MaterialCardView>-->
+
+                <LinearLayout
+                    android:id="@+id/llBackNextFinishButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/_40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1"
+                    tools:visibility="visible">
+
+                    <!--<com.loopeer.shadow.ShadowView
+                        android:id="@+id/svBack"
+                        style="@style/ShadowViewStyle"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        app:shadowMargin="@dimen/_20dp">-->
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBack"
+                        style="@style/MaterialWhiteButtonStyle"
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_margin="@dimen/_20dp"
+                        android:background="@drawable/bg_off_white_curve"
+                        android:text="@string/back"
+                        android:textColor="@color/secondary_black"
+                        app:layout_gravity="center" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnNext"
+                        style="@style/MaterialGoldButtonStyle"
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/_20dp"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="@string/next"
+                        app:layout_gravity="center" />
+                    <!--</com.loopeer.shadow.ShadowView>-->
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

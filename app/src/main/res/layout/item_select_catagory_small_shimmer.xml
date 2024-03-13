@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="@dimen/_54sdp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivCategoryImage"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/_1sdp"
+                android:scaleType="centerCrop"
+                android:theme="@style/ShapeAppearanceOverlay_Round"
+                app:cornerFamily="rounded"
+                app:srcCompat="@color/light_grey"
+                tools:padding="@dimen/_2sdp"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/shimmer_light" />
+    </LinearLayout>
+
+
+</layout>

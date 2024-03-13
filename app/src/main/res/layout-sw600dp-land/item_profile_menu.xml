@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_24dp"
+        android:paddingTop="@dimen/_16dp"
+        android:paddingEnd="@dimen/_30dp"
+        android:paddingBottom="@dimen/_16dp">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vd_user_circle"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/llProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivImage"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMenuName"
+                style="@style/TextViewJostSemiBoldStyle"
+                android:layout_marginHorizontal="@dimen/_20dp"
+                android:layout_toEndOf="@id/ivImage"
+                android:text="@string/logout"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/_24sp" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMenuDescription"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/llProfile"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_30dp"
+            android:layout_toEndOf="@id/ivImage"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lines="1"
+            android:textColor="@color/medium_grey"
+            android:textSize="@dimen/_14sp"
+            tools:text="francisco.quintero@drsha.com" />
+
+        <ImageView
+            android:id="@+id/ivEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+</layout>

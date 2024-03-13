@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:background="@color/white"
+                android:fillViewport="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    tools:context=".ui.program.ProgramDetailsActivity">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBannerImages"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.55"
+                            android:scaleType="centerCrop"
+                            android:visibility="visible"
+                            tools:src="@drawable/dummy_session_image_dummy_1" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/bg_white_for_programs"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_80sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_how_to_meditate_bg" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_60sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvProgramName"
+                            style="@style/TextViewCormorantBoldStyle"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/gold"
+                            android:textSize="@dimen/_15ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="7 Days To Better Quality Sleep" />
+
+                        <LinearLayout
+                            android:id="@+id/llRating"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:gravity="center|start"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="@id/tvProgramName"
+                            app:layout_constraintStart_toStartOf="@id/tvProgramName"
+                            app:layout_constraintTop_toBottomOf="@id/tvProgramName">
+
+                            <com.willy.ratingbar.ScaleRatingBar
+                                android:id="@+id/rbRating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srb_clearRatingEnabled="true"
+                                app:srb_clickable="false"
+                                app:srb_drawableEmpty="@drawable/ic_star"
+                                app:srb_drawableFilled="@drawable/dr_fill_star"
+                                app:srb_isIndicator="false"
+                                app:srb_numStars="5"
+                                app:srb_rating="0"
+                                app:srb_scrollable="false"
+                                app:srb_starHeight="@dimen/_8sdp"
+                                app:srb_starPadding="1dp"
+                                app:srb_starWidth="@dimen/_8sdp"
+                                app:srb_stepSize="1"
+                                tools:srb_minimumStars="1" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvRateCount"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_8ssp"
+                                tools:text="10" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalUserJoinedCount"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:drawableStart="@drawable/vd_small_gold_user"
+                                android:drawablePadding="@dimen/_2sdp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_8ssp"
+                                tools:text="10" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <FrameLayout
+                        android:id="@+id/flDailyActivityChart"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_110sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/bg_gery_30_round" />
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/circularProgressDailyActivityChart"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:rotation="270"
+                            app:cpb_background_progressbar_color="@color/white_90"
+                            app:cpb_background_progressbar_width="@dimen/_9sdp"
+                            app:cpb_progress="0"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progress_max="100"
+                            app:cpb_progressbar_color_end="@color/dandelion"
+                            app:cpb_progressbar_color_start="@color/dandelion"
+                            app:cpb_progressbar_width="@dimen/_9sdp"
+                            app:cpb_round_border="true"
+                            tools:cpb_progress="40" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvNotStarted"
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_14ssp"
+                                android:visibility="visible"
+                                tools:text="@string/for_you" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_180sdp">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/startMargin"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="@dimen/startMargin" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/endMargin"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="@dimen/endMargin" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:background="@drawable/bg_white_top_left_right_curve_gradient"
+                            android:scaleType="centerCrop"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="@id/endMargin"
+                            app:layout_constraintStart_toStartOf="@id/startMargin"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_white_top_radius_30"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="@id/endMargin"
+                            app:layout_constraintStart_toStartOf="@id/startMargin">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvProgramsTab"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@color/transparent"
+                                android:clipToPadding="false"
+                                android:fadeScrollbars="false"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/_6sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:paddingBottom="0dp"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:itemCount="3"
+                                tools:listitem="@layout/item_custom_tab_view" />
+
+                            <FrameLayout
+                                android:id="@+id/root_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_5sdp" />
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnGetMeditation"
+                            style="@style/MaterialGoldButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/bg_light_dark_golden_curve"
+                            android:fontFamily="@font/font_jost_semi_bold"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/get"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:visibility="gone"
+                            app:backgroundTint="@null"
+                            app:elevation="@dimen/_2sdp"
+                            app:icon="@drawable/vd_arrow_up_white"
+                            app:iconGravity="textEnd"
+                            app:iconTint="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/endMargin"
+                            app:layout_constraintStart_toStartOf="@id/startMargin"
+                            app:rippleColor="@color/white"
+                            tools:visibility="gone" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:background="@drawable/bg_white_top_gradient" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:background="@drawable/bg_toolbar_icon"
+                android:elevation="@dimen/_3sdp"
+                android:src="@drawable/vd_grey_back_arrow"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardFav"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:alpha="0.8"
+                android:background="@drawable/bg_toolbar_icon"
+                android:elevation="@dimen/_3sdp"
+                app:cardCornerRadius="@dimen/_25sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieLike"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="false"
+                    app:lottie_scale="@integer/material_motion_duration_long_1" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvJoinPrograms"
+            style="@style/CardViewStyle"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_light_dark_golden_curve"
+            android:visibility="gone"
+            app:cardElevation="3dp"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJoinPrograms"
+                style="@style/ButtonGoldStyle"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_light_dark_golden_curve"
+                android:drawableStart="@drawable/drawable_program_join_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_90sdp"
+                android:paddingEnd="0dp"
+                android:text="@string/join"
+                android:textSize="@dimen/_7ssp"
+                app:fontFamily="@font/font_lato_bold"
+                tools:visibility="visible" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/llMain"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/vd_challenge_reward_round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRewardTitle"
+            style="@style/TextViewJostRegularStyle"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="@string/_30_silver_hearts"
+            android:textColor="@color/secondary_black"
+            android:textSize="@dimen/_15ssp" />
+
+        <ImageView
+            android:id="@+id/ivRewardHeart"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/vd_reward_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

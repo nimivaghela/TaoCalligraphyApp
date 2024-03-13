@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_50sdp"
+        tools:context=".ui.meditation_rooms_detail.fragment.SessionListFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@drawable/bg_light_grey_shadow" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_135sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mr_shah_drawing" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/ic_white_black_shadow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostSemiBoldStyle"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/_38sdp"
+                        android:text="NOW: Transformative Art for Flourishing"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:text="with Dr. &amp; Master Sha"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp" />
+
+                </FrameLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/CardViewStyle"
+                    android:layout_marginTop="@dimen/_120sdp"
+                    app:cardCornerRadius="@dimen/_15sdp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnJoinLive"
+                        style="@style/ButtonGoldStyle"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/bg_red_button_curve"
+                        android:text="Join Live"
+                        android:textSize="@dimen/_11ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lilUpcomingSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_26sdp"
+                android:paddingEnd="@dimen/_16sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/upcoming_session"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:text="@string/see_all"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableEnd="@drawable/vd_see_more_arrow"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRoomsUpcomingSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:fadeScrollbars="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_room_upcoming_sessions_list" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tVUpcomingSesLoadMore"
+                style="@style/TextViewJostRegularStyle"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_grey_95_with_curve"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/load_more"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Upcoming"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:text="@string/see_all"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableEnd="@drawable/vd_see_more_arrow"
+                    android:textColor="@color/dark_gold"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/ic_dot_lines_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostRegularStyle"
+                    android:gravity="center"
+                    android:text="No scheduled sessions\nat this time"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_17ssp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/CardViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="0dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnScheduleSession"
+                        style="@style/ButtonGoldStyle"
+                        android:background="@drawable/bg_light_dark_golden_curve"
+                        android:text="Schedule a Session" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRoomsUpcomingSessionsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:fadeScrollbars="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_room_upcoming_session_list" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_grey_95_with_curve"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/load_more"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_12ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewJostSemiBoldStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Past"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_18ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblPastSeeAll"
+                    style="@style/TextViewJostRegularStyle"
+                    android:text="@string/see_all"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableEnd="@drawable/vd_see_more_arrow"
+                    android:textColor="@color/dark_gold"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRoomsPastSessionsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:fadeScrollbars="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_room_past_session_list" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_grey_95_with_curve"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/load_more"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

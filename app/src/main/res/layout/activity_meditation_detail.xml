@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rrMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            tools:context=".ui.meditation.MeditationDetailActivity">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ffController">
+
+                <LinearLayout
+                    android:id="@+id/llMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_30sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/rrHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        tools:context=".ui.experience.ExperienceMoreActivity">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivMeditationImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_320sdp"
+                            android:scaleType="centerCrop"
+                            tools:srcCompat="@drawable/ic_dummy_women_bird" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivMeditationBg"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_160sdp"
+                            android:layout_alignParentBottom="true"
+                            app:srcCompat="@drawable/ic_transparent_bg_meditation_detail" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="50dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMeditationTitle"
+                                style="@style/TextViewCormorantBoldStyle"
+                                android:clipChildren="false"
+                                android:clipToPadding="false"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_40ssp"
+                                tools:text="Support Surgery Recovery" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCaption"
+                                style="@style/TextViewJostRegularStyle"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                tools:text="with Peter Hudoba, MD, Neurosurgeon" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="-40dp"
+                        android:background="@drawable/meditation_bg"
+                        android:padding="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingEnd="@dimen/_20sdp">
+
+                        <LinearLayout
+                            android:id="@+id/llTabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_15sdp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAbout"
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:background="@drawable/bg_white_gold_border_22dp"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:text="@string/about"
+                                android:textAllCaps="true"
+                                android:textColor="@color/gold"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvReviews"
+                                style="@style/TextViewJostMediumStyle"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:background="@drawable/bg_gray_95_radius_22dp"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/_15sdp"
+                                android:paddingTop="@dimen/_7sdp"
+                                android:paddingEnd="@dimen/_15sdp"
+                                android:paddingBottom="@dimen/_7sdp"
+                                android:text="@string/reviews"
+                                android:textAllCaps="true"
+                                android:textColor="@color/medium_grey"
+                                android:textSize="@dimen/_13ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llAbout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_20sdp">
+
+                            <LinearLayout
+                                android:id="@+id/llAboutData"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_15sdp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="1">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvRatingCount"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:drawableStart="@drawable/vd_smile_icon"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:text="27.1K felt better" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLikesCount"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:drawableStart="@drawable/vd_like_thumb"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:text="31K" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFavouriteCount"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:drawableStart="@drawable/vd_fav_heart"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:text="24K" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvViewCount"
+                                    style="@style/TextViewJostMediumStyle"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:drawableStart="@drawable/vd_play_small"
+                                    android:drawablePadding="@dimen/_5sdp"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/_10ssp"
+                                    tools:text="34K" />
+
+                            </LinearLayout>
+
+                            <WebView
+                                android:id="@+id/webView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:orientation="vertical"
+                                android:scrollbars="none"
+                                android:visibility="visible"
+                                tools:ignore="WebViewLayout" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvCategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:scrollbars="none"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llReviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtReviewTitle"
+                                style="@style/TextViewJostSemiBoldStyle"
+                                android:gravity="center_vertical"
+                                android:text="@string/what_people_experience"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_18ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/noReviews"
+                                style="@style/TextViewJostBoldStyle"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:text="@string/no_reviews_yet"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="@dimen/_15ssp"
+                                android:visibility="visible" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvReview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        </LinearLayout>
+
+                        <!--<com.github.mikephil.charting.charts.HorizontalBarChart
+                            android:id="@+id/chart_review"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            />-->
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <FrameLayout
+                android:id="@+id/ffController"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_50sdp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGetMeditation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:background="@drawable/bg_light_dark_golden_curve"
+                    android:fontFamily="@font/font_jost_semi_bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/get"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    android:visibility="gone"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="@dimen/_12sdp"
+                    app:elevation="@dimen/_2sdp"
+                    app:icon="@drawable/vd_arrow_up_white"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/white"
+                    app:rippleColor="@color/white"
+                    tools:visibility="visible" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <include
+                android:id="@+id/progressBar"
+                layout="@layout/item_progress" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_4sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_8sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDays"
+            style="@style/TextViewJostMediumStyle"
+            android:gravity="center_vertical"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_10ssp"
+            tools:text="Sun" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            style="@style/TextViewJostMediumStyle"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_white_light_grey"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_14ssp"
+            tools:text="31" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tvIndicator"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/bg_light_gery_round" />
+
+    </LinearLayout>
+
+</layout>

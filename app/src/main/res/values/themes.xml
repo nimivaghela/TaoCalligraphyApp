@@ -1,0 +1,819 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TaoCalligraphy" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item> <!--purple_500-->
+        <item name="colorPrimaryVariant">@color/white</item> <!--purple_700-->
+        <item name="colorOnPrimary">@color/gold</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/gold_semi_light</item>
+        <item name="colorSecondaryVariant">@color/gold</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="snackbarStyle">@style/hpr_snackbar_message_style</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="CustomThemeLightStatusBar" parent="Theme.TaoCalligraphy">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="CustomThemeDarkStatusBar" parent="Theme.TaoCalligraphy">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="ExplodeTransition" parent="CustomThemeDarkStatusBar">
+        <item name="android:windowEnterTransition">@transition/explode_animation</item>
+        <item name="android:windowExitTransition">@transition/explode_animation</item>
+    </style>
+
+    <style name="FullScreenThemeLightStatusBar" parent="Theme.TaoCalligraphy">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="FullScreenThemeLightDarkStatusBar" parent="Theme.TaoCalligraphy">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- TextView Style Start -->
+    <style name="TextViewCormorantBoldStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_cormorant_bold</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextViewJostBoldStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_jost_bold</item>
+    </style>
+
+    <style name="TextViewJostSemiBoldStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_jost_semi_bold</item>
+    </style>
+
+    <style name="TextViewJostLightStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_jost_light</item>
+    </style>
+
+    <style name="TextViewJostRegularStyle">
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+        <item name="android:autoLink">web</item>
+        <item name="android:linksClickable">true</item>
+    </style>
+
+    <style name="TextViewSFProBoldStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_sfpro_bold</item>
+    </style>
+
+    <style name="TextViewSFProMediumStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_sfpro_medium</item>
+    </style>
+
+    <style name="TextViewSFProRegularStyle">
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_sfpro_regular</item>
+        <item name="android:autoLink">web</item>
+        <item name="android:linksClickable">true</item>
+    </style>
+
+    <style name="TextViewSFProRegularStyleWithoutColor">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_sfpro_regular</item>
+    </style>
+
+    <style name="TextViewJostRegularStyleWithoutColor">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+    </style>
+
+    <style name="TextViewJostRegularStyleTags">
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+    </style>
+
+    <style name="TextViewJostRegularItalicStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_jost_regular_italic</item>
+    </style>
+
+    <style name="TextViewJostMediumStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_jost_medium</item>
+    </style>
+
+    <style name="TextViewLatoSemiBoldStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_lato_semi_bold</item>
+    </style>
+
+    <style name="TextViewLatoBoldStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_lato_bold</item>
+    </style>
+
+    <style name="TextViewLatoRegularStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_lato_regular</item>
+    </style>
+
+    <style name="TextViewDmSerifRegularStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_dmseriftext_regular</item>
+    </style>
+
+    <style name="TextViewDmSerifRegularItalicStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_dmseriftext_regular_italic</item>
+    </style>
+
+    <style name="TextViewOpenSansRegularStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_opensans_regular</item>
+    </style>
+
+    <style name="TextViewPoppinsRegularStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_poppins_regular</item>
+    </style>
+
+    <style name="TextViewPoppinsMediumStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_poppins_medium</item>
+    </style>
+    <!-- TextView Style End -->
+
+    <!-- Button Style Start -->
+    <style name="ButtonGoldStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="background">@drawable/bg_light_dark_golden_curve</item>
+        <item name="fontFamily">@font/font_jost_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+
+
+    <style name="ButtonWhiteStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="background">@drawable/bg_white_curve</item>
+        <item name="fontFamily">@font/font_jost_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+
+
+    <!-- Button Style End -->
+    <style name="ButtonGoldSFProStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="background">@drawable/bg_light_dark_golden_curve</item>
+        <item name="fontFamily">@font/font_sfpro_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+
+    <style name="ButtonWhiteSFProStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="background">@drawable/bg_white_curve</item>
+        <item name="fontFamily">@font/font_sfpro_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+    </style>
+    <!-- Button Style End -->
+
+    <!-- Card view Style Start -->
+    <style name="CardViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_3sdp</item>
+        <item name="cardCornerRadius">@dimen/_10sdp</item>
+        <item name="cardElevation">@dimen/_3sdp</item>
+        <item name="cardBackgroundColor">@color/transparent</item>
+    </style>
+    <!-- Card view Style End -->
+
+
+    <!-- Edit text Style Start -->
+    <style name="TextInputLayoutBoxStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="colorPrimary">@color/medium_grey</item>
+        <item name="colorPrimaryDark">@color/medium_grey</item>
+        <item name="boxStrokeColor">@color/gold</item>
+        <item name="boxStrokeWidth">@dimen/_1sdp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+        <item name="hintTextColor">@color/medium_grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/medium_grey</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+        <item name="boxBackgroundColor">@color/white_95</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_4sdp</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorTextColor">@color/red</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorTextAppearance">@style/TextInputLayoutErrorText</item>
+
+    </style>
+    <!-- Edit text Style End -->
+
+    <!-- Edit text Style Start -->
+    <style name="TextInputLayoutMediumBoxStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout</item>
+        <item name="colorPrimary">@color/medium_grey_40</item>
+        <item name="colorPrimaryDark">@color/medium_grey_40</item>
+        <item name="boxStrokeColor">@color/edittext_box_selector</item>
+        <item name="boxStrokeWidth">@dimen/_1sdp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+        <item name="hintTextColor">@color/medium_grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/medium_grey</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+        <item name="boxBackgroundColor">@color/white_80</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_8sdp</item>
+        <item name="cornerRadius">@dimen/_8sdp</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorTextColor">@color/red</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorTextAppearance">@style/TextInputLayoutErrorText</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <item name="colorAccent">@color/gold_semi_light</item>
+        <item name="editTextStyle">@style/EditTextStyle</item>
+    </style>
+
+    <!-- Edit text Style End -->
+
+    <style name="TextInputLayoutErrorText" parent="TextAppearance.Design.Error">
+        <item name="android:fontFamily">@font/font_jost_medium</item>
+    </style>
+
+    <!-- Edit text Style Start -->
+    <style name="EditTextStyle" parent="@style/Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="colorAccent">@color/gold_semi_light</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">@dimen/_40sdp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="fontFamily">@font/font_jost_regular</item>
+        <item name="android:textColor">@color/secondary_black</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColorHint">@color/secondary_black</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+    <!-- Edit text Style End -->
+
+    <!-- Edit text Style Start -->
+    <style name="EditTextStyleMultiLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/font_jost_regular</item>
+        <item name="android:textColor">@color/secondary_black</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+    <!-- Edit text Style End -->
+
+
+    <style name="pickerText">
+        <item name="textAllCaps">true</item>
+    </style>
+    <!-- Chip Style End -->
+
+    <!-- Popup Style Start -->
+    <style name="popup_window_animation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+    <!-- Popup Style End -->
+    <!-- Popup Style Start -->
+    <style name="bottom_popup_window_animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+    <!-- Popup Style End -->
+
+    <!-- Rating bar Style Start -->
+    <style name="customRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/gold</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+    <!-- Rating bar Style End -->
+
+    <style name="BottomNavigationViewStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/font_jost_regular</item>
+    </style>
+
+    <style name="BottomNavigationTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+    </style>
+
+    <style name="SliderLabel" parent="Widget.MaterialComponents.Tooltip">
+        <item name="android:textAppearance">@style/SliderLabelTextColor</item>
+        <item name="backgroundTint">@color/gold</item>
+    </style>
+
+    <style name="SliderLabelTextColor" parent="TextAppearance.MaterialComponents.Tooltip">
+        <!--This is the Tooltip Text Color -->
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CalenderHeaderTextAppearance" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="fontFamily">@font/font_jost_medium</item>
+    </style>
+
+    <style name="CalenderWeekDayTextAppearance" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="fontFamily">@font/font_jost_bold</item>
+    </style>
+
+    <style name="CalenderMonthDayTextAppearance" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/calendar_day_text_color</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="fontFamily">@font/font_jost_regular</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="FullScreenBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">1200dp</item>
+    </style>
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/gold</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+        <item name="colorControlNormal">@color/gold</item>
+    </style>
+
+    <!--Custom CarView Style Start-->
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_8sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_24sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_24sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_8sdp</item>
+    </style>
+    <!--Custom CarView Style End-->
+
+    <style name="ShapeAppearanceOverlay_Round" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_15_5" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_5sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_5sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_15_5_program" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_5sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_15sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_10sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_5sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_9_5" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_4sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_8sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_4sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_4sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_10_10" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_8sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_8sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_8sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_8sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_15_5_gradient" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_5sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_15sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_13_5_8_5" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_5sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_13sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_6sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_5sdp</item>
+    </style>
+
+    <style name="ShapebleImageViewCircle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_50sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_50sdp</item>
+        <item name="cornerSizeBottomRight">@dimen/_50sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_50sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_13_5" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_5sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_13sdp</item>
+
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_6" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_6sdp</item>
+    </style>
+
+    <style name="foodRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:maxHeight">47dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.SelectedCornerRadius" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_18sdp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_5sdp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerSizeBottomLeft">@dimen/_5sdp</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomRight">@dimen/_18sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.SelectedTopCornerRadius" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_18sdp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_5sdp</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+    </style>
+
+    <style name="CardViewTopCorner" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_top_corner</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_top_corner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_25sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_Popup" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/_25sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_25sdp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="PopupCardStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardForegroundColor">@android:color/transparent</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_Popup</item>
+    </style>
+
+    <style name="PopupCardThemeOverlay">
+        <item name="materialCardViewStyle">@style/PopupCardStyle</item>
+    </style>
+
+    <style name="Theme.TaoCalligraphy.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TaoCalligraphy.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TaoCalligraphy.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.ProfileScreen" parent="CustomThemeDarkStatusBar">
+        <item name="android:windowBackground">@drawable/bg_profile_drawable</item>
+    </style>
+
+    <style name="Theme.ProfileAccountInfoScreen" parent="CustomThemeDarkStatusBar">
+        <item name="android:windowBackground">@drawable/bg_watermark_screen_drawable</item>
+    </style>
+
+    <style name="Theme.ProfileSubscription" parent="CustomThemeDarkStatusBar">
+        <item name="android:windowBackground">@drawable/bg_watermark_screen_drawable</item>
+    </style>
+
+    <style name="MaterialGoldButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="android:background">@drawable/bg_light_dark_golden_curve</item>
+        <item name="fontFamily">@font/font_jost_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="cornerRadius">@dimen/_12sdp</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="MaterialGoldWithIconButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="android:background">@drawable/bg_light_dark_golden_curve</item>
+        <item name="fontFamily">@font/font_jost_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="cornerRadius">@dimen/_12sdp</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="MaterialRedButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="android:background">@drawable/bg_light_dark_red_curve</item>
+        <item name="fontFamily">@font/font_jost_semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="cornerRadius">@dimen/_12sdp</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="MaterialWhiteButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45sdp</item>
+        <item name="android:background">@drawable/bg_white_curve_gold_border</item>
+        <item name="fontFamily">@font/font_jost_semi_bold</item>
+        <item name="android:textColor">@color/dark_gold</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="cornerRadius">@dimen/_12sdp</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="MaterialWhiteButtonStyleUserMenuRight" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:paddingStart">@dimen/_18sdp</item>
+        <item name="android:background">@drawable/bg_white_curve_24dp</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:elevation">@dimen/_13sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="cornerRadius">@dimen/_40sdp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="iconPadding">@dimen/_10sdp</item>
+        <item name="rippleColor">@color/gold</item>
+        <item name="iconTint">@color/gold</item>
+    </style>
+
+    <style name="MaterialWhiteButtonStyleUserMenuLeft" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:paddingStart">@dimen/_18sdp</item>
+        <item name="android:background">@drawable/bg_white_curve_24dp</item>
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:elevation">@dimen/_15sdp</item>
+        <item name="cornerRadius">@dimen/_40sdp</item>
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="iconPadding">@dimen/_10sdp</item>
+        <item name="iconTint">@color/gold</item>
+        <item name="rippleColor">@color/gold</item>
+    </style>
+
+
+    <!-- Card view Style Start -->
+    <style name="ShadowViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="shadowDx">0</item>
+        <item name="shadowDy">0</item>
+        <item name="cornerRadius">@dimen/_12sdp</item>
+        <item name="shadowColor">@color/black_15</item>
+        <item name="shadowRadius">@dimen/_5sdp</item>
+        <item name="shadowMarginBottom">@dimen/_10sdp</item>
+        <item name="shadowMarginLeft">@dimen/_10sdp</item>
+        <item name="shadowMarginRight">@dimen/_10sdp</item>
+        <item name="shadowMarginTop">@dimen/_10sdp</item>
+    </style>
+    <!-- Card view Style End -->
+
+
+    <!--SignUp Dialog-->
+    <style name="DialogTheme" parent="@style/Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="StackedAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@style/StackedButtonBarButtonStyle</item>
+    </style>
+
+    <style name="StackedButtonBarButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/selector_chip</item>
+        <item name="android:textColor">@color/text_color_chip_state_list</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/font_jost_regular</item>
+    </style>
+
+
+    <style name="ShadowViewProfileDialogStyle">
+        <item name="shadowDx">0</item>
+        <item name="shadowDy">0</item>
+        <item name="shadowColor">@color/black_15</item>
+        <item name="shadowRadius">@dimen/_5sdp</item>
+    </style>
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShadowViewProfileImageStyle">
+        <item name="shadowDx">10</item>
+        <item name="shadowDy">10</item>
+        <item name="shadowColor">@color/black_15</item>
+        <item name="shadowRadius">3dp</item>
+    </style>
+
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/font_cormorant_bold</item>
+        <item name="elevation">@dimen/_40sdp</item>
+        <item name="android:elevation">@dimen/_40sdp</item>
+        <item name="text_size">@dimen/_20sdp</item>
+        <item name="text_color">@color/white</item>
+    </style>
+
+    <style name="ChipTextAppearance" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TextViewCormorantBoldStyleWelcomeNormal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_cormorant_bold</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
+    </style>
+
+    <style name="TextViewCormorantBoldStyleWelcomeHeart">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_cormorant_bold</item>
+        <item name="android:textSize">@dimen/_35ssp</item>
+    </style>
+
+    <style name="TextViewCormorantBoldStyleUserExperienceNormal">
+        <item name="android:fontFamily">@font/font_cormorant_bold</item>
+        <item name="android:textSize">@dimen/_28ssp</item>
+    </style>
+
+    <style name="TextViewCormorantBoldStyleUserExperienceTitle">
+        <item name="android:fontFamily">@font/font_cormorant_bold</item>
+        <item name="android:textSize">@dimen/_35ssp</item>
+    </style>
+
+    <style name="hpr_snackbar_message_style" parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="android:layout_margin">@null</item>
+        <!-- Use default Snackbar margins for top/left/right -->
+        <item name="android:layout_marginTop">@dimen/_50sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_10sdp</item>
+        <item name="android:layout_marginRight">@dimen/_10sdp</item>
+        <item name="android:shadowRadius">5</item>
+        <!-- Custom bottom margin, this could work for top/left/right too -->
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+    </style>
+
+    <style name="Theme.WaterMarkBackground" parent="CustomThemeDarkStatusBar">
+        <item name="android:windowBackground">@drawable/bg_watermark_screen_drawable</item>
+    </style>
+
+    <style name="Theme.CreateNewChatTheme" parent="CustomThemeDarkStatusBar">
+        <item name="android:windowBackground">@drawable/bg_window_create_chat</item>
+    </style>
+
+    <style name="SegmentedButtonTextAppearance">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_white_curve_20dp</item>
+    </style>
+</resources>

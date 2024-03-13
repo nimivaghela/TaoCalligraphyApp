@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.app.taocalligraphy.utils.ArcViewLeft
+            android:id="@+id/arcViewLeftOne"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintDimensionRatio="1:0.6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewTopHide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_constraintDimensionRatio="1:0.30"
+            app:layout_constraintEnd_toEndOf="@id/arcViewLeftOne"
+            app:layout_constraintStart_toStartOf="@id/arcViewLeftOne"
+            app:layout_constraintTop_toTopOf="@id/arcViewLeftOne" />
+
+        <View
+            android:id="@+id/viewBottomHide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:0.30"
+            app:layout_constraintEnd_toEndOf="@id/arcViewLeftOne"
+            app:layout_constraintStart_toStartOf="@id/arcViewLeftOne" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.55">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_7sdp"
+                android:alpha="0.7"
+                android:src="@color/gray_95" />
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/circleProgressProgram"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:cpb_background_progressbar_color="@color/gold"
+                app:cpb_background_progressbar_color_direction="bottom_to_top"
+                app:cpb_background_progressbar_width="@dimen/_1sdp"
+                app:cpb_progress="100"
+                app:cpb_progress_direction="to_right"
+                app:cpb_progress_max="100"
+                app:cpb_progressbar_color_direction="bottom_to_top"
+                app:cpb_progressbar_color_end="@color/varden"
+                app:cpb_progressbar_color_start="@color/dandelion"
+                app:cpb_progressbar_width="@dimen/_13sdp"
+                app:cpb_round_border="true" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.57">
+
+            <FrameLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <View
+                    android:id="@+id/viewCircle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_shimmer_light_round" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDay"
+                    style="@style/TextViewJostMediumStyle"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="02"
+                    android:textAllCaps="true"
+                    android:textColor="@color/medium_grey"
+                    android:textSize="@dimen/_26ssp" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewJostRegularStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="NOV 30"
+                android:textAllCaps="true"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.36">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textAllCaps="true"
+                        android:textColor="@color/driftwood"
+                        android:textSize="@dimen/_24ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:gravity="center"
+                        android:text="/"
+                        android:textAllCaps="true"
+                        android:textColor="@color/silver_foil"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewJostRegularStyle"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textAllCaps="true"
+                        android:textColor="@color/silver_foil"
+                        android:textSize="@dimen/_18ssp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewLatoRegularStyle"
+                    android:gravity="center"
+                    android:text="@string/steps"
+                    android:textColor="@color/driftwood"
+                    android:textSize="@dimen/_12ssp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
